@@ -686,6 +686,15 @@ namespace BOTrueZealMod.Tools
             LoadedAssetsHandler.LoadedCharacters[ch.name] = ch;
         }
 
+        public static IntentTargetInfo TargetIntent(BaseCombatTargettingSO target, params IntentType[] intents)
+        {
+            return new()
+            {
+                targets = target,
+                targetIntents = intents
+            };
+        }
+
         public static T NewItem<T>(string name, string flavor, string description, string sprite, ItemPools pools, int price = 0, bool silent = false) where T : BaseWearableSO
         {
             return CreateScriptable<T>(x =>

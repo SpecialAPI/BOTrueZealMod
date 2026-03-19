@@ -20,3 +20,4 @@ global using static BOTrueZealMod.Tools.CharacterBuilder;
 global using Object = UnityEngine.Object;
 global using Random = UnityEngine.Random;
 global using Debug = UnityEngine.Debug;
+global using Priority = BOTrueZealMod.Tools.Priority;
