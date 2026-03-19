@@ -41,7 +41,7 @@ namespace BOTrueZealMod.Characters
                 .SetEffects(new()
                 {
                     Effects.Effect(Targets.FurthestEnemies, CreateScriptable<DamageEffect>(), flirtDmg),
-                    Effects.Effect(Targets.FurthestEnemies, CreateScriptable<HealEffect>(), flirtHeal),
+                    Effects.Effect(Targets.FurthestEnemies, CreateScriptable<HealEffect>(x => x._onlyIfHasHealthOver0 = true), flirtHeal),
                     Effects.Effect(Targets.FurthestEnemies, CreateScriptable<SwapTowardsCasterEffect>()),
                 })
                 .SetIntents(new()
