@@ -7,8 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Abilities\AttackIcon_Confession.png" />
     <None Remove="Resources\Abilities\AttackIcon_Flirtation.png" />
+    <None Remove="Resources\Abilities\AttackIcon_Mass.png" />
     <None Remove="Resources\Abilities\AttackIcon_Relapse.png" />
+    <None Remove="Resources\Abilities\AttackIcon_See.png" />
+    <None Remove="Resources\Formosus\FormosusBack.png" />
+    <None Remove="Resources\Formosus\FormosusFront.png" />
+    <None Remove="Resources\Formosus\FormosusLocked.png" />
+    <None Remove="Resources\Formosus\FormosusOW.png" />
+    <None Remove="Resources\Formosus\FormosusUnlocked.png" />
     <None Remove="Resources\Shelly\ShellyBack.png" />
     <None Remove="Resources\Shelly\ShellyFront.png" />
     <None Remove="Resources\Shelly\ShellyLocked.png" />
@@ -18,8 +26,16 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Brawl.png" />
+    <EmbeddedResource Include="Resources\Abilities\AttackIcon_Confession.png" />
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Flirtation.png" />
+    <EmbeddedResource Include="Resources\Abilities\AttackIcon_Mass.png" />
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Relapse.png" />
+    <EmbeddedResource Include="Resources\Abilities\AttackIcon_See.png" />
+    <EmbeddedResource Include="Resources\Formosus\FormosusBack.png" />
+    <EmbeddedResource Include="Resources\Formosus\FormosusFront.png" />
+    <EmbeddedResource Include="Resources\Formosus\FormosusLocked.png" />
+    <EmbeddedResource Include="Resources\Formosus\FormosusOW.png" />
+    <EmbeddedResource Include="Resources\Formosus\FormosusUnlocked.png" />
     <EmbeddedResource Include="Resources\Shelly\ShellyBack.png" />
     <EmbeddedResource Include="Resources\Shelly\ShellyFront.png" />
     <EmbeddedResource Include="Resources\Shelly\ShellyLocked.png" />
