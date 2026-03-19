@@ -14,6 +14,9 @@ namespace BOTrueZealMod.Tools
     [HarmonyPatch]
     public static class Tools
     {
+        public static GameInformationHolder infoHolder;
+        public static readonly Dictionary<string, AbilitySO> LoadedBossAbilities = [];
+
         public static Texture2D LoadTexture(string name)
         {
             if (!TryReadFromResource(name.TryAddExtension("png"), out var ba))
@@ -319,38 +322,5 @@ namespace BOTrueZealMod.Tools
                 return value;
             return dict[key] = create(key);
         }
-
-        [HarmonyPatch(typeof(ItemPoolDataBaseSO), nameof(ItemPoolDataBaseSO.ShopPool), MethodType.Getter)]
-        [HarmonyPatch(typeof(ItemPoolDataBaseSO), nameof(ItemPoolDataBaseSO.TreasurePool), MethodType.Getter)]
-        [HarmonyPrefix]
-        public static void AddItemsToPool(ItemPoolDataBaseSO __instance)
-        {
-            if(itemPool == null)
-            {
-                itemPool = __instance;
-
-                itemPool._TreasurePool = itemPool._TreasurePool.Concat(treasuresToAdd).ToArray();
-                itemPool._ShopPool = itemPool._ShopPool.Concat(shopItemsToAdd).ToArray();
-
-                treasuresToAdd.Clear();
-                shopItemsToAdd.Clear();
-            }
-        }
-
-        public static ItemPoolDataBaseSO itemPool;
-        public static GameInformationHolder infoHolder;
-
-        private static readonly List<string> shopItemsToAdd = new();
-        private static readonly List<string> treasuresToAdd = new();
-        public static readonly Dictionary<string, AbilitySO> LoadedBossAbilities = new();
-    }
-
-    [Flags]
-    public enum ItemPools
-    {
-        Shop = 1,
-        Treasure = 2,
-        Fish = 4,
-        Extra = 8
     }
 }

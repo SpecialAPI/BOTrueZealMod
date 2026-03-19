@@ -27,9 +27,9 @@ namespace BOTrueZealMod
             GlossaryStuffAdder.glossaryDB = Resources.FindObjectsOfTypeAll<GlossaryDataBase>().FirstOrDefault();
             infoHolder = Resources.FindObjectsOfTypeAll<GameInformationHolder>().FirstOrDefault();
             if (infoHolder != null)
-                itemPool = infoHolder.ItemPoolDB;
-            if (itemPool == null)
-                itemPool = Resources.FindObjectsOfTypeAll<ItemPoolDataBaseSO>().FirstOrDefault();
+                ItemBuilder.itemPool = infoHolder.ItemPoolDB;
+            if (ItemBuilder.itemPool == null)
+                ItemBuilder.itemPool = Resources.FindObjectsOfTypeAll<ItemPoolDataBaseSO>().FirstOrDefault();
 
             Pigments.Init();
             Passives.Init();
