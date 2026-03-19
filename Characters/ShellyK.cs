@@ -82,6 +82,10 @@ namespace BOTrueZealMod.Characters
                 };
             });
             ch.AddToDatabase(true, false);
+
+            var menuCh = ch.GenerateMenuCharacter("ShellyUnlocked", "ShellyLocked");
+            menuCh.SetAsFullDPS();
+            menuCh.AddToDatabase();
         }
     }
 }

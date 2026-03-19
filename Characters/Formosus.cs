@@ -85,6 +85,11 @@ namespace BOTrueZealMod.Characters
             });
 
             ch.AddToDatabase(true, false);
+
+            var menuCh = ch.GenerateMenuCharacter("FormosusUnlocked", "FormosusLocked");
+            menuCh.AddDPSSets(0, 1);
+            menuCh.AddSupportSets(2);
+            menuCh.AddToDatabase();
         }
     }
 }
