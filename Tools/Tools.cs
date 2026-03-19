@@ -196,7 +196,20 @@ namespace BOTrueZealMod.Tools
 
         public static AbilitySO GetAnyAbility(string name)
         {
-            return LoadedAssetsHandler.GetCharacterAbility(name) ?? LoadedAssetsHandler.GetEnemyAbility(name) ?? GetBossAbility(name);
+            var ab = LoadedAssetsHandler.GetCharacterAbility(name);
+            if(ab != null)
+                return ab;
+
+            ab = LoadedAssetsHandler.GetEnemyAbility(name);
+            if(ab != null)
+                return ab;
+
+            ab = GetBossAbility(name);
+            if(ab != null)
+                return ab;
+
+            Debug.LogError($"Failed to get ability with ID {name}");
+            return null;
         }
 
         public static AbilitySO GetBossAbility(string abilityName)
@@ -636,27 +649,28 @@ namespace BOTrueZealMod.Tools
 
         public static IntentType IntentForDamage(int damage)
         {
-            if(damage <= 2)
+            return damage switch
             {
-                return IntentType.Damage_1_2;
-            }
-            else if(damage <= 6)
+                <= 2 => IntentType.Damage_1_2,
+                <= 6 => IntentType.Damage_3_6,
+                <= 10 => IntentType.Damage_7_10,
+                <= 15 => IntentType.Damage_11_15,
+                <= 20 => IntentType.Damage_16_20,
+
+                _ => IntentType.Damage_21
+            };
+        }
+
+        public static IntentType IntentForHealing(int healing)
+        {
+            return healing switch
             {
-                return IntentType.Damage_3_6;
-            }
-            else if(damage <= 10)
-            {
-                return IntentType.Damage_7_10;
-            }
-            else if(damage <= 15)
-            {
-                return IntentType.Damage_11_15;
-            }
-            else if (damage <= 20)
-            {
-                return IntentType.Damage_16_20;
-            }
-            return IntentType.Damage_21;
+                <= 4 => IntentType.Heal_1_4,
+                <= 10 => IntentType.Heal_5_10,
+                <= 20 => IntentType.Heal_11_20,
+
+                _ => IntentType.Heal_21,
+            };
         }
 
         public static bool IsOpposing(IUnit first, IUnit second)
@@ -693,6 +707,34 @@ namespace BOTrueZealMod.Tools
                 targets = target,
                 targetIntents = intents
             };
+        }
+
+        public static List<TargetSlotInfo> GetAllUnitTargetSlotsAsList(this SlotsCombat self, bool getCharacters, bool getAllUnitSlots, int ignoreCastSlot = -1)
+        {
+            var ret = new List<TargetSlotInfo>();
+
+            if (getCharacters)
+            {
+                foreach (var combatSlot in self.CharacterSlots)
+                {
+                    if (combatSlot.HasUnit && combatSlot.Unit.SlotID != ignoreCastSlot)
+                        ret.Add(combatSlot.TargetSlotInformation);
+                }
+            }
+            else
+            {
+                for (var j = 0; j < self.EnemySlots.Length; j++)
+                {
+                    if (getAllUnitSlots)
+                    {
+                        if (self.EnemySlots[j].HasUnit && self.EnemySlots[j].Unit.SlotID != ignoreCastSlot)
+                            ret.Add(self.EnemySlots[j].TargetSlotInformation);
+                    }
+                    else if (self.EnemySlots[j].HasUnit && self.EnemySlots[j].Unit.SlotID == j && self.EnemySlots[j].Unit.SlotID != ignoreCastSlot)
+                        ret.Add(self.EnemySlots[j].TargetSlotInformation);
+                }
+            }
+            return ret;
         }
 
         public static T NewItem<T>(string name, string flavor, string description, string sprite, ItemPools pools, int price = 0, bool silent = false) where T : BaseWearableSO

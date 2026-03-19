@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BOTrueZealMod.CustomTargeting;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -94,6 +95,15 @@ namespace BOTrueZealMod.Tools
             x.ignoreCastSlot = false;
         });
 
+        public static BaseCombatTargettingSO FurthestEnemies = CreateScriptable<TargetingByDistance>(x =>
+        {
+            x.getFurthest = true;
+
+            x.getAllies = false;
+            x.getAllUnitSlots = false;
+            x.ignoreCastSlot = false;
+        });
+
         public static BaseCombatTargettingSO Relative(bool allies, params int[] offsets)
         {
             return CreateScriptable<Targetting_BySlot_Index>(x =>
@@ -110,6 +120,20 @@ namespace BOTrueZealMod.Tools
             {
                 x.getAllies = allies;
                 x.slotPointerDirections = positions;
+            });
+        }
+
+        public static BaseCombatTargettingSO UnitsWithStatus(bool allies, StatusEffectType status, bool allSlots = false)
+        {
+            return CreateScriptable<TargetingByStatus>(x =>
+            {
+                x.getStatus = true;
+                x.specificStatusOnly = true;
+                x.specificStatus = [status];
+
+                x.getAllies = allies;
+                x.getAllUnitSlots = allSlots;
+                x.ignoreCastSlot = false;
             });
         }
     }

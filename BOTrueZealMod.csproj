@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Abilities\AttackIcon_Flirtation.png" />
+    <None Remove="Resources\Abilities\AttackIcon_Relapse.png" />
     <None Remove="Resources\Shelly\ShellyBack.png" />
     <None Remove="Resources\Shelly\ShellyFront.png" />
     <None Remove="Resources\Shelly\ShellyLocked.png" />
@@ -15,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Abilities\AttackIcon_Brawl.png" />
+    <EmbeddedResource Include="Resources\Abilities\AttackIcon_Flirtation.png" />
+    <EmbeddedResource Include="Resources\Abilities\AttackIcon_Relapse.png" />
     <EmbeddedResource Include="Resources\Shelly\ShellyBack.png" />
     <EmbeddedResource Include="Resources\Shelly\ShellyFront.png" />
     <EmbeddedResource Include="Resources\Shelly\ShellyLocked.png" />
