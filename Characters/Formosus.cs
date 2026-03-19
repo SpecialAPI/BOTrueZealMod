@@ -82,6 +82,8 @@ namespace BOTrueZealMod.Characters
                     health = RankedValue(11, 14, 17, 19)
                 };
             });
+
+            ch.AddToDatabase(true, false);
         }
     }
 }
