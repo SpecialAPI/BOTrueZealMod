@@ -37,11 +37,11 @@ namespace BOTrueZealMod.Tools
 
         public static void Init()
         {
-            Red = LoadedAssetsHandler.LoadCharacter("Burnout_CH").healthColor;
-            Blue = LoadedAssetsHandler.LoadCharacter("Cranes_CH").healthColor;
-            Yellow = LoadedAssetsHandler.LoadCharacter("Dimitri_CH").healthColor;
-            Purple = LoadedAssetsHandler.LoadCharacter("Nowak_CH").healthColor;
-            Grey = LoadedAssetsHandler.LoadCharacter("Gospel_CH").healthColor;
+            Red = LoadedAssetsHandler.GetCharcater("Burnout_CH").healthColor;
+            Blue = LoadedAssetsHandler.GetCharcater("Cranes_CH").healthColor;
+            Yellow = LoadedAssetsHandler.GetCharcater("Dimitri_CH").healthColor;
+            Purple = LoadedAssetsHandler.GetCharcater("Nowak_CH").healthColor;
+            Grey = LoadedAssetsHandler.GetCharcater("Gospel_CH").healthColor;
 
             readableVersions = new()
             {
