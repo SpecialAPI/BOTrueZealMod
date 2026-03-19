@@ -10,6 +10,7 @@ global using UnityEngine.UI;
 global using System.Reflection;
 
 global using BOTrueZealMod.Tools;
+global using BOTrueZealMod.ExtendedEnums;
 
 global using static BOTrueZealMod.Plugin;
 global using static BOTrueZealMod.Tools.Tools;
