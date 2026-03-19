@@ -737,6 +737,16 @@ namespace BOTrueZealMod.Tools
             return ret;
         }
 
+        public static TValue GetOrCreate<TKey, TValue>(this Dictionary<TKey, TValue> dict, TKey key, Func<TKey, TValue> create, bool hasCustomParam)
+        {
+            if (hasCustomParam)
+                return create(key);
+
+            if (dict.TryGetValue(key, out TValue value))
+                return value;
+            return dict[key] = create(key);
+        }
+
         public static T NewItem<T>(string name, string flavor, string description, string sprite, ItemPools pools, int price = 0, bool silent = false) where T : BaseWearableSO
         {
             return CreateScriptable<T>(x =>

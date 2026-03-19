@@ -179,101 +179,103 @@ namespace BOTrueZealMod.Tools
 
         public static BasePassiveAbilitySO Skittish(int count = 1, string customOwner = null)
         {
-            return LookForOrCreatePassive<PerformEffectPassiveAbility>(Skittishes, count, x =>
+            return Skittishes.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<PerformEffectPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"Skittish ({count})";
                 x.passiveIcon = Skittishes[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Skittish;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnAbilityUsed };
+                x._triggerOn = [TriggerCalls.OnAbilityUsed];
                 x._characterDescription = $"Upon performing an attack {Owner("this party member", customOwner)} will attempt to move to the Left or Right {GetTimes(count)}.";
                 x._enemyDescription = $"Upon performing an attack {Owner("this enemy", customOwner)} will attempt to move to the Left or Right {GetTimes(count)}.";
-                x.conditions = new EffectorConditionSO[] { CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true) };
+                x.conditions = [CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true)];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
                 x.effects = new EffectInfo[count];
                 for(int i = 0; i < count; i++)
                 {
-                    x.effects[i] = new()
-                    {
-                        condition = null,
-                        effect = CreateScriptable<SwapToSidesEffect>(),
-                        entryVariable = 0,
-                        targets = Targets.ThisSlot
-                    };
+                    x.effects[i] = Effects.Effect(Targets.ThisSlot, CreateScriptable<SwapToSidesEffect>());
                 }
 
                 x.name = $"Skittish_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO Slippery(int count = 1, string customOwner = null)
         {
-            return LookForOrCreatePassive<PerformEffectPassiveAbility>(Slipperies, count, x =>
+            return Slipperies.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<PerformEffectPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"Slippery ({count})";
                 x.passiveIcon = Slipperies[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Slippery;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnDirectDamaged };
+                x._triggerOn = [TriggerCalls.OnDirectDamaged];
                 x._characterDescription = $"Upon taking direct damage {Owner("this party member", customOwner)} will attempt to move to the Left or Right {GetTimes(count)}.";
                 x._enemyDescription = $"Upon taking direct damage {Owner("this enemy", customOwner)} will attempt to move to the Left or Right {GetTimes(count)}.";
-                x.conditions = new EffectorConditionSO[] { CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true) };
+                x.conditions = [CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true)];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
                 x.effects = new EffectInfo[count];
                 for (int i = 0; i < count; i++)
                 {
-                    x.effects[i] = new()
-                    {
-                        condition = null,
-                        effect = CreateScriptable<SwapToSidesEffect>(),
-                        entryVariable = 0,
-                        targets = Targets.ThisSlot
-                    };
+                    x.effects[i] = Effects.Effect(Targets.ThisSlot, CreateScriptable<SwapToSidesEffect>());
                 }
 
                 x.name = $"Slippery_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO Overexert(int count, string customOwner = null)
         {
-            return LookForOrCreatePassive<OverexertPassiveAbility>(Overexerts, count, x =>
+            return Overexerts.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<OverexertPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"Overexert ({count})";
                 x.passiveIcon = Overexerts[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Overexert;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnDirectDamaged };
+                x._triggerOn = [TriggerCalls.OnDirectDamaged];
                 x._characterDescription = $"This passive is not meant for party members.";
                 x._enemyDescription = $"Upon receiving {count} or more direct damage, cancel 1 of {Owner("this enemy's", customOwner)} actions.";
-                x.conditions = new EffectorConditionSO[] { CreateScriptable<IntegerReferenceOverEqualValueEffectorCondition>(x => x.compareValue = count), CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true) };
+                x.conditions = [CreateScriptable<IntegerReferenceOverEqualValueEffectorCondition>(x => x.compareValue = count), CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true)];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
                 x.name = $"Overexert_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO MultiAttack(int count, string customOwner = null)
         {
-            return LookForOrCreatePassive<IntegerSetterPassiveAbility>(MultiAttacks, count, x =>
+            return MultiAttacks.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<IntegerSetterPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"MultiAttack ({count})";
                 x.passiveIcon = MultiAttacks[2].passiveIcon;
                 x.type = PassiveAbilityTypes.MultiAttack;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.AttacksPerTurn };
+                x._triggerOn = [TriggerCalls.AttacksPerTurn];
                 x._characterDescription = $"This passive is not meant for party members.";
                 x._enemyDescription = $"{Owner("This enemy", customOwner)} will perform {count} actions each turn.";
-                x.conditions = new EffectorConditionSO[] { CreateScriptable<IntegerReferenceDetectionEffectorCondition>() };
+                x.conditions = [CreateScriptable<IntegerReferenceDetectionEffectorCondition>()];
                 x.doesPassiveTriggerInformationPanel = false;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
@@ -281,22 +283,26 @@ namespace BOTrueZealMod.Tools
                 x._isItAdditive = true;
 
                 x.name = $"MultiAttack_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO Fleeting(int count, string customOwner = null)
         {
-            return LookForOrCreatePassive<FleetingPassiveAbility>(Fleetings, count, x =>
+            return Fleetings.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<FleetingPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"Fleeting ({count})";
                 x.passiveIcon = Fleetings[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Fleeting;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnRoundFinished };
+                x._triggerOn = [TriggerCalls.OnRoundFinished];
                 x._characterDescription = $"After {count} rounds {Owner("this party member", customOwner)} will flee… Coward.";
                 x._enemyDescription = $"After {count} rounds {Owner("this enemy", customOwner)} will flee.";
-                x.conditions = new EffectorConditionSO[0];
+                x.conditions = [];
                 x.doesPassiveTriggerInformationPanel = false;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
@@ -304,82 +310,82 @@ namespace BOTrueZealMod.Tools
                 x._turnsBeforeFleeting = count;
 
                 x.name = $"Fleeting_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO Leaky(int count = 1, string customOwner = null)
         {
-            return LookForOrCreatePassive<PerformEffectPassiveAbility>(Leakies, count, x =>
+            return Leakies.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<PerformEffectPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"Leaky ({count})";
                 x.passiveIcon = Leakies[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Leaky;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnDirectDamaged };
+                x._triggerOn = [TriggerCalls.OnDirectDamaged];
                 x._characterDescription = $"Upon receiving direct damage, {Owner("this character", customOwner)} generates {count} extra pigment of its health colour.";
                 x._enemyDescription = $"Upon receiving direct damage, {Owner("this enemy", customOwner)} generates {count} extra pigment of its health colour.";
-                x.conditions = new EffectorConditionSO[] { CreateScriptable<HealthColorDetectionEffectorCondition>(x => { x.canGenerateMana = true; x.checkManaGeneration = true; }) };
+                x.conditions = [CreateScriptable<HealthColorDetectionEffectorCondition>(x => { x.canGenerateMana = true; x.checkManaGeneration = true; })];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
-                x.effects = new EffectInfo[]
-                {
-                    new()
-                    {
-                        condition = null,
-                        effect = CreateScriptable<GenerateCasterHealthManaEffect>(),
-                        entryVariable = count,
-                        targets = null
-                    }
-                };
+                x.effects = [Effects.Effect(null, CreateScriptable<GenerateCasterHealthManaEffect>(), count)];
 
                 x.name = $"Leaky_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO BoneSpurs(int count)
         {
-            return LookForOrCreatePassive<PerformEffectPassiveAbility>(BoneSpurses, count, x =>
+            return BoneSpurses.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<PerformEffectPassiveAbility>();
+
                 x._passiveName = $"Bone Spurs ({count})";
                 x.passiveIcon = BoneSpurses[2].passiveIcon;
                 x.type = PassiveAbilityTypes.BoneSpurs;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnDirectDamaged };
+                x._triggerOn = [TriggerCalls.OnDirectDamaged];
                 x._characterDescription = $"Deal {count} indirect damage to the Opposing enemy upon receiving direct damage.";
                 x._enemyDescription = $"Deal {count} indirect damage to the Opposing party member upon receiving direct damage.";
-                x.conditions = new EffectorConditionSO[0];
+                x.conditions = [];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.BoneSpursPA;
 
-                x.effects = new EffectInfo[]
+                x.effects = [Effects.Effect(Targets.OpposingSlot, CreateScriptable<DamageByStoredValueEffect>(x =>
                 {
-                    new()
-                    {
-                        condition = null,
-                        effect = CreateScriptable<DamageByStoredValueEffect>(x => { x._deathType = DeathType.Basic; x._increaseDamage = true; x._indirect = true; x._valueName = UnitStoredValueNames.BoneSpursPA; }),
-                        entryVariable = count,
-                        targets = Targets.OpposingSlot
-                    }
-                };
+                    x._deathType = DeathType.Basic;
+                    x._increaseDamage = true;
+                    x._indirect = true;
+                    x._valueName = UnitStoredValueNames.BoneSpursPA;
+                }), count)];
 
                 x.name = $"BoneSpurs_{count}_PA";
-            }, null);
+
+                return x;
+            }, false);
         }
 
         public static BasePassiveAbilitySO Infestation(int count, string customOwner = null)
         {
-            return LookForOrCreatePassive<InfestationPassiveAbility>(Infestations, count, x =>
+            return Infestations.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<InfestationPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"Infestation ({count})";
                 x.passiveIcon = Infestations[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Infestation;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnWillApplyDamage };
+                x._triggerOn = [TriggerCalls.OnWillApplyDamage];
                 x._characterDescription = $"{Owner("This party member", customOwner)} boosts the damage dealt by all other party members and enemies with Infestation by {count}.";
                 x._enemyDescription = $"{Owner("This enemy", customOwner)} boosts the damage dealt by all other enemies and party members with Infestation by {count}.";
-                x.conditions = new EffectorConditionSO[] { CreateScriptable<DamageDealtValueChangeDetectionEffectorCondition>() };
+                x.conditions = [CreateScriptable<DamageDealtValueChangeDetectionEffectorCondition>()];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.InfestationPA;
 
@@ -388,25 +394,29 @@ namespace BOTrueZealMod.Tools
                 x._addsXInfestationEnemies = count;
                 x._selfDamageMultiplierPerEnemy = 1;
                 x._useDealt = true;
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO Construct(int count = 1)
         {
-            return LookForOrCreatePassive<Connection_PerformEffectPassiveAbility>(Constructs, count, x =>
+            return Constructs.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<Connection_PerformEffectPassiveAbility>();
+
                 x._passiveName = $"Construct ({count})";
                 x.passiveIcon = Constructs[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Construct;
-                x._triggerOn = new TriggerCalls[0];
+                x._triggerOn = [];
                 x._characterDescription = $"Add {count} random item abilities at the beginning of combat.";
                 x._enemyDescription = $"Add {count} random item abilities at the beginning of combat.";
-                x.conditions = new EffectorConditionSO[0];
+                x.conditions = [];
                 x.doesPassiveTriggerInformationPanel = false;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
                 x.immediateEffect = true;
-                x.disconnectionEffects = new EffectInfo[0];
+                x.disconnectionEffects = [];
                 x.connectionEffects = new EffectInfo[count];
 
                 var extra = ((Constructs[1] as Connection_PerformEffectPassiveAbility).connectionEffects[1].effect as CasterAddRandomExtraAbilityEffect)._extraData;
@@ -414,48 +424,43 @@ namespace BOTrueZealMod.Tools
 
                 for (int i = 0; i < count; i++)
                 {
-                    x.connectionEffects[i] = new()
+                    x.connectionEffects[i] = Effects.Effect(null, CreateScriptable<CasterAddRandomExtraAbilityEffect>(x =>
                     {
-                        condition = null,
-                        effect = CreateScriptable<CasterAddRandomExtraAbilityEffect>(x => { x._extraData = extra; x._slapData = slap; }),
-                        entryVariable = 1,
-                        targets = null
-                    };
+                        x._extraData = extra;
+                        x._slapData = slap;
+                    }), 1);
                 }
 
                 x.name = $"Construct_{count}_PA";
-            }, null);
+
+                return x;
+            }, false);
         }
 
         public static BasePassiveAbilitySO Masochism(int count = 1, string customOwner = null)
         {
-            return LookForOrCreatePassive<PerformEffectPassiveAbility>(Masochisms, count, x =>
+            return Masochisms.GetOrCreate(count, _ =>
             {
+                var x = CreateScriptable<PerformEffectPassiveAbility>();
+
                 var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
 
                 x._passiveName = $"Masochism ({count})";
                 x.passiveIcon = Masochisms[1].passiveIcon;
                 x.type = PassiveAbilityTypes.Masochism;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnDamaged };
+                x._triggerOn = [TriggerCalls.OnDamaged];
                 x._characterDescription = $"This Passive Ability is not meant for characters.";
                 x._enemyDescription = $"Upon receiving {count} or more damage, {Owner("this enemy", customOwner)} will queue an additional ability.";
-                x.conditions = new EffectorConditionSO[] { CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true) };
+                x.conditions = [CreateScriptable<IsAliveEffectorCondition>(x => x.checkByCurrentHealth = true)];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
-                x.effects = new EffectInfo[]
-                {
-                    new()
-                    {
-                        condition = null,
-                        effect = CreateScriptable<AddTurnCasterToTimelineEffect>(),
-                        entryVariable = 1,
-                        targets = null
-                    }
-                };
+                x.effects = [Effects.Effect(null, CreateScriptable<AddTurnCasterToTimelineEffect>(), 1)];
 
                 x.name = $"Masochism_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
-            }, customOwner);
+
+                return x;
+            }, !string.IsNullOrEmpty(customOwner));
         }
 
         public static BasePassiveAbilitySO Parental(AbilitySO parentalAbility, string customOwner = null)
@@ -467,17 +472,17 @@ namespace BOTrueZealMod.Tools
                 x._passiveName = "Parental";
                 x.passiveIcon = ParentalIcon;
                 x.type = PassiveAbilityTypes.Parental;
-                x._triggerOn = new TriggerCalls[0];
+                x._triggerOn = [];
                 x._characterDescription = "This passive is not meant for party members.";
                 x._enemyDescription = $"If an infantile enemy receives direct damage, {Owner("this enemy", customOwner)} will perform \"{parentalAbility._abilityName}\" in retribution.";
-                x.conditions = new EffectorConditionSO[0];
+                x.conditions = [];
                 x.doesPassiveTriggerInformationPanel = false;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
                 x._parentalAbility = new ExtraAbilityInfo()
                 {
                     ability = parentalAbility,
-                    cost = new ManaColorSO[0],
+                    cost = [],
                     rarity = CreateScriptable<RaritySO>(x =>
                     {
                         x.rarityValue = 0;
@@ -498,17 +503,17 @@ namespace BOTrueZealMod.Tools
                 x._passiveName = attack._abilityName;
                 x.passiveIcon = BonusAttackIcon;
                 x.type = ExtendEnum<PassiveAbilityTypes>($"BonusAttack_{attack._abilityName.ToCodeName()}");
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.ExtraAdditionalAttacks };
+                x._triggerOn = [TriggerCalls.ExtraAdditionalAttacks];
                 x._characterDescription = "This passive is not meant for party members.";
                 x._enemyDescription = $"{Owner("This enemy", customOwner)} will perform \"{attack._abilityName}\" at the end of each turn as an additional attack.";
-                x.conditions = new EffectorConditionSO[0];
+                x.conditions = [];
                 x.doesPassiveTriggerInformationPanel = false;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
                 x._extraAbility = new ExtraAbilityInfo()
                 {
                     ability = attack,
-                    cost = new ManaColorSO[0],
+                    cost = [],
                     rarity = CreateScriptable<RaritySO>(x =>
                     {
                         x.rarityValue = 0;
@@ -529,39 +534,17 @@ namespace BOTrueZealMod.Tools
                 x._passiveName = "Decay";
                 x.passiveIcon = DecayIcon;
                 x.type = PassiveAbilityTypes.Decay;
-                x._triggerOn = new TriggerCalls[] { TriggerCalls.OnDeath };
+                x._triggerOn = [TriggerCalls.OnDeath];
                 x._characterDescription = $"Upon death this party member has a 34% chance of spawning a Mung.";
                 x._enemyDescription = $"Upon death this enemy has a 34% chance of spawning a Mung.";
-                x.conditions = chance < 100 ? new EffectorConditionSO[] { CreateScriptable<PercentageEffectorCondition>(x => x.triggerPercentage = chance) } : new EffectorConditionSO[0];
+                x.conditions = chance < 100 ? [CreateScriptable<PercentageEffectorCondition>(x => x.triggerPercentage = chance)] : [];
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
-                x.effects = new EffectInfo[]
-                {
-                    new()
-                    {
-                        condition = null,
-                        effect = CreateScriptable<SpawnEnemyInSlotFromEntryEffect>(x => { x.enemy = enemyToSpawn; x.givesExperience = givesExperience; })
-                    }
-                };
+                x.effects = [Effects.Effect(null, CreateScriptable<SpawnEnemyInSlotFromEntryEffect>(x => { x.enemy = enemyToSpawn; x.givesExperience = givesExperience; }))];
 
                 x.name = $"Decay_{enemyToSpawn.name}{(hasCustomOwner ? $"_Custom_{customOwner.ToCodeName()}" : "")}_{chance}Percent{(givesExperience ? "" : "_NoExperience")}_PA";
             });
-        }
-
-        private static BasePassiveAbilitySO LookForOrCreatePassive<T>(Dictionary<int, BasePassiveAbilitySO> passives, int count, Action<T> configurePassive, string customOwner) where T : BasePassiveAbilitySO
-        {
-            var hasCustomOwner = !string.IsNullOrEmpty(customOwner);
-            if(hasCustomOwner || !passives.ContainsKey(count))
-            {
-                var passive = CreateScriptable(configurePassive);
-                if (!hasCustomOwner)
-                {
-                    passives[count] = passive;
-                }
-                return passive;
-            }
-            return passives[count];
         }
     }
 }
