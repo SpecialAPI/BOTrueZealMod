@@ -6,6 +6,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Shelly\ShellyBack.png" />
+    <None Remove="Resources\Shelly\ShellyFront.png" />
+    <None Remove="Resources\Shelly\ShellyLocked.png" />
+    <None Remove="Resources\Shelly\ShellyOW.png" />
+    <None Remove="Resources\Shelly\ShellyUnlocked.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Shelly\ShellyBack.png" />
+    <EmbeddedResource Include="Resources\Shelly\ShellyFront.png" />
+    <EmbeddedResource Include="Resources\Shelly\ShellyLocked.png" />
+    <EmbeddedResource Include="Resources\Shelly\ShellyOW.png" />
+    <EmbeddedResource Include="Resources\Shelly\ShellyUnlocked.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BepInEx.Core" Version="5.4.21" />
     <PackageReference Include="UnityEngine.Modules" Version="2020.3.26">
       <PrivateAssets>all</PrivateAssets>
@@ -44,10 +60,6 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>..\References_Legacy\UnityEngine.UI.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Characters\" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
+using BOTrueZealMod.Characters;
 using System;
 
 namespace BOTrueZealMod
@@ -19,6 +20,7 @@ namespace BOTrueZealMod
 
         public void Awake()
         {
+            #region misc setup
             ModAssembly = Assembly.GetExecutingAssembly();
             ModConfig = Config;
 
@@ -34,8 +36,9 @@ namespace BOTrueZealMod
 
             HarmonyInstance.PatchAll();
             Magic.ExtendAllEnums();
+            #endregion
 
-
+            ShellyK.Init();
         }
     }
 }

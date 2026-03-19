@@ -15,6 +15,7 @@ global using BOTrueZealMod.ExtendedEnums;
 global using static BOTrueZealMod.Plugin;
 global using static BOTrueZealMod.Tools.Tools;
 global using static BOTrueZealMod.Tools.EnumExtension;
+global using static BOTrueZealMod.Tools.CharacterBuilder;
 
 global using Object = UnityEngine.Object;
 global using Random = UnityEngine.Random;
