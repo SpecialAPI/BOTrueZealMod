@@ -40,6 +40,7 @@ namespace BOTrueZealMod
             #endregion
 
             ShellyK.Init();
+            Formosus.Init();
         }
     }
 }
