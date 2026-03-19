@@ -36,6 +36,7 @@ namespace BOTrueZealMod
 
             HarmonyInstance.PatchAll();
             Magic.ExtendAllEnums();
+            CustomPassives.Init();
             #endregion
 
             ShellyK.Init();
