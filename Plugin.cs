@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using System;
 
 namespace BOTrueZealMod
@@ -10,9 +11,27 @@ namespace BOTrueZealMod
         public const string MOD_NAME = "True Zeal";
         public const string MOD_VERSION = "1.4.2";
 
+        public static Harmony HarmonyInstance = new(MOD_GUID);
+        public static Assembly ModAssembly;
+        public static ConfigFile ModConfig;
+        public static AssetBundle Bundle;
+
         public void Awake()
         {
+            ModAssembly = Assembly.GetExecutingAssembly();
+            ModConfig = Config;
 
+            GlossaryStuffAdder.glossaryDB = Resources.FindObjectsOfTypeAll<GlossaryDataBase>().FirstOrDefault();
+            infoHolder = Resources.FindObjectsOfTypeAll<GameInformationHolder>().FirstOrDefault();
+            if (infoHolder != null)
+                itemPool = infoHolder.ItemPoolDB;
+            if (itemPool == null)
+                itemPool = Resources.FindObjectsOfTypeAll<ItemPoolDataBaseSO>().FirstOrDefault();
+
+            Pigments.Init();
+            Passives.Init();
+
+            HarmonyInstance.PatchAll();
         }
     }
 }

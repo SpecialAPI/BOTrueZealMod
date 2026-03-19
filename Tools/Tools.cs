@@ -14,9 +14,6 @@ namespace BOTrueZealMod.Tools
     [HarmonyPatch]
     public static class Tools
     {
-        public static Assembly SpecialItemsAssembly;
-        public static ConfigFile Config;
-        public static AssetBundle Bundle;
 
         public static Texture2D LoadTexture(string name)
         {
@@ -32,10 +29,10 @@ namespace BOTrueZealMod.Tools
 
         public static bool TryReadFromResource(string resname, out byte[] ba)
         {
-            var names = SpecialItemsAssembly.GetManifestResourceNames().Where(x => x.EndsWith($".{resname}"));
+            var names = ModAssembly.GetManifestResourceNames().Where(x => x.EndsWith($".{resname}"));
             if(names.Count() > 0)
             {
-                using var strem = SpecialItemsAssembly.GetManifestResourceStream(names.First());
+                using var strem = ModAssembly.GetManifestResourceStream(names.First());
                 ba = new byte[strem.Length];
                 strem.Read(ba, 0, ba.Length);
                 return true;
@@ -708,7 +705,7 @@ namespace BOTrueZealMod.Tools
                 {
                     x.name += "_SW";
 
-                    if(!Config.Bind("Items.Shop", codename, true, $"Whether or not the item {name} appears in shops.").Value)
+                    if(!ModConfig.Bind("Items.Shop", codename, true, $"Whether or not the item {name} appears in shops.").Value)
                     {
                         pools &= ~ItemPools.Shop;
                     }
@@ -717,7 +714,7 @@ namespace BOTrueZealMod.Tools
                 {
                     x.name += "_TW";
 
-                    if (!Config.Bind("Items.Treasure", codename, true, $"Whether or not the item {name} appears in treasure chests.").Value)
+                    if (!ModConfig.Bind("Items.Treasure", codename, true, $"Whether or not the item {name} appears in treasure chests.").Value)
                     {
                         pools &= ~ItemPools.Treasure;
                     }
@@ -726,7 +723,7 @@ namespace BOTrueZealMod.Tools
                 {
                     x.name += "_FW";
 
-                    if (!Config.Bind("Items.Fish", codename, true, $"Whether or not the item {name} appears in the fish pool.").Value)
+                    if (!ModConfig.Bind("Items.Fish", codename, true, $"Whether or not the item {name} appears in the fish pool.").Value)
                     {
                         pools &= ~ItemPools.Fish;
                     }
