@@ -56,14 +56,15 @@ namespace BOTrueZealMod.Tools
             __result = __result.Concat(toAdd).ToArray();
         }
 
-        [HarmonyPatch(typeof(SelectableCharactersSO), nameof(SelectableCharactersSO.PrepareCharacters))]
-        [HarmonyPrefix]
-        private static void AddUnlockedByDefaultCharacters1(ref HashSet<string> unlockedCharacters)
+        [HarmonyPatch(typeof(SelectableCharacterData), nameof(SelectableCharacterData.TryLoadIfAvailable))]
+        [HarmonyPostfix]
+        private static void AddUnlockedByDefaultCharacters1(SelectableCharacterData __instance)
         {
-            unlockedCharacters = [..unlockedCharacters];
+            if (__instance.LoadedCharacter != null)
+                return;
 
-            foreach(var ch in charactersUnlockedByDefault)
-                unlockedCharacters.Add(ch);
+            if (charactersUnlockedByDefault.Contains(__instance._characterName))
+                __instance.LoadedCharacter = LoadedAssetsHandler.GetCharcater(__instance._characterName);
         }
 
         public static CharacterSO NewCharacter(string id_CH, EntityIDs entityId)
