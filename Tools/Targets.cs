@@ -11,56 +11,35 @@ namespace BOTrueZealMod.Tools
         {
             x.allSelfSlots = false;
             x.getAllies = true;
-            x.slotPointerDirections = new int[]
-            {
-                0
-            };
+            x.slotPointerDirections = [0];
         });
 
         public static BaseCombatTargettingSO SelfAll = CreateScriptable<Targetting_BySlot_Index>(x =>
         {
             x.allSelfSlots = true;
             x.getAllies = true;
-            x.slotPointerDirections = new int[]
-            {
-                0
-            };
+            x.slotPointerDirections = [0];
         });
 
         public static BaseCombatTargettingSO Front = CreateScriptable<Targetting_BySlot_Index>(x =>
         {
+            x.allSelfSlots = false;
+            x.getAllies = false;
+            x.slotPointerDirections = [0];
+        });
+
+        public static BaseCombatTargettingSO AllySide = CreateScriptable<Targetting_BySlot_Index>(x =>
+        {
             x.allSelfSlots = true;
-            x.getAllies = false;
-            x.slotPointerDirections = new int[]
-            {
-                0
-            };
-        });
-
-        public static BaseCombatTargettingSO AllySide = CreateScriptable<GenericTargetting_BySlot_Index>(x =>
-        {
             x.getAllies = true;
-            x.slotPointerDirections = new int[]
-            {
-                0,
-                1,
-                2,
-                3,
-                4
-            };
+            x.slotPointerDirections = [4, 3, 2, 1, 0, -1, -2, -3, -4];
         });
 
-        public static BaseCombatTargettingSO OpponentSide = CreateScriptable<GenericTargetting_BySlot_Index>(x =>
+        public static BaseCombatTargettingSO OpponentSide = CreateScriptable<Targetting_BySlot_Index>(x =>
         {
+            x.allSelfSlots = false;
             x.getAllies = false;
-            x.slotPointerDirections = new int[]
-            {
-                0,
-                1,
-                2,
-                3,
-                4
-            };
+            x.slotPointerDirections = [4, 3, 2, 1, 0, -1, -2, -3, -4];
         });
 
         public static BaseCombatTargettingSO AllAllySlots = CreateScriptable<Targetting_ByUnit_Side>(x =>
@@ -114,11 +93,31 @@ namespace BOTrueZealMod.Tools
             x.ignoreCastSlot = false;
         });
 
+        public static BaseCombatTargettingSO AlliesWithStatuses = CreateScriptable<TargetingByStatus>(x =>
+        {
+            x.getStatus = true;
+            x.specificStatusOnly = false;
+
+            x.getAllies = true;
+            x.getAllUnitSlots = false;
+            x.ignoreCastSlot = false;
+        });
+
+        public static BaseCombatTargettingSO OpponentsWithStatuses = CreateScriptable<TargetingByStatus>(x =>
+        {
+            x.getStatus = true;
+            x.specificStatusOnly = false;
+
+            x.getAllies = false;
+            x.getAllUnitSlots = false;
+            x.ignoreCastSlot = false;
+        });
+
         public static BaseCombatTargettingSO Relative(bool allies, params int[] offsets)
         {
             return CreateScriptable<Targetting_BySlot_Index>(x =>
             {
-                x.allSelfSlots = true;
+                x.allSelfSlots = false;
                 x.getAllies = allies;
                 x.slotPointerDirections = offsets;
             });
