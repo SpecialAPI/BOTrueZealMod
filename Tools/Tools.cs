@@ -14,7 +14,6 @@ namespace BOTrueZealMod.Tools
     [HarmonyPatch]
     public static class Tools
     {
-
         public static Texture2D LoadTexture(string name)
         {
             if(TryReadFromResource(name.TryAddExtension("png"), out var ba))
@@ -25,6 +24,11 @@ namespace BOTrueZealMod.Tools
                 return tex;
             }
             return null;
+        }
+
+        public static string GetID(string id)
+        {
+            return $"{MOD_PREFIX}_{id}";
         }
 
         public static bool TryReadFromResource(string resname, out byte[] ba)
@@ -42,7 +46,7 @@ namespace BOTrueZealMod.Tools
             return false;
         }
 
-        public static Sprite LoadSprite(string name, int pixelsperunit = 32, Vector2? pivot = null)
+        public static Sprite LoadSprite(string name, Vector2? pivot = null, int pixelsperunit = 32)
         {
             var tex = LoadTexture(name);
             if(tex != null)

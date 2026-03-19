@@ -10,6 +10,7 @@ namespace BOTrueZealMod
         public const string MOD_GUID = "157.TrueZeal";
         public const string MOD_NAME = "True Zeal";
         public const string MOD_VERSION = "1.4.2";
+        public const string MOD_PREFIX = "TrueZeal";
 
         public static Harmony HarmonyInstance = new(MOD_GUID);
         public static Assembly ModAssembly;
@@ -32,6 +33,9 @@ namespace BOTrueZealMod
             Passives.Init();
 
             HarmonyInstance.PatchAll();
+            Magic.ExtendAllEnums();
+
+
         }
     }
 }
