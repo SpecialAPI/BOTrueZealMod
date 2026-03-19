@@ -201,7 +201,7 @@ namespace BOTrueZealMod.Tools
                         condition = null,
                         effect = CreateScriptable<SwapToSidesEffect>(),
                         entryVariable = 0,
-                        targets = TargettingLibrary.ThisSlot
+                        targets = Targets.ThisSlot
                     };
                 }
 
@@ -233,7 +233,7 @@ namespace BOTrueZealMod.Tools
                         condition = null,
                         effect = CreateScriptable<SwapToSidesEffect>(),
                         entryVariable = 0,
-                        targets = TargettingLibrary.ThisSlot
+                        targets = Targets.ThisSlot
                     };
                 }
 
@@ -359,7 +359,7 @@ namespace BOTrueZealMod.Tools
                         condition = null,
                         effect = CreateScriptable<DamageByStoredValueEffect>(x => { x._deathType = DeathType.Basic; x._increaseDamage = true; x._indirect = true; x._valueName = UnitStoredValueNames.BoneSpursPA; }),
                         entryVariable = count,
-                        targets = TargettingLibrary.OpposingSlot
+                        targets = Targets.OpposingSlot
                     }
                 };
 

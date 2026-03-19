@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BOTrueZealMod.Tools
 {
-    public static class TargettingLibrary
+    public static class Targets
     {
         public static BaseCombatTargettingSO ThisSlot = CreateScriptable<Targetting_BySlot_Index>(x =>
         {
