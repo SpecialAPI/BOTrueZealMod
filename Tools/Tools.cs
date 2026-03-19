@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using Tools;
 using UnityEngine;
+using Utility.SerializableCollection;
 
 namespace BOTrueZealMod.Tools
 {
@@ -321,6 +322,14 @@ namespace BOTrueZealMod.Tools
             if (dict.TryGetValue(key, out TValue value))
                 return value;
             return dict[key] = create(key);
+        }
+
+        public static void AddOrSet<TKey, TValue>(this SerializableDictionary<TKey, TValue> sdict, TKey key, TValue value)
+        {
+            if(sdict.ContainsKey(key))
+                sdict[key] = value;
+            else
+                sdict.Add(key, value);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace BOTrueZealMod.Tools
         private static readonly List<SelectableCharacterData> selectableCharsToAdd = [];
         private static readonly Dictionary<CharacterRefString, CharacterIgnoredAbilities> dpsToAdd = [];
         private static readonly Dictionary<CharacterRefString, CharacterIgnoredAbilities> supportsToAdd = [];
+        private static readonly HashSet<string> charactersUnlockedByDefault = [];
 
         private static int _rank = -1;
 
@@ -29,13 +30,40 @@ namespace BOTrueZealMod.Tools
 
             selectableCharacters._characters = selectableCharacters._characters.AddRangeToArray([..selectableCharsToAdd]);
             foreach(var kvp in dpsToAdd)
-                selectableCharacters._dpsCharacters[kvp.Key] = kvp.Value;
+                selectableCharacters._dpsCharacters.AddOrSet(kvp.Key, kvp.Value);
             foreach(var kvp in supportsToAdd)
-                selectableCharacters._supportCharacters[kvp.Key] = kvp.Value;
+                selectableCharacters._supportCharacters.AddOrSet(kvp.Key, kvp.Value);
 
             selectableCharsToAdd.Clear();
             dpsToAdd.Clear();
             supportsToAdd.Clear();
+        }
+
+        [HarmonyPatch(typeof(InGameDataSO), nameof(InGameDataSO.GetUnlockedCharacters))]
+        [HarmonyPostfix]
+        private static void AddUnlockedByDefaultCharacters1(ref string[] __result)
+        {
+            var toAdd = new HashSet<string>();
+
+            foreach(var ch in charactersUnlockedByDefault)
+            {
+                if (Array.IndexOf(__result, ch) >= 0)
+                    continue;
+
+                toAdd.Add(ch);
+            }
+
+            __result = __result.Concat(toAdd).ToArray();
+        }
+
+        [HarmonyPatch(typeof(SelectableCharactersSO), nameof(SelectableCharactersSO.PrepareCharacters))]
+        [HarmonyPrefix]
+        private static void AddUnlockedByDefaultCharacters1(ref HashSet<string> unlockedCharacters)
+        {
+            unlockedCharacters = [..unlockedCharacters];
+
+            foreach(var ch in charactersUnlockedByDefault)
+                unlockedCharacters.Add(ch);
         }
 
         public static CharacterSO NewCharacter(string id_CH, EntityIDs entityId)
@@ -221,6 +249,11 @@ namespace BOTrueZealMod.Tools
                 }
             }
 
+            if(locked && charactersUnlockedByDefault.Contains(ch.name))
+                charactersUnlockedByDefault.Remove(ch.name);
+            else if(!locked && !charactersUnlockedByDefault.Contains(ch.name))
+                charactersUnlockedByDefault.Add(ch.name);
+
             return ch;
         }
 
@@ -253,7 +286,7 @@ namespace BOTrueZealMod.Tools
             var ignoredAbs = new CharacterIgnoredAbilities() { ignoredAbilities = [] };
 
             if (selectableCharacters != null)
-                selectableCharacters._dpsCharacters[refStr] = ignoredAbs;
+                selectableCharacters._dpsCharacters.AddOrSet(refStr, ignoredAbs);
             else
                 dpsToAdd[refStr] = ignoredAbs;
 
@@ -272,7 +305,7 @@ namespace BOTrueZealMod.Tools
                         dpsSets.ignoredAbilities.AddRange(sets);
                 }
                 else
-                    selectableCharacters._dpsCharacters[refStr] = new() { ignoredAbilities = [..sets] };
+                    selectableCharacters._dpsCharacters.Add(refStr, new() { ignoredAbilities = [..sets] });
             }
             else
             {
@@ -282,7 +315,7 @@ namespace BOTrueZealMod.Tools
                         dpsSets.ignoredAbilities.AddRange(sets);
                 }
                 else
-                    dpsToAdd[refStr] = new() { ignoredAbilities = [..sets] };
+                    dpsToAdd.Add(refStr, new() { ignoredAbilities = [..sets] });
             }
 
             return selCh;
@@ -294,7 +327,7 @@ namespace BOTrueZealMod.Tools
             var ignoredAbs = new CharacterIgnoredAbilities() { ignoredAbilities = [] };
 
             if (selectableCharacters != null)
-                selectableCharacters._supportCharacters[refStr] = ignoredAbs;
+                selectableCharacters._supportCharacters.AddOrSet(refStr, ignoredAbs);
             else
                 supportsToAdd[refStr] = ignoredAbs;
 
@@ -313,7 +346,7 @@ namespace BOTrueZealMod.Tools
                         supportSets.ignoredAbilities.AddRange(sets);
                 }
                 else
-                    selectableCharacters._supportCharacters[refStr] = new() { ignoredAbilities = [.. sets] };
+                    selectableCharacters._supportCharacters.Add(refStr, new() { ignoredAbilities = [.. sets] });
             }
             else
             {
@@ -323,7 +356,7 @@ namespace BOTrueZealMod.Tools
                         supportSets.ignoredAbilities.AddRange(sets);
                 }
                 else
-                    supportsToAdd[refStr] = new() { ignoredAbilities = [.. sets] };
+                    supportsToAdd.Add(refStr, new() { ignoredAbilities = [.. sets] });
             }
 
             return selCh;
