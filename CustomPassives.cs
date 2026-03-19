@@ -31,7 +31,7 @@ namespace BOTrueZealMod
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.None;
 
-                x.effects = [Effects.Effect(Targets.OpposingSlot, CreateScriptable<ApplyDivineProtectionEffect>(), count)];
+                x.effects = [Effects.Effect(Targets.Front, CreateScriptable<ApplyDivineProtectionEffect>(), count)];
 
                 x.name = $"Anointed_{count}_PA";
 

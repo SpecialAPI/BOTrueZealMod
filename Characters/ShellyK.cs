@@ -29,7 +29,7 @@ namespace BOTrueZealMod.Characters
                     TargetIntent(Targets.Relative(false, -1, 0, 1), IntentForDamage(relapseDmgHeal), IntentForHealing(relapseDmgHeal)),
                     TargetIntent(Targets.Relative(true, -1, 1), IntentForDamage(relapseDmgHeal), IntentForHealing(relapseDmgHeal))
                 })
-                .SetVisuals(Animations.OiledBurn, Targets.ThisSlot)
+                .SetVisuals(Animations.OiledBurn, Targets.Self)
                 .CharacterAbility(Pigments.Red, Pigments.Blue, Pigments.Red);
 
                 var flirtDmg = RankedValue(6, 8, 10, 12);
@@ -40,20 +40,20 @@ namespace BOTrueZealMod.Characters
                 .SetBasicInformationCharacter(flirtName, flirtDesc, "AttackIcon_Flirtation")
                 .SetEffects(new()
                 {
-                    Effects.Effect(Targets.FurthestEnemies, CreateScriptable<DamageEffect>(), flirtDmg),
-                    Effects.Effect(Targets.FurthestEnemies, CreateScriptable<HealEffect>(x => x._onlyIfHasHealthOver0 = true), flirtHeal),
-                    Effects.Effect(Targets.FurthestEnemies, CreateScriptable<SwapTowardsCasterEffect>()),
+                    Effects.Effect(Targets.FurthestOpponents, CreateScriptable<DamageEffect>(), flirtDmg),
+                    Effects.Effect(Targets.FurthestOpponents, CreateScriptable<HealEffect>(x => x._onlyIfHasHealthOver0 = true), flirtHeal),
+                    Effects.Effect(Targets.FurthestOpponents, CreateScriptable<SwapTowardsCasterEffect>()),
                 })
                 .SetIntents(new()
                 {
-                    TargetIntent(Targets.FurthestEnemies, IntentForDamage(flirtDmg), IntentForHealing(flirtHeal), IntentType.Swap_Sides)
+                    TargetIntent(Targets.FurthestOpponents, IntentForDamage(flirtDmg), IntentForHealing(flirtHeal), IntentType.Swap_Sides)
                 })
-                .SetVisuals(Animations.Kiss, Targets.FurthestEnemies)
+                .SetVisuals(Animations.Kiss, Targets.FurthestOpponents)
                 .CharacterAbility(Pigments.Red, Pigments.Purple, Pigments.Red);
 
                 var brawlRupture = RankedValue(2, 3, 3, 4);
                 var brawlOil = RankedValue(2, 3, 3, 4);
-                var brawlOilTargets = RankedValue(Targets.OpposingSlot, Targets.OpposingSlot, Targets.Relative(false, -1, 0, 1), Targets.Relative(false, -1, 0, 1));
+                var brawlOilTargets = RankedValue(Targets.Front, Targets.Front, Targets.Relative(false, -1, 0, 1), Targets.Relative(false, -1, 0, 1));
                 var brawlOilEnemyText = RankedValue("Opposing enemy", "Opposing enemy", "Opposing, Left and Right enemies", "Opposing, Left and Right enemies");
                 var brawlDamage = RankedValue(2, 3, 4, 5);
                 var brawlName = $"{RankedValue("Drunken", "Pub", "Bar", "Infamous")} Brawl";
@@ -62,17 +62,17 @@ namespace BOTrueZealMod.Characters
                 .SetBasicInformationCharacter(brawlName, brawlDesc, "AttackIcon_Brawl")
                 .SetEffects(new()
                 {
-                    Effects.Effect(Targets.FurthestEnemies, CreateScriptable<ApplyRupturedEffect>(), brawlRupture),
+                    Effects.Effect(Targets.FurthestOpponents, CreateScriptable<ApplyRupturedEffect>(), brawlRupture),
                     Effects.Effect(brawlOilTargets, CreateScriptable<ApplyOilSlickedEffect>(), brawlOil),
                     Effects.Effect(Targets.UnitsWithStatus(false, StatusEffectType.OilSlicked), CreateScriptable<DamageEffect>(), brawlDamage)
                 })
                 .SetIntents(new()
                 {
-                    TargetIntent(Targets.FurthestEnemies, IntentType.Status_Ruptured),
+                    TargetIntent(Targets.FurthestOpponents, IntentType.Status_Ruptured),
                     TargetIntent(brawlOilTargets, IntentType.Status_OilSlicked),
                     TargetIntent(Targets.UnitsWithStatus(false, StatusEffectType.OilSlicked), IntentForDamage(brawlDamage))
                 })
-                .SetVisuals(Animations.EatMyFlesh, Targets.FurthestEnemies)
+                .SetVisuals(Animations.EatMyFlesh, Targets.FurthestOpponents)
                 .CharacterAbility(Pigments.Red, Pigments.Yellow, Pigments.Red);
 
                 return new()

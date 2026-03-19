@@ -198,7 +198,7 @@ namespace BOTrueZealMod.Tools
                 x.effects = new EffectInfo[count];
                 for(int i = 0; i < count; i++)
                 {
-                    x.effects[i] = Effects.Effect(Targets.ThisSlot, CreateScriptable<SwapToSidesEffect>());
+                    x.effects[i] = Effects.Effect(Targets.Self, CreateScriptable<SwapToSidesEffect>());
                 }
 
                 x.name = $"Skittish_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
@@ -228,7 +228,7 @@ namespace BOTrueZealMod.Tools
                 x.effects = new EffectInfo[count];
                 for (int i = 0; i < count; i++)
                 {
-                    x.effects[i] = Effects.Effect(Targets.ThisSlot, CreateScriptable<SwapToSidesEffect>());
+                    x.effects[i] = Effects.Effect(Targets.Self, CreateScriptable<SwapToSidesEffect>());
                 }
 
                 x.name = $"Slippery_{(hasCustomOwner ? $"Custom_{customOwner.ToCodeName()}" : count.ToString())}_PA";
@@ -357,7 +357,7 @@ namespace BOTrueZealMod.Tools
                 x.doesPassiveTriggerInformationPanel = true;
                 x.specialStoredValue = UnitStoredValueNames.BoneSpursPA;
 
-                x.effects = [Effects.Effect(Targets.OpposingSlot, CreateScriptable<DamageByStoredValueEffect>(x =>
+                x.effects = [Effects.Effect(Targets.Front, CreateScriptable<DamageByStoredValueEffect>(x =>
                 {
                     x._deathType = DeathType.Basic;
                     x._increaseDamage = true;
