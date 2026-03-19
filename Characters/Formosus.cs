@@ -10,6 +10,7 @@ namespace BOTrueZealMod.Characters
         {
             var ch = NewCharacter("Formosus_CH", EntityIDsE.Formosus);
             ch.SetBasicInformation("Formosus", Pigments.Purple, "FormosusFront", "FormosusBack", "FormosusOW");
+            ch.AddPassives(CustomPassives.Anointed(1));
 
             ch.RankedDataSetup(4, (rank, abRank) =>
             {
