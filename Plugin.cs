@@ -30,6 +30,8 @@ namespace BOTrueZealMod
                 ItemBuilder.itemPool = infoHolder.ItemPoolDB;
             if (ItemBuilder.itemPool == null)
                 ItemBuilder.itemPool = Resources.FindObjectsOfTypeAll<ItemPoolDataBaseSO>().FirstOrDefault();
+            if(selectableCharacters == null)
+                selectableCharacters = Resources.FindObjectsOfTypeAll<SelectableCharactersSO>().FirstOrDefault();
 
             Pigments.Init();
             Passives.Init();

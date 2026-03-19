@@ -5,8 +5,39 @@ using UnityEngine.TextCore;
 
 namespace BOTrueZealMod.Tools
 {
+    [HarmonyPatch]
     public static class CharacterBuilder
     {
+        public static SelectableCharactersSO selectableCharacters;
+        private static readonly List<SelectableCharacterData> selectableCharsToAdd = [];
+        private static readonly Dictionary<CharacterRefString, CharacterIgnoredAbilities> dpsToAdd = [];
+        private static readonly Dictionary<CharacterRefString, CharacterIgnoredAbilities> supportsToAdd = [];
+
+        private static int _rank = -1;
+
+        [HarmonyPatch(typeof(MainMenuController), nameof(MainMenuController.Start))]
+        [HarmonyPrefix]
+        private static void AddCharactersToMenu(MainMenuController __instance)
+        {
+            if (selectableCharacters != null)
+                return;
+
+            if (__instance._charSelectionDB == null)
+                return;
+
+            selectableCharacters = __instance._charSelectionDB;
+
+            selectableCharacters._characters = selectableCharacters._characters.AddRangeToArray([..selectableCharsToAdd]);
+            foreach(var kvp in dpsToAdd)
+                selectableCharacters._dpsCharacters[kvp.Key] = kvp.Value;
+            foreach(var kvp in supportsToAdd)
+                selectableCharacters._supportCharacters[kvp.Key] = kvp.Value;
+
+            selectableCharsToAdd.Clear();
+            dpsToAdd.Clear();
+            supportsToAdd.Clear();
+        }
+
         public static CharacterSO NewCharacter(string id_CH, EntityIDs entityId)
         {
             return NewCharacter<CharacterSO>(id_CH, entityId);
@@ -193,45 +224,109 @@ namespace BOTrueZealMod.Tools
             return ch;
         }
 
-        // todo
-        //public static SelectableCharacterData GenerateMenuCharacter<T>(this T ch, string unlockedSpriteName, string lockedSpriteName = null) where T : CharacterSO
-        //{
-        //    profile ??= ProfileManager.GetProfile(Assembly.GetCallingAssembly());
-        //    if (!ProfileManager.EnsureProfileExists(profile))
-        //        return null;
+        public static SelectableCharacterData GenerateMenuCharacter<T>(this T ch, string unlockedSpriteName, string lockedSpriteName = null) where T : CharacterSO
+        {
+            var unlockedSprite = LoadSprite(unlockedSpriteName);
+            var lockedSprite = string.IsNullOrEmpty(lockedSpriteName) ? null : LoadSprite(lockedSpriteName);
 
-        //    var unlockedSprite = LoadSprite(unlockedSpriteName);
-        //    var lockedSprite = string.IsNullOrEmpty(lockedSpriteName) ? null : LoadSprite(lockedSpriteName);
+            return new(ch.name, unlockedSprite, lockedSprite != null ? lockedSprite : unlockedSprite);
+        }
 
-        //    return new(ch.name, unlockedSprite, lockedSprite != null ? lockedSprite : unlockedSprite);
-        //}
+        public static SelectableCharacterData GenerateMenuCharacter<T>(this T ch, Sprite unlockedSprite, Sprite lockedSprite = null) where T : CharacterSO
+        {
+            return new(ch.name, unlockedSprite, lockedSprite != null ? lockedSprite : unlockedSprite);
+        }
 
-        //public static SelectableCharacterData GenerateMenuCharacter<T>(this T ch, Sprite unlockedSprite, Sprite lockedSprite = null) where T : CharacterSO
-        //{
-        //    return new(ch.name, unlockedSprite, lockedSprite != null ? lockedSprite : unlockedSprite);
-        //}
+        public static T AddToDatabase<T>(this T selCh) where T : SelectableCharacterData
+        {
+            if (selectableCharacters != null)
+                selectableCharacters._characters = selectableCharacters._characters.AddToArray(selCh);
+            else
+                selectableCharsToAdd.Add(selCh);
 
-        //public static T AddToDatabase<T>(this T selCh) where T : SelectableCharacterData
-        //{
-        //    CharacterDB.SelectableCharacters.Add(selCh);
+            return selCh;
+        }
 
-        //    return selCh;
-        //}
+        public static T SetAsFullDPS<T>(this T selCh) where T : SelectableCharacterData
+        {
+            var refStr = new CharacterRefString(selCh.CharacterName);
+            var ignoredAbs = new CharacterIgnoredAbilities() { ignoredAbilities = [] };
 
-        //public static T SetAsFullDPS<T>(this T selCh) where T : SelectableCharacterData
-        //{
-        //    CharacterDB._dpsCharacters.Add(new(selCh.CharacterName), new([]));
+            if (selectableCharacters != null)
+                selectableCharacters._dpsCharacters[refStr] = ignoredAbs;
+            else
+                dpsToAdd[refStr] = ignoredAbs;
 
-        //    return selCh;
-        //}
+            return selCh;
+        }
 
-        //public static T SetAsFullSupport<T>(this T selCh) where T : SelectableCharacterData
-        //{
-        //    CharacterDB._supportCharacters.Add(new(selCh.CharacterName), new([]));
+        public static T AddDPSSets<T>(this T selCh, params int[] sets) where T : SelectableCharacterData
+        {
+            var refStr = new CharacterRefString(selCh.CharacterName);
 
-        //    return selCh;
-        //}
+            if (selectableCharacters != null)
+            {
+                if (selectableCharacters._dpsCharacters.TryGetValue(refStr, out var dpsSets))
+                {
+                    if (dpsSets.ignoredAbilities != null && dpsSets.ignoredAbilities.Count > 0)
+                        dpsSets.ignoredAbilities.AddRange(sets);
+                }
+                else
+                    selectableCharacters._dpsCharacters[refStr] = new() { ignoredAbilities = [..sets] };
+            }
+            else
+            {
+                if (dpsToAdd.TryGetValue(refStr, out var dpsSets))
+                {
+                    if (dpsSets.ignoredAbilities != null && dpsSets.ignoredAbilities.Count > 0)
+                        dpsSets.ignoredAbilities.AddRange(sets);
+                }
+                else
+                    dpsToAdd[refStr] = new() { ignoredAbilities = [..sets] };
+            }
 
-        private static int _rank = -1;
+            return selCh;
+        }
+
+        public static T SetAsFullSupport<T>(this T selCh) where T : SelectableCharacterData
+        {
+            var refStr = new CharacterRefString(selCh.CharacterName);
+            var ignoredAbs = new CharacterIgnoredAbilities() { ignoredAbilities = [] };
+
+            if (selectableCharacters != null)
+                selectableCharacters._supportCharacters[refStr] = ignoredAbs;
+            else
+                supportsToAdd[refStr] = ignoredAbs;
+
+            return selCh;
+        }
+
+        public static T AddSupportSets<T>(this T selCh, params int[] sets) where T : SelectableCharacterData
+        {
+            var refStr = new CharacterRefString(selCh.CharacterName);
+
+            if (selectableCharacters != null)
+            {
+                if (selectableCharacters._supportCharacters.TryGetValue(refStr, out var supportSets))
+                {
+                    if (supportSets.ignoredAbilities != null && supportSets.ignoredAbilities.Count > 0)
+                        supportSets.ignoredAbilities.AddRange(sets);
+                }
+                else
+                    selectableCharacters._supportCharacters[refStr] = new() { ignoredAbilities = [.. sets] };
+            }
+            else
+            {
+                if (supportsToAdd.TryGetValue(refStr, out var supportSets))
+                {
+                    if (supportSets.ignoredAbilities != null && supportSets.ignoredAbilities.Count > 0)
+                        supportSets.ignoredAbilities.AddRange(sets);
+                }
+                else
+                    supportsToAdd[refStr] = new() { ignoredAbilities = [.. sets] };
+            }
+
+            return selCh;
+        }
     }
 }
