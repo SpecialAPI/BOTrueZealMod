@@ -1,7 +1,5 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
-using BOTrueZealMod.Characters;
-using BOTrueZealMod.Enemies;
 using System;
 
 namespace BOTrueZealMod
