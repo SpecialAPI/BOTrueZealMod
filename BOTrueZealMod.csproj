@@ -12,6 +12,7 @@
     <None Remove="Resources\Abilities\AttackIcon_Mass.png" />
     <None Remove="Resources\Abilities\AttackIcon_Relapse.png" />
     <None Remove="Resources\Abilities\AttackIcon_See.png" />
+    <None Remove="Resources\Enemies\BlueyOW.png" />
     <None Remove="Resources\Formosus\FormosusBack.png" />
     <None Remove="Resources\Formosus\FormosusFront.png" />
     <None Remove="Resources\Formosus\FormosusLocked.png" />
@@ -74,6 +75,7 @@
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Mass.png" />
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Relapse.png" />
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_See.png" />
+    <EmbeddedResource Include="Resources\Enemies\BlueyOW.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusBack.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusFront.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusLocked.png" />
