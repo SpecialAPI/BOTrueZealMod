@@ -30,6 +30,7 @@ namespace BOTrueZealMod.Tools
 
             en.health = 1;
             en.healthColor = Pigments.Red;
+            en.size = 1;
 
             en.damageSound = string.Empty;
             en.deathSound = string.Empty;
