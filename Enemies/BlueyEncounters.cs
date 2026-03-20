@@ -32,7 +32,7 @@ namespace BOTrueZealMod.Enemies
                 },
                 new()
                 {
-                    _enemyNames = [GetID("CadaverSynod_EN"), "SkinningHomunculus_EN", "ChoirBoy_EN"]
+                    _enemyNames = [GetID("CadaverSynod_EN"), "GigglingMinister_EN", "ChoirBoy_EN"]
                 }
             ];
         }
