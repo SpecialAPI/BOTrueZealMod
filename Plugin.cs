@@ -29,8 +29,10 @@ namespace BOTrueZealMod
                 ItemBuilder.itemPool = infoHolder.ItemPoolDB;
             if (ItemBuilder.itemPool == null)
                 ItemBuilder.itemPool = Resources.FindObjectsOfTypeAll<ItemPoolDataBaseSO>().FirstOrDefault();
-            if(selectableCharacters == null)
+            if (selectableCharacters == null)
                 selectableCharacters = Resources.FindObjectsOfTypeAll<SelectableCharactersSO>().FirstOrDefault();
+            if (PortalSignAdder.signs == null)
+                PortalSignAdder.signs = Resources.FindObjectsOfTypeAll<PortalSignsDataBaseSO>().FirstOrDefault();
 
             Pigments.Init();
             Passives.Init();
@@ -44,6 +46,7 @@ namespace BOTrueZealMod
             Formosus.Init();
 
             Bluey.Init();
+            BlueyEncounters.Init();
         }
     }
 }
