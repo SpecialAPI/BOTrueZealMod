@@ -52,6 +52,8 @@ namespace BOTrueZealMod.Enemies
             .SetVisuals(Animations.Birth, Targets.Self)
             .EnemyAbility(Rarity.Common, Priority.ExtremelySlow);
 
+            en.SetAbilities([exhume]);
+
             en.AddToDatabase(false, false, false);
         }
 
