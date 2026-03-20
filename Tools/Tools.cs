@@ -331,5 +331,27 @@ namespace BOTrueZealMod.Tools
             else
                 sdict.Add(key, value);
         }
+
+        public static EffectInfo FindEffectInfo<T>(this IEnumerable<EffectInfo> effects) where T : EffectSO
+        {
+            foreach (var e in effects)
+            {
+                if (e != null && e.effect is T)
+                    return e;
+            }
+
+            return null;
+        }
+
+        public static T FindEffectSO<T>(this IEnumerable<EffectInfo> effects) where T : EffectSO
+        {
+            foreach (var e in effects)
+            {
+                if (e != null && e.effect is T t)
+                    return t;
+            }
+
+            return null;
+        }
     }
 }
