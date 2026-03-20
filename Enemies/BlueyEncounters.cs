@@ -24,15 +24,15 @@ namespace BOTrueZealMod.Enemies
             [
                 new()
                 {
-                    _enemyNames = ["CadaverSynod_EN", "GigglingMinister_EN", "SkinningHomunculus_EN"]
+                    _enemyNames = [GetID("CadaverSynod_EN"), "GigglingMinister_EN", "SkinningHomunculus_EN"]
                 },
                 new()
                 {
-                    _enemyNames = ["CadaverSynod_EN", "InHisImage_EN", "InHerImage_EN", "GigglingMinister_EN"]
+                    _enemyNames = [GetID("CadaverSynod_EN"), "InHisImage_EN", "InHerImage_EN", "GigglingMinister_EN"]
                 },
                 new()
                 {
-                    _enemyNames = ["CadaverSynod_EN", "SkinningHomunculus_EN", "ChoirBoy_EN"]
+                    _enemyNames = [GetID("CadaverSynod_EN"), "SkinningHomunculus_EN", "ChoirBoy_EN"]
                 }
             ];
         }
