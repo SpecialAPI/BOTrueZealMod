@@ -52,6 +52,7 @@ namespace BOTrueZealMod.Enemies
             .SetVisuals(Animations.Birth, Targets.Self)
             .EnemyAbility(Rarity.Common, Priority.ExtremelySlow);
 
+            en.AddToDatabase(false, false, false);
         }
 
         public static EnemySO[] CreateBasegameSpawnPool()
