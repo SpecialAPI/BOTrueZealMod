@@ -44,7 +44,12 @@ namespace BOTrueZealMod.Tools
         [HarmonyPostfix]
         private static void AddAchievementsToMenu(UnlockedAchievementsUIHandler __instance, UnlockListUIPanel list, AchievementUnlockType listType, Sprite lockSprite)
         {
+            const float SizeDeltaYIncreasePerRow = 150f;
+
             if (!achievementsByCategory.TryGetValue(listType, out var achs) || achs.Count == 0)
+                return;
+
+            if (list._icons.Length == 0)
                 return;
 
             var firstValidIconIdx = 0;
@@ -56,15 +61,17 @@ namespace BOTrueZealMod.Tools
                     break;
             }
 
+            var firstIcon = list._icons[0];
+            var firstRow = firstIcon.transform.parent.gameObject;
+            var iconZone = firstRow.transform.parent.gameObject;
+
+            var newRows = 0;
+
             foreach(var (i, ach) in achs.Enumerate())
             {
                 var iconIdx = firstValidIconIdx + i;
                 if(iconIdx >= list._icons.Length)
                 {
-                    var firstIcon = list._icons[0];
-                    var firstRow = firstIcon.transform.parent.gameObject;
-                    var iconZone = firstRow.transform.parent.gameObject;
-
                     var newRow = Object.Instantiate(firstRow, iconZone.transform);
                     var newIcons = new List<UnlockIconUILayout>();
                     foreach(Transform iconTransform in newRow.transform)
@@ -82,6 +89,7 @@ namespace BOTrueZealMod.Tools
                     }
 
                     list._icons = [..list._icons, ..newIcons];
+                    newRows++;
                 }
 
                 if (iconIdx >= list._icons.Length)
@@ -98,6 +106,18 @@ namespace BOTrueZealMod.Tools
 
                 var sprite = ach.unlocked ? ach.unlockedSprite : lockSprite;
                 icon.SetInformation(evilInfoHolder, -1, -1, sprite);
+            }
+
+            if (newRows > 0)
+            {
+                if (iconZone.transform is RectTransform iconZoneRT)
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(iconZoneRT);
+
+                if (list.transform is RectTransform listRT)
+                {
+                    listRT.sizeDelta += new Vector2(0f, newRows * SizeDeltaYIncreasePerRow);
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(listRT);
+                }
             }
         }
 
