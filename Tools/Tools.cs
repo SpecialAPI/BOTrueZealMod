@@ -353,5 +353,24 @@ namespace BOTrueZealMod.Tools
 
             return null;
         }
+
+        public static IEnumerable<(int, T)> Enumerate<T>(this IEnumerable<T> orig)
+        {
+            var i = 0;
+
+            foreach(var elem in orig)
+            {
+                yield return (i, elem);
+                i++;
+            }
+        }
+
+        public static StringTrioData GetCustomAchievementData(this InGameLanguage lang, string id, string defaultName, string defaultDescription, string defaultDescription2)
+        {
+            if (lang._achievementsData.TryGetValue(GetID(id), out var value))
+                return value;
+
+            return new StringTrioData(defaultName, defaultDescription, defaultDescription2);
+        }
     }
 }
