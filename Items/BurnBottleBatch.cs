@@ -29,7 +29,7 @@ namespace BOTrueZealMod.Items
             item.effects =
             [
                 Effects.Effect(null, CreateScriptable<ExtraVariableForNextEffect>(), 1),
-                Effects.Effect(Targets.OpponentSide, CreateScriptable<ApplyRandomFireBetweenPreviousAndEntryEffect>(), 1),
+                Effects.Effect(Targets.OpponentSide, CreateScriptable<ApplyRandomFireBetweenPreviousAndEntryEffect>(), 3),
 
                 Effects.Effect(null, extraLoot),
                 Effects.Effect(null, extraLoot),
