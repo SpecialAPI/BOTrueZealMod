@@ -43,6 +43,7 @@ namespace BOTrueZealMod
             #endregion
 
             BurnBottleBatch.Init();
+            RoyalPine.Init();
 
             ShellyK.Init();
             Formosus.Init();
