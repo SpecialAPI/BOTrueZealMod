@@ -138,6 +138,8 @@ namespace BOTrueZealMod.Tools
         public static T AddToShop<T>(this T w) where T : BaseWearableSO
         {
             w.AddWithoutItemPools();
+            w.isShopItem = true;
+            
             if (itemPool != null)
                 itemPool._ShopPool = itemPool._ShopPool.AddToArray(w.name);
             else
