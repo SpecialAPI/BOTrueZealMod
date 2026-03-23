@@ -150,6 +150,8 @@ namespace BOTrueZealMod.Tools
 
         public static T AddToFishPool<T>(this T w, int fishingRodWeight, int canOfWormsWelsCatfishWeight) where T : BaseWearableSO
         {
+            w.AddWithoutItemPools();
+
             if (fishingRodWeight > 0)
             {
                 var fishingRodW = LoadedAssetsHandler.GetWearable("FishingRod_TW");
