@@ -148,9 +148,9 @@ namespace BOTrueZealMod.Tools
             return w;
         }
 
-        public static T AddToFishPool<T>(this T w, int weight, bool fishingRod = true, bool canOfWorms_WelsCatfish = true) where T : BaseWearableSO
+        public static T AddToFishPool<T>(this T w, int fishingRodWeight, int canOfWormsWelsCatfishWeight) where T : BaseWearableSO
         {
-            if (fishingRod)
+            if (fishingRodWeight > 0)
             {
                 var fishingRodW = LoadedAssetsHandler.GetWearable("FishingRod_TW");
                 if(fishingRodW != null && fishingRodW is PerformEffectWearable fishingRodPEW && fishingRodPEW.effects.FindEffectSO<ExtraLootListEffect>() is ExtraLootListEffect fishingRodLootList)
@@ -158,7 +158,7 @@ namespace BOTrueZealMod.Tools
                     var probability = new LootItemProbability()
                     {
                         itemName = w.name,
-                        probability = weight
+                        probability = fishingRodWeight
                     };
 
                     if (w.startsLocked)
@@ -167,7 +167,7 @@ namespace BOTrueZealMod.Tools
                         fishingRodLootList._lootableItems = [..fishingRodLootList._lootableItems ?? [], probability];
                 }
             }
-            if (canOfWorms_WelsCatfish)
+            if (canOfWormsWelsCatfishWeight > 0)
             {
                 var canOfWormsW = LoadedAssetsHandler.GetWearable("CanOfWorms_SW");
                 if (canOfWormsW != null && canOfWormsW is PerformEffectWearable canOfWormsPEW && canOfWormsPEW.effects.FindEffectSO<ExtraLootListEffect>() is ExtraLootListEffect fishingRodLootList)
@@ -175,7 +175,7 @@ namespace BOTrueZealMod.Tools
                     var probability = new LootItemProbability()
                     {
                         itemName = w.name,
-                        probability = weight
+                        probability = canOfWormsWelsCatfishWeight
                     };
 
                     if (w.startsLocked)
