@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
+using BOTrueZealMod.Items;
 using System;
 
 namespace BOTrueZealMod
@@ -41,6 +42,8 @@ namespace BOTrueZealMod
             Magic.ExtendAllEnums();
             CustomPassives.Init();
             #endregion
+
+            BurnBottleBatch.Init();
 
             ShellyK.Init();
             Formosus.Init();
