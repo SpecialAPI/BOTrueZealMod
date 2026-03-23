@@ -15,6 +15,7 @@ global using BOTrueZealMod.CustomEffects;
 global using BOTrueZealMod.CustomTargeting;
 global using BOTrueZealMod.Characters;
 global using BOTrueZealMod.Enemies;
+global using BOTrueZealMod.Items;
 
 global using static BOTrueZealMod.Plugin;
 global using static BOTrueZealMod.Tools.Tools;

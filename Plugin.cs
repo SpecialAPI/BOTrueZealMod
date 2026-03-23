@@ -1,6 +1,5 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
-using BOTrueZealMod.Items;
 using System;
 
 namespace BOTrueZealMod
