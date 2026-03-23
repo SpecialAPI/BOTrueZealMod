@@ -12,7 +12,7 @@ namespace BOTrueZealMod.Items
             var flav = "“Natural predator of a corrupt regime\"";
             var desc = "Inflict 1-3 Fire to all enemy positions at the beginning of combat.\nThis item is destroyed upon activation and gives you 5 more fire bombs.";
 
-            var item = ItemBuilder.NewItem<PerformEffectWearable>("BurnBottleBatch_TW")
+            var item = ItemBuilder.NewItem<PerformEffectWearable>("BurnBottleBatch_SW")
                 .SetBasicInformation(name, flav, desc, "BurnBottleBatch")
                 .SetStartsLocked(true)
                 .AddItemTypes(ItemType.Fabric)
