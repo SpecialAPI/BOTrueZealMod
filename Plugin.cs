@@ -45,6 +45,7 @@ namespace BOTrueZealMod
             BurnBottleBatch.Init();
             RoyalPine.Init();
             Coelacanth.Init();
+            SacredShrub.Init();
 
             ShellyK.Init();
             Formosus.Init();
