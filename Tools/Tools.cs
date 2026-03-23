@@ -334,9 +334,12 @@ namespace BOTrueZealMod.Tools
 
         public static EffectInfo FindEffectInfo<T>(this IEnumerable<EffectInfo> effects) where T : EffectSO
         {
+            if (effects == null)
+                return null;
+
             foreach (var e in effects)
             {
-                if (e != null && e.effect is T)
+                if (e != null && e.effect != null && e.effect is T)
                     return e;
             }
 
@@ -345,9 +348,12 @@ namespace BOTrueZealMod.Tools
 
         public static T FindEffectSO<T>(this IEnumerable<EffectInfo> effects) where T : EffectSO
         {
+            if(effects == null)
+                return null;
+
             foreach (var e in effects)
             {
-                if (e != null && e.effect is T t)
+                if (e != null && e.effect != null && e.effect is T t)
                     return t;
             }
 
