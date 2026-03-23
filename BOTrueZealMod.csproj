@@ -30,6 +30,10 @@
     <None Remove="Resources\Formosus\FormosusLocked.png" />
     <None Remove="Resources\Formosus\FormosusOW.png" />
     <None Remove="Resources\Formosus\FormosusUnlocked.png" />
+    <None Remove="Resources\Items\BurnBottleBatch.png" />
+    <None Remove="Resources\Items\Coelacanth.png" />
+    <None Remove="Resources\Items\RoyalPine.png" />
+    <None Remove="Resources\Items\SacredShrub.png" />
     <None Remove="Resources\Passives\Anointed.png" />
     <None Remove="Resources\Pigments\Blue\BlueMana.png" />
     <None Remove="Resources\Pigments\Blue\BlueManaCostSelected.png" />
@@ -99,6 +103,10 @@
     <EmbeddedResource Include="Resources\Formosus\FormosusLocked.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusOW.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusUnlocked.png" />
+    <EmbeddedResource Include="Resources\Items\BurnBottleBatch.png" />
+    <EmbeddedResource Include="Resources\Items\Coelacanth.png" />
+    <EmbeddedResource Include="Resources\Items\RoyalPine.png" />
+    <EmbeddedResource Include="Resources\Items\SacredShrub.png" />
     <EmbeddedResource Include="Resources\Passives\Anointed.png" />
     <EmbeddedResource Include="Resources\Pigments\Blue\BlueMana.png" />
     <EmbeddedResource Include="Resources\Pigments\Blue\BlueManaCostSelected.png" />
