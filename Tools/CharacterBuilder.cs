@@ -251,6 +251,8 @@ namespace BOTrueZealMod.Tools
             else
                 Debug.LogError($"Boss {bossId} is unsupported...");
 
+            unlocksDB._bossDefeatUnlockableData = unlocksDB._bossDefeatUnlockableData.AddToArray(unlock);
+
             return ch;
         }
 

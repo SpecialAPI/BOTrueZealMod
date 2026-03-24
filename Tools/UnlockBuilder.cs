@@ -49,13 +49,6 @@ namespace BOTrueZealMod.Tools
 
             return u;
         }
-
-        public static T AddToDatabase<T>(this T u) where T : UnlockableData
-        {
-            infoHolder.UnlockableManager._unlockableDB._unlockables[u.id] = u;
-
-            return u;
-        }
     }
 
     public class CustomUnlockableData : UnlockableData

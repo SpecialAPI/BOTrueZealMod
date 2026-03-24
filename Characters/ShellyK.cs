@@ -88,8 +88,7 @@ namespace BOTrueZealMod.Characters
                 .AddToBaseCategory(AchievementUnlockType.TheWitness);
             var osmanUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.ShellyK_Osman)
                 .SetAchievement(osmanAch)
-                .SetItems(["BurnBottleBatch_SW"])
-                .AddToDatabase();
+                .SetItems(["BurnBottleBatch_SW"]);
             ch.AddFinalBossUnlock(BossType.OsmanSinnoks, osmanUnlock);
 
             var heavenAch = AchievementBuilder.NewAchievement(AchievementIDs.ShellyHeavenUnlock, "Royal Pine", "Unlocked a new item.")
@@ -97,8 +96,7 @@ namespace BOTrueZealMod.Characters
                 .AddToBaseCategory(AchievementUnlockType.TheDivine);
             var heavenUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.ShellyK_Heaven)
                 .SetAchievement(heavenAch)
-                .SetItems(["RoyalPine_TW"])
-                .AddToDatabase();
+                .SetItems(["RoyalPine_TW"]);
             ch.AddFinalBossUnlock(BossType.Heaven, heavenUnlock);
 
             var menuCh = ch.GenerateMenuCharacter("ShellyUnlocked", "ShellyLocked");
