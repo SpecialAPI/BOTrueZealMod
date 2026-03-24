@@ -229,6 +229,31 @@ namespace BOTrueZealMod.Tools
             return ch;
         }
 
+        public static T AddFinalBossUnlock<T>(this T ch, BossType bossId, UnlockableData unlock) where T : CharacterSO
+        {
+            if (unlock == null)
+                return ch;
+
+            //if (unlock.hasModdedAchievementUnlock)
+            //    ch.m_BossAchData.Add(new(bossId, unlock.moddedAchievementID));
+
+            var unlockConnection = new EntityUnlockConnection()
+            {
+                entityID = ch.characterEntityID,
+                unlockID = unlock.id
+            };
+
+            var unlocksDB = infoHolder.UnlockableManager._unlockableDB;
+            if (bossId == BossType.OsmanSinnoks)
+                unlocksDB._osmanConnections = unlocksDB._osmanConnections.AddToArray(unlockConnection);
+            else if (bossId == BossType.Heaven)
+                unlocksDB._heavenConnections = unlocksDB._heavenConnections.AddToArray(unlockConnection);
+            else
+                Debug.LogError($"Boss {bossId} is unsupported...");
+
+            return ch;
+        }
+
         public static T AddToDatabase<T>(this T ch, bool appearsInShops = true, bool locked = false) where T : CharacterSO
         {
             LoadedAssetsHandler.LoadedCharacters[ch.name] = ch;
