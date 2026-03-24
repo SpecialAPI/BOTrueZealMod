@@ -83,6 +83,24 @@ namespace BOTrueZealMod.Characters
             });
             ch.AddToDatabase(true, false);
 
+            var osmanAch = AchievementBuilder.NewAchievement(AchievementIDs.ShellyOsmanUnlock, "Burn-Bottle Batch", "Unlocked a new item.")
+                .SetSprite("Shelly_Osman")
+                .AddToBaseCategory(AchievementUnlockType.TheWitness);
+            var osmanUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.ShellyK_Osman)
+                .SetAchievement(osmanAch)
+                .SetItems(["BurnBottleBatch_SW"])
+                .AddToDatabase();
+            ch.AddFinalBossUnlock(BossType.OsmanSinnoks, osmanUnlock);
+
+            var heavenAch = AchievementBuilder.NewAchievement(AchievementIDs.ShellyHeavenUnlock, "Royal Pine", "Unlocked a new item.")
+                .SetSprite("Shelly_Heaven")
+                .AddToBaseCategory(AchievementUnlockType.TheDivine);
+            var heavenUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.ShellyK_Heaven)
+                .SetAchievement(heavenAch)
+                .SetItems(["RoyalPine_TW"])
+                .AddToDatabase();
+            ch.AddFinalBossUnlock(BossType.Heaven, heavenUnlock);
+
             var menuCh = ch.GenerateMenuCharacter("ShellyUnlocked", "ShellyLocked");
             menuCh.SetAsFullDPS();
             menuCh.AddToDatabase();
