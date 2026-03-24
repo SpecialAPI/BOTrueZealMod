@@ -30,14 +30,22 @@ namespace BOTrueZealMod.Tools
             }
 
             foreach(var ach in achievements.Values)
-            {
-                var isCompletedKey = string.Format(achievementCompleteDataKeyFormat, ach.id);
-                var isCompleted = gameData.GetBoolData(isCompletedKey);
-
-                ach.unlocked = isCompleted;
-            }
+                ach.unlocked = gameData.IsCustomAchCompleted(ach.id);
 
             achievementsInitialized = true;
+        }
+
+        private static string GetCustomAchCompletionDataKey(string achID) => string.Format(achievementCompleteDataKeyFormat, achID);
+
+        private static bool IsCustomAchCompleted(this InGameDataSO gameData, string achID) => gameData.GetBoolData(GetCustomAchCompletionDataKey(achID));
+
+        public static void UnlockCustomAchievement(this InGameDataSO gameData, string achID)
+        {
+            if (!achievements.TryGetValue(achID, out var ach))
+                return;
+
+            ach.unlocked = true;
+            gameData.SetBoolData(GetCustomAchCompletionDataKey(ach.id), true);
         }
 
         [HarmonyPatch(typeof(UnlockedAchievementsUIHandler), nameof(UnlockedAchievementsUIHandler.PopulateList))]
