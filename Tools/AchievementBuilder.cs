@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using Tools;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.TextCore;
 
 namespace BOTrueZealMod.Tools
 {
@@ -154,6 +155,20 @@ namespace BOTrueZealMod.Tools
             extraUI.OpenMenu();
         }
 
+        [HarmonyPatch(typeof(SelectableCharacterData), nameof(SelectableCharacterData.SetAchievementState))]
+        [HarmonyPostfix]
+        private static void ProcessCustomHeavenAndOsmanAchievements(SelectableCharacterData __instance)
+        {
+            if (__instance is not CustomSelectableCharacterData customSelCh)
+                return;
+
+            if (customSelCh.hasCustomOsmanAchievement)
+                __instance.HasTheWitness = IsCustomAchievementUnlocked(customSelCh.customOsmanAchievementID);
+
+            if (customSelCh.hasCustomHeavenAchievement)
+                __instance.HasTheDivine = IsCustomAchievementUnlocked(customSelCh.customHeavenAchievementID);
+        }
+
         public static CustomAchievement NewAchievement(string ACH_achievementId, string name, string description)
         {
             var ach = new CustomAchievement(ACH_achievementId, name, description);
@@ -196,6 +211,14 @@ namespace BOTrueZealMod.Tools
 
             ach.unlocked = true;
             gameData.SetBoolData(GetCustomAchCompletionDataKey(ach.id), true);
+        }
+
+        public static bool IsCustomAchievementUnlocked(string achID)
+        {
+            if(!achievements.TryGetValue(achID, out var ach))
+                return false;
+
+            return ach.unlocked;
         }
     }
 

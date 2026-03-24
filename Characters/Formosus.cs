@@ -106,6 +106,8 @@ namespace BOTrueZealMod.Characters
             menuCh.AddDPSSets(0, 1);
             menuCh.AddSupportSets(2);
             menuCh.AddToDatabase();
+            menuCh.SetOsmanAchievement(AchievementIDs.FormosusOsmanUnlock);
+            menuCh.SetHeavenAchievement(AchievementIDs.FormosusHeavenUnlock);
         }
     }
 }

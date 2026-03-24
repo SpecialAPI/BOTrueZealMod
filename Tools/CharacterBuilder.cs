@@ -285,7 +285,7 @@ namespace BOTrueZealMod.Tools
             return ch;
         }
 
-        public static SelectableCharacterData GenerateMenuCharacter<T>(this T ch, string unlockedSpriteName, string lockedSpriteName = null) where T : CharacterSO
+        public static CustomSelectableCharacterData GenerateMenuCharacter<T>(this T ch, string unlockedSpriteName, string lockedSpriteName = null) where T : CharacterSO
         {
             var unlockedSprite = LoadSprite(unlockedSpriteName);
             var lockedSprite = string.IsNullOrEmpty(lockedSpriteName) ? null : LoadSprite(lockedSpriteName);
@@ -293,7 +293,7 @@ namespace BOTrueZealMod.Tools
             return new(ch.name, unlockedSprite, lockedSprite != null ? lockedSprite : unlockedSprite);
         }
 
-        public static SelectableCharacterData GenerateMenuCharacter<T>(this T ch, Sprite unlockedSprite, Sprite lockedSprite = null) where T : CharacterSO
+        public static CustomSelectableCharacterData GenerateMenuCharacter<T>(this T ch, Sprite unlockedSprite, Sprite lockedSprite = null) where T : CharacterSO
         {
             return new(ch.name, unlockedSprite, lockedSprite != null ? lockedSprite : unlockedSprite);
         }
@@ -389,5 +389,30 @@ namespace BOTrueZealMod.Tools
 
             return selCh;
         }
+
+        public static T SetOsmanAchievement<T>(this T selCh, string achID) where T : CustomSelectableCharacterData
+        {
+            selCh.hasCustomOsmanAchievement = true;
+            selCh.customOsmanAchievementID = achID;
+
+            return selCh;
+        }
+
+        public static T SetHeavenAchievement<T>(this T selCh, string achID) where T : CustomSelectableCharacterData
+        {
+            selCh.hasCustomHeavenAchievement = true;
+            selCh.customHeavenAchievementID = achID;
+
+            return selCh;
+        }
+    }
+
+    public class CustomSelectableCharacterData(string charName, Sprite portrait, Sprite noPortrait) : SelectableCharacterData(charName, portrait, noPortrait)
+    {
+        public bool hasCustomOsmanAchievement;
+        public string customOsmanAchievementID;
+
+        public bool hasCustomHeavenAchievement;
+        public string customHeavenAchievementID;
     }
 }

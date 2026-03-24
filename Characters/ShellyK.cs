@@ -102,6 +102,8 @@ namespace BOTrueZealMod.Characters
             var menuCh = ch.GenerateMenuCharacter("ShellyUnlocked", "ShellyLocked");
             menuCh.SetAsFullDPS();
             menuCh.AddToDatabase();
+            menuCh.SetOsmanAchievement(AchievementIDs.ShellyOsmanUnlock);
+            menuCh.SetHeavenAchievement(AchievementIDs.ShellyHeavenUnlock);
         }
     }
 }
