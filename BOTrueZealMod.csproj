@@ -205,7 +205,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AssetBundle\AssetBundles\" />
+    <EmbeddedResource Include="AssetBundle\AssetBundles\truezealbundle" />
   </ItemGroup>
 
 </Project>

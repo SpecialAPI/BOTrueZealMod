@@ -23,6 +23,9 @@ namespace BOTrueZealMod
             ModAssembly = Assembly.GetExecutingAssembly();
             ModConfig = Config;
 
+            if(TryReadFromResource("truezealbundle", out var ba))
+                Bundle = AssetBundle.LoadFromMemory(ba);
+
             GlossaryStuffAdder.glossaryDB = Resources.FindObjectsOfTypeAll<GlossaryDataBase>().FirstOrDefault();
             infoHolder = Resources.FindObjectsOfTypeAll<GameInformationHolder>().FirstOrDefault();
             if (infoHolder != null)
