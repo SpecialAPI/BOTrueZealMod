@@ -116,6 +116,20 @@ namespace BOTrueZealMod.Characters
             menuCh.AddToDatabase();
             menuCh.SetOsmanAchievement(AchievementIDs.FormosusOsmanUnlock);
             menuCh.SetHeavenAchievement(AchievementIDs.FormosusHeavenUnlock);
+
+            var speaker = CreateScriptable<SpeakerData>();
+            speaker.name = GetID("Formosus_SpeakerData");
+            speaker.speakerName = "Formosus";
+            speaker.portraitLooksCenter = false;
+            speaker.portraitLooksLeft = true;
+            speaker._emotionBundles = [];
+            speaker._defaultBundle = new()
+            {
+                portrait = ch.characterSprite,
+                dialogueSound = ch.dxSound,
+                bundleTextColor = new(0.3725f, 0.0902f, 0.0902f)
+            };
+            LoadedAssetsHandler.LoadedSpeakers[speaker.name] = speaker;
         }
     }
 }
