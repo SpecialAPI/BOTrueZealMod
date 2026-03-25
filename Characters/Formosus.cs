@@ -99,7 +99,7 @@ namespace BOTrueZealMod.Characters
                 .AddToBaseCategory(AchievementUnlockType.TheWitness);
             var osmanUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.Formosus_Osman)
                 .SetAchievement(osmanAch)
-                .SetItems(["Coelacanth_ExtraW"]);
+                .SetItems([GetID("Coelacanth_ExtraW")]);
             ch.AddFinalBossUnlock(BossType.OsmanSinnoks, osmanUnlock);
 
             var heavenAch = AchievementBuilder.NewAchievement(AchievementIDs.FormosusHeavenUnlock, "Sacred Shrub", "Unlocked a new item.")
@@ -107,7 +107,7 @@ namespace BOTrueZealMod.Characters
                 .AddToBaseCategory(AchievementUnlockType.TheDivine);
             var heavenUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.Formosus_Heaven)
                 .SetAchievement(heavenAch)
-                .SetItems(["SacredShrub_TW"]);
+                .SetItems([GetID("SacredShrub_TW")]);
             ch.AddFinalBossUnlock(BossType.Heaven, heavenUnlock);
 
             var menuCh = ch.GenerateMenuCharacter("FormosusUnlocked", "FormosusLocked");
