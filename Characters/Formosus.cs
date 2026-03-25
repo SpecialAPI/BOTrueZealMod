@@ -84,7 +84,7 @@ namespace BOTrueZealMod.Characters
                 };
             });
 
-            ch.AddToDatabase(true, false);
+            ch.AddToDatabase(true, true);
 
             var osmanAch = AchievementBuilder.NewAchievement(AchievementIDs.FormosusOsmanUnlock, "Coelacanth", "Unlocked a new item.")
                 .SetSprite("Formosus_Osman")
