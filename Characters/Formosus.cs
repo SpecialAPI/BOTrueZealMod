@@ -86,6 +86,14 @@ namespace BOTrueZealMod.Characters
 
             ch.AddToDatabase(true, true);
 
+            var questAch = AchievementBuilder.NewAchievement(AchievementIDs.FormosusQuest, "The Exhumed", "Unlock Formosus.")
+                .SetSprite("Formosus_Quest")
+                .AddToBaseCategory(AchievementUnlockType.PartyMembers);
+            var questUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.Formosus)
+                .SetAchievement(questAch)
+                .SetCharacter(GetID("Formosus_CH"))
+                .AddToDatabase();
+
             var osmanAch = AchievementBuilder.NewAchievement(AchievementIDs.FormosusOsmanUnlock, "Coelacanth", "Unlocked a new item.")
                 .SetSprite("Formosus_Osman")
                 .AddToBaseCategory(AchievementUnlockType.TheWitness);
