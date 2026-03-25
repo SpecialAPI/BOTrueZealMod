@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BOTrueZealMod.Conditions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -29,13 +30,26 @@ namespace BOTrueZealMod.Enemies
             en.SetSprites(ow, ow, sepulchre.enemyOWCorpseSprite);
             en.SetSounds(sepulchre.damageSound, sepulchre.deathSound);
             en.enemyTemplate = sepulchre.enemyTemplate;
+            en.priority = Priority.ExtremelySlow;
 
             SpawnEffect = CreateScriptable<SpawnRandomEnemyAnywhereEffect>();
             SpawnEffect._enemies = CreateBasegameSpawnPool();
             SpawnEffect._givesExperience = true;
 
+            var formosusUnlockDialogue = CreateScriptable<DialogueSO>();
+            formosusUnlockDialogue.name = GetID("Combat_Formosus_Dialogue");
+            formosusUnlockDialogue.m_DialogID = GetID("Formosus");
+            formosusUnlockDialogue.startNode = "TrueZeal_Formosus_Quest_Complete";
+            formosusUnlockDialogue.dialog = Bundle.LoadAsset<YarnProgram>("FormosusDialogue");
+            LoadedAssetsHandler.LoadedDialogues[formosusUnlockDialogue.name] = formosusUnlockDialogue;
+            LoadedDBsHandler.GetDialogueDB().AddOrChangeDialog(formosusUnlockDialogue.m_DialogID, formosusUnlockDialogue.dialog);
+
             en.enterEffects = [Effects.Effect(null, SpawnEffect, 4)];
-            en.priority = Priority.ExtremelySlow;
+            en.exitEffects = [Effects.Effect(null, CreateScriptable<StartDialogueConversationEffect>(x => x._dialogue = formosusUnlockDialogue)).WithCondition(CreateScriptable<HasCustomAchievementEffectCondition>(x =>
+            {
+                x.achID = AchievementIDs.FormosusQuest;
+                x.needsToBeUnlocked = false;
+            }))];
 
             var exhumeName = "Exhume";
             var exhumeDesc = "Beckon forth as many enemies as possible.";
