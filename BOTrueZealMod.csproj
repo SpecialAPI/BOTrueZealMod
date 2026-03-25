@@ -196,6 +196,12 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>..\References_Legacy\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="YarnSpinner">
+      <HintPath>..\References_Legacy\YarnSpinner.dll</HintPath>
+    </Reference>
+    <Reference Include="YarnSpinner.Unity">
+      <HintPath>..\References_Legacy\YarnSpinner.Unity.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
