@@ -196,7 +196,7 @@ Nowak? How much of that stuff do you believe?
 <<LeftSound>>
 I don't know, Bosch.
 I don't know.
-<<Unlock Formosus>>
+<<Unlock 157.TrueZeal.Formosus>>
 <<if HasPartySpace() is false>>
     [[TrueZeal_Formosus_PartyFull]]
 <<else>>
@@ -225,7 +225,7 @@ Amen.
 ...
 <<RightSound>>
 I am ready to depart on this strange new journey.
-<<Unlock Formosus>>
+<<Unlock 157.TrueZeal.Formosus>>
 <<if HasPartySpace() is false>>
     [[TrueZeal_Formosus_PartyFull]]
 <<else>>

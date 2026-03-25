@@ -483,7 +483,7 @@ Wouldn't want to leave you here skipping class.
 <<LeftSound>>
 Wow, uhh.
 Huh..
-<<Unlock TrueZeal_ShellyK>>
+<<Unlock 157.TrueZeal.ShellyK>>
 <<HideRoomNPCs>>
 <<HireCharacter TrueZeal_ShellyK_CH>>
 <<SaveProgress>>
@@ -606,6 +606,6 @@ Okay?
 Y-yeah, I'll stop.
 <<RightFocus>>
 Okay.
-<<Unlock TrueZeal_AntonSad>>
+<<Unlock 157.TrueZeal.AntonSad>>
 <<SaveProgress>>
 ===
