@@ -1,0 +1,288 @@
+title: TrueZeal_Formosus_Quest_Complete
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_Formosus>>
+<<RightFocus>>
+<<RightSound>>
+Deus, Deus meus, ne derelinquas me.
+Intellego consilia tua infallibilia esse, sed te obsecro ne me talibus daemonibus deseras, sine causis tuis mihi explicatis.
+<<LeftFocus>>
+<<LeftSound>>
+Are you okay?
+Were you trapped inside that big blue bag thing?
+<<LeftSet Bosch Confused>>
+<<LeftSound>>
+Nowak, I think he's speaking Italian.
+<<LeftSet Nowak>>
+<<LeftSound>>
+I don't know any Italian.
+<<RightFocus>>
+<<RightSound>>
+Quanta agonia est vixisse nec nomen tuum digne honoravisse.
+Abiectus, deficiens ut pontifex atque papa.
+<<LeftSet Bosch Smile>>
+<<LeftFocus>>
+<<LeftSound>>
+Do the Italian hand thing, so he feels safe.
+<<LeftSet Nowak>>
+<<LeftSound>>
+Bosch, that absolutely is not going to help.
+<<RightFocus>>
+<<RightSound>>
+Devil, tell me, why do you speak in strange Saxon tongues?
+<<LeftFocus>>
+<<LeftSound>>
+Devil?
+I'm not the devil.
+<<RightFocus>>
+<<RightSound>>
+Why do you present to me a terrible and grand gilded spectre?
+<<LeftSet Bosch>>
+<<LeftFocus>>
+<<LeftSound>>
+That's honestly a pretty cool way to phrase it.
+<<LeftSet Nowak>>
+<<RightFocus>>
+<<RightSound>>
+Spectre, what is thy name?
+<<LeftFocus>>
+<<LeftSound>>
+Uhh, Nowak is my name.
+I don't know about the gold part, but most people are skeletons down here in Purgatory.
+<<RightFocus>>
+<<RightSound>>
+Purgatory?
+This is Purgatory?
+*He looks down at his hands*
+<<RightSound>>
+My flesh has leapt from my figure; what a terrible sight to behold.
+<<LeftFocus>>
+<<LeftSound>>
+Did you just get here?
+<<RightFocus>>
+<<RightSound>>
+I must have died but a moment ago.
+May the lord be decisive in his verdict.
+<<RightSound>>
+There is still hope I shall see Heaven.
+<<LeftFocus>>
+<<LeftSound>>
+Hey, uh... what's your name?
+<<RightFocus>>
+<<RightSound>>
+Are you a heathen?
+<<LeftFocus>>
+<<LeftSound>>
+What? No.
+I went to church... sometimes.
+<<RightFocus>>
+<<RightSound>>
+How does one "go to church" yet not know the name of the current pontiff?
+Ah... On earth, they must be holding a conclave as we speak.
+<<LeftFocus>>
+<<LeftSound>>
+Pontiff..?
+<<RightFocus>>
+<<RightSound>>
+I am Pope Formosus.
+<<LeftSet Bosch>>
+<<LeftFocus>>
+<<LeftSound>>
+Ask him what year it is.
+<<LeftSet Nowak>>
+<<LeftSound>>
+Um...
+Uh, Fomosus?
+<<RightFocus>>
+<<RightSound>>
+Pope Formosus.
+There is an "R".
+<<LeftFocus>>
+<<LeftSound>>
+Formosus, what year is it?
+<<RightFocus>>
+<<RightSound>>
+I took ill in early Martius of the year of our Lord 896.
+<<LeftFocus>>
+<<LeftSound>>
+896?
+<<RightFocus>>
+<<RightSound>>
+Yes.
+...
+<<RightSound>>
+My dearest, has it already been years?
+<<RightSound>>
+Tell me it is not already 900, and I was trapped in that confounding creature for years on end.
+<<LeftSet Bosch>>
+<<LeftFocus>>
+<<LeftSound>>
+Oh boy...
+<<LeftSet Nowak>>
+<<LeftSound>>
+It's uhh...
+<<LeftSound>>
+It's 1951.
+<<LeftSet Bosch>>
+<<LeftSound>>
+Honestly, it might be 1952 at this point. Time gets weird down here.
+<<LeftSet Nowak>>
+<<RightFocus>>
+<<RightSound>>
+1951?
+You-you jest.
+I-
+<<RightSound>>
+Strange one, may I ask a kindness of you?
+<<RightSound>>
+Could you lead me through this land?
+<<LeftFocus>>
+<<LeftSound>>
+Yeah, I can do that.
+<<RightFocus>>
+<<RightSound>>
+I have so much to ask about this new world and the world in my absence.
+<<LeftFocus>>
+<<LeftSound>>
+Sure, I can tell you what I know, but I'll warn you, it's a dangerous road.
+<<RightFocus>>
+<<RightSound>>
+I understand.
+<<RightSound>>
+Before we depart, may I say a prayer?
+<<LeftFocus>>
+<<LeftSound>>
+Sure.
+<<RightFocus>>
+...
+<<RightSound>>
+Would you prefer if I said the prayer in your language?
+[[Yes.| TrueZeal_Formosus_Prayer_Yes]]
+[[No.| TrueZeal_Formosus_Prayer_No]]
+===
+
+title: TrueZeal_Formosus_Prayer_Yes
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_Formosus>>
+<<RightFocus>>
+*He nods*
+<<RightSound>>
+O Lord, accept me in penitence.
+O Lord, leave me not.
+O Lord, lead me not into temptation.
+O Lord, grant me good thoughts.
+O Lord, grant me tears and remembrance of death and compunction.
+O Lord, grant me the thought of confessing my sins.
+O Lord, grant me humility, chastity, and obedience.
+O Lord, grant me patience, courage, and meekness.
+O Lord, plant in me the root of all blessings, the fear of Thee in my heart.
+O Lord, grant me to love Thee with all my mind and soul, and always to do Thy will.
+O Lord, protect me from certain people, and demons, and passions, and from every other harmful thing.
+O Lord, Thou know that Thou act as Thou will; may Thy will be also in me, a sinner, for blessed art Thou forever.
+<<RightSound>>
+Amen.
+...
+<<RightSound>>
+I am ready to depart on this strange new journey.
+<<LeftSet Bosch>>
+<<LeftFocus>>
+...
+<<LeftSound>>
+Nowak? How much of that stuff do you believe?
+<<LeftSet Nowak>>
+<<LeftSound>>
+I don't know, Bosch.
+I don't know.
+<<Unlock Formosus>>
+<<if HasPartySpace() is false>>
+    [[TrueZeal_Formosus_PartyFull]]
+<<else>>
+    <<HireCharacter TrueZeal_Formosus_CH>>
+<<endif>>
+<<SaveProgress>>
+===
+
+title: TrueZeal_Formosus_Prayer_No
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_Formosus>>
+<<RightFocus>>
+*He nods*
+<<RightSound>>
+Gloria Patri, et Filio, et Spiritui Sancto.
+Sicut erat in principio, et nunc, et semper, et in saecula saeculorum.
+<<RightSound>>
+Amen.
+Requiem aeternam.
+Requiem aeternam dona eis, Domine, et lux perpetua luceat eis.
+Requiescatant in pace.
+<<RightSound>>
+Amen.
+...
+<<RightSound>>
+I am ready to depart on this strange new journey.
+<<Unlock Formosus>>
+<<if HasPartySpace() is false>>
+    [[TrueZeal_Formosus_PartyFull]]
+<<else>>
+    <<HireCharacter TrueZeal_Formosus_CH>>
+<<endif>>
+<<SaveProgress>>
+===
+
+title: TrueZeal_Formosus_PartyFull
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_Formosus>>
+<<RightFocus>>
+...
+<<RightSound>>
+I'm sorry, but if I came with you, it would only put you at risk.
+Your numbers are already too great.
+<<RightSound>>
+I would only make your pilgrimage cumbersome and uneven.
+===
+
+title: TrueZeal_Formosus_FreeFool_Start
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_Formosus>>
+<<LeftFocus>>
+<<LeftSound>>
+Oh? Fomosus, what are you doing here?
+<<RightFocus>>
+<<RightSound>>
+Keh heh, you still forget to pronounce the "R".
+<<LeftFocus>>
+<<LeftSound>>
+Sorry... But do you want to come with us?
+[[TrueZeal_Formosus_TryHire]]
+===
+
+title: TrueZeal_Formosus_TryHire
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_Formosus>>
+<<if HasPartySpace() is true>>
+    <<RightFocus>>
+    <<RightSound>>
+    I would be delighted.
+    <<HideRoomNPCs>>
+    <<HireCharacter TrueZeal_Formosus_CH>>
+    <<SaveProgress>>
+<<else>>
+    <<RightFocus>>
+    <<RightSound>>
+    I'm sorry, but if I came with you, it would only put you at risk.
+    Your numbers are already too great.
+    <<RightSound>>
+    I would only make your pilgrimage cumbersome and uneven.
+<<endif>>
+===

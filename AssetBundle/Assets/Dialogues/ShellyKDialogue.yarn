@@ -1,0 +1,611 @@
+title: TrueZeal_ShellyK_Bar_Start
+tags:
+---
+<<if GetGameBoolData("TrueZeal_ShellyKFirstBarTalkDone") is false>>
+    [[TrueZeal_ShellyK_Bar_FirstTalk]]
+<<else>>
+    [[TrueZeal_ShellyK_Bar_PartyCheck]]
+<<endif>>
+===
+
+title: TrueZeal_ShellyK_Bar_FirstTalk
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightFocus>>
+<<RightSound>>
+Now look at you.
+<<LeftFocus>>
+<<LeftSound>>
+Me?
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+You think I'm talkin' to some other schmuck?
+Don't you look cute. Tryna look tough in your lil' leather jacket?
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightSound>>
+Did you borrow that from your big brother?
+You tryna start a lil' gang or somethin'?
+<<LeftFocus>>
+<<LeftSound>>
+Sorta. Why? You wanna join?
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Listen, I'm sure you're sweet n' all.
+But I'm a grown woman.
+I don't hang out with lil' boys.
+<<LeftFocus>>
+<<LeftSound>>
+I'm no "little boy".
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightFocus>>
+*She just smiles*
+<<RightSound>>
+Let me look at your gang, I'll make up my mind pretty quick.
+<<SetGameBoolData TrueZeal_ShellyKFirstBarTalkDone true>>
+<<SaveProgress>>
+[[TrueZeal_ShellyK_Bar_PartyCheck]]
+===
+
+title: TrueZeal_ShellyK_Bar_PartyCheck
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<if CharacterInParty("Anton") is true>>
+    [[TrueZeal_ShellyK_Bar_Anton]]
+<<elseif CharacterInParty("Bimini") is true>>
+    [[TrueZeal_ShellyK_Bar_Bimini]]
+<<elseif CharacterInParty("Rags") is true>>
+    [[TrueZeal_ShellyK_Bar_Rags]]
+<<elseif CharacterInParty("Thype") is true>>
+    [[TrueZeal_ShellyK_Bar_Thype]]
+<<elseif CharacterInParty("Hans") is true>>
+    [[TrueZeal_ShellyK_Bar_Hans]]
+<<elseif CharacterInParty("Pearl") is true>>
+    [[TrueZeal_ShellyK_Bar_Pearl]]
+<<elseif CharacterInParty("TrueZeal_ShellyK") is true>>
+    [[TrueZeal_ShellyK_Bar_ShellyK]]
+<<elseif HasPartySpace() is false>>
+    [[TrueZeal_ShellyK_Bar_PartySpace]]
+<<endif>>
+<<RightFocus>>
+<<RightSound>>
+Damn, some of you boys don't look half bad.
+Sure, I'll head out with you all, but don't think we'll be makin' this a regular thing.
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightSound>>
+When this is done, I'm not comin' back for round two.
+<<if CharacterInParty("Arnold") is true>>
+    [[TrueZeal_ShellyK_Bar_Complete]]
+<<else>>
+    <<HideRoomNPCs>>
+    <<HireCharacter TrueZeal_ShellyK_CH>>
+    <<SaveProgress>>
+<<endif>>
+===
+
+title: TrueZeal_ShellyK_Bar_Anton
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Ditch the lil' pervert.
+<<LeftFocus>>
+<<LeftSound>>
+Anton?
+<<LeftSet Anton>>
+<<LeftSound>>
+What? Nowak?!
+<<LeftSound>>
+Why do you assume that means me?
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightFocus>>
+<<RightSound>>
+Because you're a pervy lil' freak.
+<<LeftFocus>>
+<<LeftSound>>
+What? Babes love me.
+<<RightSet TrueZeal_ShellyK Drink>>
+<<LeftSound>>
+I've got charisma.
+<<RightFocus>>
+<<RightSound>>
+Well this "babe" definitely doesn't.
+<<LeftFocus>>
+<<LeftSound>>
+Aww c'mon, get to know me a little.
+*Anton puts his hands onto Shelly's lap*
+<<RightSet TrueZeal_ShellyK>>
+<<RightFocus>>
+*Shelly violently shoves Anton away and draws her knife*
+<<RightSound>>
+Listen you snivellin' lil' abortion.
+<<RightSound>>
+Touch me again, and I'll shove your head so far up your own ass that when it finally slops back out you'll be the first jag off that's ever been miscarried twice.
+<<LeftFocus>>
+Hey... *Anton raises his hands in submission*
+<<LeftSound>>
+I'm in the business of listening to the perspectives of women.
+So I just want you to know...
+I understand and respect your position on this matter.
+<<RightSet TrueZeal_ShellyK Drink>>
+...
+*Anton leans into Nowak's ear and whispers*
+<<LeftSet Anton TrueZeal_Sad>>
+<<LeftSound>>
+Nowak, please don't kick me out of the gang, I need this.
+<<LeftSet Anton>>
+<<LeftSound>>
+Pretty please?
+<<LeftSet Nowak>>
+<<RightFocus>>
+<<RightSound>>
+Alright, Golden Boy, you gonna do the right thing?
+===
+
+title: TrueZeal_ShellyK_Bar_Bimini
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Ditch the sword girl.
+<<LeftFocus>>
+<<LeftSound>>
+Bimini? No, she's part of the team.
+<<LeftSet Bimini>>
+<<LeftSound>>
+Hey, {"@#$%"} you lady, no one tells me to leave.
+<<LeftSound>>
+I carry this goddamn team.
+These saps are nothing without me.
+<<LeftSound>>
+Right, Nowak?
+<<LeftSet Nowak>>
+<<LeftSound>>
+Uhh... yeah, I guess.
+<<RightFocus>>
+<<RightSound>>
+See, I don't play nice with other girls.
+So if you want me to tag along...
+<<RightSound>>
+Sword {"@#$%#"} has to go.
+<<LeftSet Bimini>>
+<<LeftFocus>>
+<<LeftSound>>
+You {"@#$%"}ing {"@#$%"}, I'll kill you.
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightFocus>>
+<<RightSound>>
+That's cute...
+<<LeftSet Devs>>
+<<RightSet Devs>>
+<<LeftFocus>>
+*Bimini and Shelly K. continue to violently argue for some time*
+===
+
+title: TrueZeal_ShellyK_Bar_Rags
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Ditch the hag.
+<<LeftFocus>>
+<<LeftSound>>
+Who? Rags? But Rags is part of the team.
+<<LeftSet Rags>>
+<<LeftSound>>
+I was leaving anyway.
+<<LeftSet Nowak>>
+<<LeftSound>>
+What?! Why?
+<<LeftSet Rags>>
+<<LeftSound>>
+I've got things to do.
+I don't need travelling companions.
+Your whole group is pretty slow.
+<<LeftSound>>
+Sometimes not just physically...
+<<LeftSet Nowak>>
+<<LeftSound>>
+Wait, wait-
+<<RightFocus>>
+<<RightSound>>
+Sounds like the decision is pretty clear, Golden Boy.
+<<LeftFocus>>
+<<LeftSound>>
+Rags, are you sure you want to leave?
+<<LeftSet Rags>>
+<<LeftSound>>
+Yeah.
+<<LeftSet Nowak>>
+<<LeftSound>>
+What if we pick up the pace?
+<<LeftSet Rags>>
+*She kinda just shrugs*
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightFocus>>
+<<RightSound>>
+You gonna run after her, or is it time I join your lil' gang?
+===
+
+title: TrueZeal_ShellyK_Bar_Thype
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Ditch the monkey girl.
+<<LeftFocus>>
+<<LeftSound>>
+What? Who?
+*Nowak looks around*
+<<LeftSet Bosch>>
+<<LeftSound>>
+I think she means Thype?
+<<LeftSet Nowak>>
+<<LeftSound>>
+Do you mean Thype?
+*Nowak points*
+<<RightSet Thype>>
+<<RightFocus>>
+*Thype is eating something out of the bottom of an abandoned glass*
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightSound>>
+Yeah, I don't play nice with other girls.
+<<LeftSet Nowak>>
+<<LeftFocus>>
+<<LeftSound>>
+Thype isn't a girl.
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightFocus>>
+<<RightSound>>
+You sure about that, Golden Boy?
+<<LeftFocus>>
+I think so.
+<<RightSet TrueZeal_ShellyK Drink>>
+<<LeftSound>>
+Hey, Thype! You a girl?
+<<RightSet Thype>>
+<<RightFocus>>
+*Thype contorts their fingers to spell the word "blood" back at Nowak*
+<<LeftSet Nowak>>
+...
+<<LeftFocus>>
+<<LeftSound>>
+I don't know what that means.
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Either way, she's too "girl" for my liking.
+Make your call, Golden Boy.
+===
+
+title: TrueZeal_ShellyK_Bar_Hans
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Ditch the blue ball.
+<<LeftFocus>>
+<<LeftSound>>
+Hans? Why would I ditch Hans?
+<<RightFocus>>
+<<RightSound>>
+I don't like how she looks.
+Besides, I don't play nice with other girls.
+<<LeftFocus>>
+<<LeftSound>>
+But Hans is barely a girl, she's like a sponge thing.
+<<LeftSet Hans TrueZeal_Surprised>>
+*Despite still wearing the same mask, Hans looks a little sad at Nowak's comment*
+<<LeftSound>>
+Perhaps I hinder the efficiency of the pre-colonial mass.
+<<LeftSound>>
+If you feel the likelihood of success would be higher in my absence, you are welcome to excise me.
+<<LeftSet Nowak>>
+<<RightFocus>>
+*Shelly raises her eyebrows at Nowak*
+<<LeftFocus>>
+...
+===
+
+title: TrueZeal_ShellyK_Bar_Pearl
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Ditch the purple mouth monster.
+I've seen those things before, you can't trust 'em.
+<<LeftSet Pearl>>
+<<LeftFocus>>
+<<LeftSound>>
+*Growls*
+<<LeftSet Nowak>>
+<<LeftSound>>
+Yeah, you might have a point.
+<<LeftSet Pearl>>
+<<LeftSound>>
+No. We will follow.
+<<LeftSet Nowak>>
+<<RightFocus>>
+<<RightSound>>
+Then I won't, simple as that.
+===
+
+title: TrueZeal_ShellyK_Bar_ShellyK
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Ditch the skinwalker.
+<<LeftSet TrueZeal_ShellyK>>
+<<LeftFocus>>
+<<LeftSound>>
+Yeah, I was meanin' to ask.
+<<LeftSound>>
+What is goin' on here exactly?
+<<LeftSet Nowak>>
+<<LeftSound>>
+What? I thought you guys were twins or something.
+<<RightFocus>>
+<<RightSound>>
+I don't know anything about that.
+<<LeftSet TrueZeal_ShellyK>>
+<<LeftFocus>>
+<<LeftSound>>
+Well pour me a drink too, this whole situation's givin' me a headache.
+<<LeftSet Nowak>>
+<<RightFocus>>
+<<RightSound>>
+Well, either way, Golden Boy; you definitely don't need two o' me.
+===
+
+title: TrueZeal_ShellyK_Bar_Female
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+Hmm.
+<<LeftFocus>>
+<<LeftSound>>
+"Hmm"?
+What does "hmm" mean?
+<<RightFocus>>
+<<RightSound>>
+I don't like new faces.
+Especially those of the feminine persuasion.
+If I'm gonna tag along with you, no new little missys can come with.
+<<RightSound>>
+Capeesh?
+<<LeftFocus>>
+<<LeftSound>>
+Ugh... capeesh.
+===
+
+title: TrueZeal_ShellyK_Bar_PartySpace
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<RightFocus>>
+<<RightSound>>
+You have enough members in your lil' gang already.
+Besides, I already paid for this drink.
+===
+
+title: TrueZeal_ShellyK_Bar_Complete
+tags:
+---
+<<LeftSet Arnold>>
+<<RightSet TrueZeal_ShellyK Drink>>
+<<LeftFocus>>
+<<LeftSound>>
+No, I think you'll be coming back.
+<<RightFocus>>
+<<RightSound>>
+Oh? And who are you?
+<<LeftFocus>>
+<<LeftSound>>
+Why? Care enough to get to know me?
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightFocus>>
+<<RightSound>>
+Hehe, I'll bite.
+<<LeftFocus>>
+<<LeftSound>>
+Oh I bet you do a lot more than that.
+<<LeftSet Bosch>>
+<<LeftSound>>
+Nowak?
+Nowak, what's happening?
+<<LeftSet Arnold>>
+<<RightFocus>>
+<<RightSound>>
+Oh careful lil' boy, don't play games if you don't know the rules.
+<<LeftFocus>>
+<<LeftSound>>
+Why don't you teach me then?
+I'd love to learn how to play this game with you.
+<<RightFocus>>
+<<RightSound>>
+Well, I think-
+<<RightSet TrueZeal_ShellyK Blush>>
+*Shelly blushes*
+<<LeftFocus>>
+<<LeftSound>>
+You think you might just stick around?
+<<LeftSound>>
+Think you might want to see the "rules" Mr. A can teach you about this little game of ours?
+<<RightFocus>>
+<<RightSound>>
+Mr. A?
+<<RightSet TrueZeal_ShellyK Smirk>>
+<<RightSound>>
+Hehe, I like that.
+*She extends her hand*
+<<LeftFocus>>
+*He kisses it gently and then matches her gaze*
+<<RightSet TrueZeal_ShellyK Blush>>
+*Suddenly he pulls her from her seat and into his arms*
+<<LeftSound>>
+Let's mosey on out, 'cause a little girl like you has a lot to learn from a man like me.
+<<LeftSound>>
+Wouldn't want to leave you here skipping class.
+<<LeftSet Nowak>>
+...
+<<RightSet Arnold>>
+<<RightFocus>>
+*Arnold winks at Nowak*
+<<RightSet Devs>>
+<<LeftFocus>>
+...
+<<LeftSet Bosch>>
+<<LeftSound>>
+Wow, uhh.
+Huh..
+<<Unlock TrueZeal_ShellyK>>
+<<HideRoomNPCs>>
+<<HireCharacter TrueZeal_ShellyK_CH>>
+<<SaveProgress>>
+===
+
+title: TrueZeal_ShellyK_FreeFool_Start
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK>>
+<<LeftFocus>>
+<<LeftSound>>
+Hey, Shelly, you wanna come with us?
+[[TrueZeal_ShellyK_TryHire]]
+===
+
+title: TrueZeal_ShellyK_TryHire
+tags:
+---
+<<LeftSet Nowak>>
+<<RightSet TrueZeal_ShellyK>>
+<<if HasPartySpace() is true>>
+    <<RightFocus>>
+    <<RightSound>>
+    No... I'm far too busy drinkin' alone and contemplatin' whether or not true love can exist in our imperfect world...
+    <<LeftFocus>>
+    <<LeftSound>>
+    Uh... Okay...
+    <<RightFocus>>
+    <<RightSound>>
+    I'm just messin', I'll tag along for a while...
+    <<HideRoomNPCs>>
+    <<HireCharacter TrueZeal_ShellyK_CH>>
+    <<SaveProgress>>
+<<else>>
+    <<RightFocus>>
+    <<RightSound>>
+    Nowak, you've got like ten numbskulls paradin' behind you already.
+    You don't need an eleventh.
+<<endif>>
+===
+
+title: TrueZeal_ShellyK_Combat_Anton_Start
+tags:
+---
+<<if Visited("TrueZeal_ShellyK_Combat_Anton01") is false>>
+    [[TrueZeal_ShellyK_Combat_Anton01]]
+<<elseif Visited("TrueZeal_ShellyK_Combat_Anton02") is false>>
+    [[TrueZeal_ShellyK_Combat_Anton02]]
+<<else>>
+    [[TrueZeal_ShellyK_Combat_Anton03]]
+<<endif>>
+===
+
+title: TrueZeal_ShellyK_Combat_Anton01
+tags:
+---
+<<LeftSet Anton>>
+<<RightSet TrueZeal_ShellyK>>
+<<LeftFocus>>
+*Anton turns to Shelly and winks*
+<<RightFocus>>
+*Shelly simply scoffs and turns her attention back to the battle at hand*
+===
+
+title: TrueZeal_ShellyK_Combat_Anton02
+tags:
+---
+<<LeftSet Anton>>
+<<RightSet TrueZeal_ShellyK>>
+<<LeftFocus>>
+<<LeftSound>>
+Pretty slick, huh?
+I know my way around a knife.
+<<RightFocus>>
+<<RightSound>>
+You call that a knife?
+<<RightSound>>
+That dinky lil' thing?
+<<LeftSet Anton TrueZeal_Sad>>
+<<LeftFocus>>
+<<LeftSound>>
+What?! My knife isn't-
+...
+<<LeftSound>>
+It's a normal knife size!
+<<RightFocus>>
+*Shelly smiles and shrugs*
+===
+
+title: TrueZeal_ShellyK_Combat_Anton03
+tags:
+---
+<<LeftSet Anton>>
+<<RightSet TrueZeal_ShellyK>>
+<<LeftFocus>>
+<<LeftSound>>
+Hot dog! I'm a goddamn killing machine!
+<<LeftSound>>
+Shelly, you messed up not getting yourself a piece of Anton when you could!
+<<RightFocus>>
+<<RightSound>>
+Would you shut up?
+<<LeftFocus>>
+...
+<<RightFocus>>
+<<RightSound>>
+Every time you accomplish anything you look over at me for approval.
+<<RightSound>>
+Just do your own thing and leave me out of it.
+<<LeftSet Anton TrueZeal_Sad>>
+<<RightSound>>
+I don't wanna be your buddy, and I sure as hell don't wanna be your girlfriend.
+<<LeftFocus>>
+...
+<<RightFocus>>
+<<RightSound>>
+Okay?
+<<LeftFocus>>
+Y-yeah, I'll stop.
+<<RightFocus>>
+Okay.
+<<Unlock TrueZeal_AntonSad>>
+<<SaveProgress>>
+===
