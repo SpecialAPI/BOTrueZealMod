@@ -197,7 +197,7 @@ Nowak? How much of that stuff do you believe?
 I don't know, Bosch.
 I don't know.
 <<Unlock 157.TrueZeal.Formosus>>
-<<if HasPartySpace() is false>>
+<<if TrueZeal_HasPartySpaceCombat() is false>>
     [[TrueZeal_Formosus_PartyFull]]
 <<else>>
     <<HireCharacter TrueZeal_Formosus_CH>>
@@ -226,7 +226,7 @@ Amen.
 <<RightSound>>
 I am ready to depart on this strange new journey.
 <<Unlock 157.TrueZeal.Formosus>>
-<<if HasPartySpace() is false>>
+<<if TrueZeal_HasPartySpaceCombat() is false>>
     [[TrueZeal_Formosus_PartyFull]]
 <<else>>
     <<HireCharacter TrueZeal_Formosus_CH>>
