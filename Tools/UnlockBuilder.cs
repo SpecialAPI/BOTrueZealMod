@@ -50,6 +50,14 @@ namespace BOTrueZealMod.Tools
             return u;
         }
 
+        public static T SetQuest<T>(this T u, QuestIDs quest) where T : UnlockableData
+        {
+            u.hasQuestCompletion = true;
+            u.questID = quest;
+
+            return u;
+        }
+
         public static T AddToDatabase<T>(this T u) where T : UnlockableData
         {
             var unlocksDB = infoHolder.UnlockableManager._unlockableDB;
