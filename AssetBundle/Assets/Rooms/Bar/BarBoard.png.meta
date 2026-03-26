@@ -1,10 +1,6 @@
 fileFormatVersion: 2
 guid: 4bd6cb70707257c4386b3b1d74373604
-timeCreated: 
-licenseType: 
-NativeFormatImporter: 
 TextureImporter:
-  serializedVersion: 11
   internalIDToNameTable:
   - first:
       213: 2631930027880433700
@@ -13,6 +9,7 @@ TextureImporter:
       213: 4109935073637390150
     second: BarBoard_1
   externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -54,15 +51,9 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot:
-    x: 0.5
-    y: 0.5
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
-  spriteBorder:
-    x: 0
-    y: 0
-    z: 0
-    w: 0
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -77,14 +68,25 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,14 +105,8 @@ TextureImporter:
         width: 121.84775
         height: 91.92388
       alignment: 9
-      pivot:
-        x: 0.49179307
-        y: 0
-      border:
-        x: 0
-        y: 0
-        z: 0
-        w: 0
+      pivot: {x: 0.49179307, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -130,14 +126,8 @@ TextureImporter:
         width: 140.89713
         height: 24.92388
       alignment: 9
-      pivot:
-        x: 0.4753344
-        y: 0
-      border:
-        x: 0
-        y: 0
-        z: 0
-        w: 0
+      pivot: {x: 0.4753344, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -151,7 +141,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ''
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -159,7 +149,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
   spritePackingTag: 
-  output: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
