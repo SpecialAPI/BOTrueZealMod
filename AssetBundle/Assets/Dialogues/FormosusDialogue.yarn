@@ -196,13 +196,13 @@ Nowak? How much of that stuff do you believe?
 <<LeftSound>>
 I don't know, Bosch.
 I don't know.
-<<Unlock 157.TrueZeal.Formosus>>
+<<TrueZeal_UnlockCombat 157.TrueZeal.Formosus>>
 <<if TrueZeal_HasPartySpaceCombat() is false>>
     [[TrueZeal_Formosus_PartyFull]]
 <<else>>
-    <<HireCharacter TrueZeal_Formosus_CH>>
+    <<TrueZeal_HireCharacterCombat TrueZeal_Formosus_CH>>
 <<endif>>
-<<SaveProgress>>
+<<TrueZeal_SaveProgressCombat>>
 ===
 
 title: TrueZeal_Formosus_Prayer_No
@@ -225,13 +225,13 @@ Amen.
 ...
 <<RightSound>>
 I am ready to depart on this strange new journey.
-<<Unlock 157.TrueZeal.Formosus>>
+<<TrueZeal_UnlockCombat 157.TrueZeal.Formosus>>
 <<if TrueZeal_HasPartySpaceCombat() is false>>
     [[TrueZeal_Formosus_PartyFull]]
 <<else>>
-    <<HireCharacter TrueZeal_Formosus_CH>>
+    <<TrueZeal_HireCharacterCombat TrueZeal_Formosus_CH>>
 <<endif>>
-<<SaveProgress>>
+<<TrueZeal_SaveProgressCombat>>
 ===
 
 title: TrueZeal_Formosus_PartyFull
