@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: 0f42819c131278f43b801b132b988688
+timeCreated: 
+licenseType: 
+NativeFormatImporter: 
+TextureImporter:
+  serializedVersion: 11
+  internalIDToNameTable:
+  - first:
+      213: 8047199284637787388
+    second: BarSceneNPCs_0
+  - first:
+      213: 404253996715380908
+    second: BarSceneNPCs_1
+  - first:
+      213: 780803872191536562
+    second: BarSceneNPCs_2
+  - first:
+      213: 5022204291815078981
+    second: BarSceneNPCs_3
+  - first:
+      213: -7802018820829969832
+    second: BarSceneNPCs_4
+  - first:
+      213: 5664938736945594506
+    second: BarSceneNPCs_5
+  - first:
+      213: -8734320474309202106
+    second: BarSceneNPCs_6
+  - first:
+      213: 3186957414365607410
+    second: BarSceneNPCs_7
+  externalObjects: {}
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot:
+    x: 0.5
+    y: 0.5
+  spritePixelsToUnits: 32
+  spriteBorder:
+    x: 0
+    y: 0
+    z: 0
+    w: 0
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BarSceneNPCs_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 27.943628
+        height: 37.923878
+      alignment: 9
+      pivot:
+        x: 0.57258135
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7581f28d7e2069140a6fc559d6d678c2
+      internalID: 8047199284637787388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSceneNPCs_1
+      rect:
+        serializedVersion: 2
+        x: 35.07612
+        y: 0
+        width: 26.910967
+        height: 55.900524
+      alignment: 9
+      pivot:
+        x: 0.4802459
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463697b4978a361488787404093f2f70
+      internalID: 404253996715380908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSceneNPCs_2
+      rect:
+        serializedVersion: 2
+        x: 69.07612
+        y: 0
+        width: 24.89713
+        height: 35.973248
+      alignment: 9
+      pivot:
+        x: 0.4387607
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127dd4bf6957c3f4a9dfdf97f57c81a0
+      internalID: 780803872191536562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSceneNPCs_3
+      rect:
+        serializedVersion: 2
+        x: 98.02675
+        y: 0
+        width: 23.89713
+        height: 34.973248
+      alignment: 9
+      pivot:
+        x: 0.5847251
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd744ce24b23ed347b0b3e6f4d614fc0
+      internalID: 5022204291815078981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSceneNPCs_4
+      rect:
+        serializedVersion: 2
+        x: 132.07613
+        y: 0
+        width: 23.891909
+        height: 38.941795
+      alignment: 9
+      pivot:
+        x: 0.49907583
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f935600cb826e374a921d6e24814478e
+      internalID: -7802018820829969832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSceneNPCs_5
+      rect:
+        serializedVersion: 2
+        x: 163.07613
+        y: 0
+        width: 24.84776
+        height: 39.973248
+      alignment: 9
+      pivot:
+        x: 0.5201223
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6f611b63ba76d4e992bd458999a6f9
+      internalID: 5664938736945594506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSceneNPCs_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 41.923878
+      alignment: 9
+      pivot:
+        x: 0.5
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9efe5f5979df354b8d70609d6059bd8
+      internalID: -8734320474309202106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSceneNPCs_7
+      rect:
+        serializedVersion: 2
+        x: 233.07613
+        y: 0
+        width: 13.847759
+        height: 10.92388
+      alignment: 9
+      pivot:
+        x: 0.49999958
+        y: 0
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b057e8c2116cd40a2f337851f7db80
+      internalID: 3186957414365607410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ''
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  output: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
