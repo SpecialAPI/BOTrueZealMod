@@ -92,6 +92,7 @@ namespace BOTrueZealMod.Characters
             var questUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.Formosus)
                 .SetAchievement(questAch)
                 .SetCharacter(GetID("Formosus_CH"))
+                .SetQuest(QuestIDsE.FormosusQuest)
                 .AddToDatabase();
 
             var osmanAch = AchievementBuilder.NewAchievement(AchievementIDs.FormosusOsmanUnlock, "Coelacanth", "Unlocked a new item.")
