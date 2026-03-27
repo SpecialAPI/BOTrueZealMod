@@ -7,6 +7,7 @@ namespace BOTrueZealMod
     public static class Bar
     {
         public const string BarRoomPrefabName = "TrueZeal_Bar_Zone01_Room";
+        private static string ShellyDialogueName;
         private static GameObject BarRoom;
 
         public static void Init()
@@ -14,6 +15,15 @@ namespace BOTrueZealMod
             var room = Bundle.LoadAsset<GameObject>(BarRoomPrefabName);
             var barHandler = room.AddComponent<BarRoomHandler>();
             LoadedAssetsHandler.LoadedRoomPrefabs[barHandler.name] = barHandler;
+
+            var shellyDialogue = CreateScriptable<DialogueSO>();
+            shellyDialogue.name = GetID("Bar_ShellyK_Dialogue");
+            shellyDialogue.m_DialogID = GetID("ShellyK");
+            shellyDialogue.startNode = "TrueZeal_ShellyK_Bar_Start";
+            shellyDialogue.dialog = Bundle.LoadAsset<YarnProgram>("ShellyKDialogue");
+            LoadedAssetsHandler.LoadedDialogues[shellyDialogue.name] = shellyDialogue;
+            LoadedDBsHandler.GetDialogueDB().AddOrChangeDialog(shellyDialogue.m_DialogID, shellyDialogue.dialog);
+            ShellyDialogueName = shellyDialogue.name;
 
             BarRoom = room;
 
@@ -49,7 +59,10 @@ namespace BOTrueZealMod
 
         private static void GenerateBarCard(ZoneBGDataBaseSO zone, CardInfo info)
         {
-            var card = new Card(zone._zoneData.CardCount, 0, info.cardType, info.pilePosition, SignTypeE.Bar, BarRoomPrefabName);
+            var entityData = new TalkingEntityContentData(ShellyDialogueName);
+            var dataID = zone._zoneData.AddDialoguePathData(entityData);
+
+            var card = new Card(zone._zoneData.CardCount, dataID, info.cardType, info.pilePosition, SignTypeE.Bar, BarRoomPrefabName);
             zone._zoneData.AddCard(card);
         }
     }
