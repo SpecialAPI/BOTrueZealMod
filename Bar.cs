@@ -17,6 +17,7 @@ namespace BOTrueZealMod
 
             BarRoom = room;
 
+            CustomCardHandler.AddCardGenerator(CardTypeE.EventBar, GenerateBarCard);
             AddCard();
         }
 
@@ -43,8 +44,6 @@ namespace BOTrueZealMod
 
             var deck = zone1BG._deckInfo;
             deck._possibleCards = deck._possibleCards.AddToArray(barCard);
-
-            CustomCardHandler.AddCardGenerator(CardTypeE.EventBar, GenerateBarCard);
         }
 
         private static void GenerateBarCard(ZoneBGDataBaseSO zone, CardInfo info)
