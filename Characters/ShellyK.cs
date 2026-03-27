@@ -83,6 +83,15 @@ namespace BOTrueZealMod.Characters
             });
             ch.AddToDatabase(true, true);
 
+            var questAch = AchievementBuilder.NewAchievement(AchievementIDs.ShellyQuest, "The Cougar", "Unlock Shelly K. for real this time...")
+                .SetSprite("Shelly_Quest")
+                .AddToBaseCategory(AchievementUnlockType.PartyMembers);
+            var questUnlock = UnlockBuilder.NewUnlock(UnlockableIDE.ShellyK)
+                .SetAchievement(questAch)
+                .SetCharacter(GetID("ShellyK_CH"))
+                .SetQuest(QuestIDsE.ShellyKQuest)
+                .AddToDatabase();
+
             var osmanAch = AchievementBuilder.NewAchievement(AchievementIDs.ShellyOsmanUnlock, "Burn-Bottle Batch", "Unlocked a new item.")
                 .SetSprite("Shelly_Osman")
                 .AddToBaseCategory(AchievementUnlockType.TheWitness);
