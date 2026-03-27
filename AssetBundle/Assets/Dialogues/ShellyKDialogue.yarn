@@ -67,7 +67,7 @@ tags:
     [[TrueZeal_ShellyK_Bar_Hans]]
 <<elseif CharacterInParty("Pearl") is true>>
     [[TrueZeal_ShellyK_Bar_Pearl]]
-<<elseif CharacterInParty("TrueZeal_ShellyK") is true>>
+<<elseif CharacterInParty("Shelly K.") is true>>
     [[TrueZeal_ShellyK_Bar_ShellyK]]
 <<elseif HasPartySpace() is false>>
     [[TrueZeal_ShellyK_Bar_PartySpace]]
