@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{b40c325e-85b8-416b-a6dc-baf427c0f20c}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
+		<property name="name">
+			<value>Boss_Roar</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{53720520-aeeb-44f6-8346-6718c020b088}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{63574b7b-12c4-4a04-b537-ebfea8fdfbb5}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{39c884f8-a325-4a09-bb1e-042a0fbe2378}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{53720520-aeeb-44f6-8346-6718c020b088}">
+		<relationship name="effects">
+			<destination>{49c99086-4f2f-4b5c-a5c8-03a139447e5d}</destination>
+			<destination>{3382e377-3342-45be-95d1-7a308135dd11}</destination>
+			<destination>{eafecd51-7d6a-4e4c-ba13-5426ac203e42}</destination>
+			<destination>{cc785b37-3fcc-4400-8ed5-c23626f428c4}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{63574b7b-12c4-4a04-b537-ebfea8fdfbb5}" />
+	<object class="Sidechain" id="{49c99086-4f2f-4b5c-a5c8-03a139447e5d}" />
+	<object class="Sidechain" id="{3382e377-3342-45be-95d1-7a308135dd11}" />
+	<object class="MixerBusFader" id="{eafecd51-7d6a-4e4c-ba13-5426ac203e42}" />
+	<object class="MixerSend" id="{cc785b37-3fcc-4400-8ed5-c23626f428c4}">
+		<property name="level">
+			<value>-15.5</value>
+		</property>
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{e08eb4f7-e873-41a8-8da2-c0e021af84c2}</destination>
+		</relationship>
+	</object>
+</objects>

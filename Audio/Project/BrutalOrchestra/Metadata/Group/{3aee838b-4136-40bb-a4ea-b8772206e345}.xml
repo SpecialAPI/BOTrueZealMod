@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{3aee838b-4136-40bb-a4ea-b8772206e345}">
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="name">
+			<value>ATK_Boss</value>
+		</property>
+		<property name="maxInstances">
+			<value>2</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ef404e4c-8a5c-427c-990f-89aed30f97ac}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{1d343252-fee2-4e2a-92e7-6ea114a0c50a}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{952dcc6c-8d6d-4036-8571-cc3de0fc3986}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ef404e4c-8a5c-427c-990f-89aed30f97ac}">
+		<relationship name="effects">
+			<destination>{95057c07-9c51-4ac3-9a5b-fc13a97087be}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{1d343252-fee2-4e2a-92e7-6ea114a0c50a}" />
+	<object class="MixerBusFader" id="{95057c07-9c51-4ac3-9a5b-fc13a97087be}" />
+</objects>

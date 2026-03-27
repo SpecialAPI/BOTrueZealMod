@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerMaster" id="{a2131e43-fb97-494e-a932-65eae9c76ad2}">
+		<property name="volume">
+			<value>-8</value>
+		</property>
+		<property name="name">
+			<value>Master Bus</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{0fbeec46-224e-4a22-8dd5-2f155c10734f}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{48273986-d55a-45bc-96ab-a77b7af58f33}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{980ab54e-1a4b-4c03-81ed-c3b96a98f9c1}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{0fbeec46-224e-4a22-8dd5-2f155c10734f}">
+		<relationship name="effects">
+			<destination>{7ec7aaa2-7d27-4e07-b4d6-376907a7a72c}</destination>
+			<destination>{6a60d134-c8a4-4a12-be34-47aae00c012d}</destination>
+			<destination>{68971323-cd85-4fde-871f-ff1f783e967f}</destination>
+			<destination>{c5fd684a-f044-4e51-92df-031ddb6e8bf7}</destination>
+			<destination>{c43f0425-09c5-44e5-9022-49cea45e33d3}</destination>
+			<destination>{5349cd1d-2c0a-4908-944d-912315fb570f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{48273986-d55a-45bc-96ab-a77b7af58f33}">
+		<property name="overridingOutputFormat">
+			<value>2</value>
+		</property>
+	</object>
+	<object class="MultibandEqEffect" id="{7ec7aaa2-7d27-4e07-b4d6-376907a7a72c}">
+		<property name="filterTypeA">
+			<value>4</value>
+		</property>
+		<property name="filterTypeB">
+			<value>1</value>
+		</property>
+		<property name="filterTypeC">
+			<value>9</value>
+		</property>
+		<property name="filterTypeD">
+			<value>9</value>
+		</property>
+		<property name="filterTypeE">
+			<value>9</value>
+		</property>
+		<property name="frequencyA">
+			<value>46</value>
+		</property>
+		<property name="frequencyB">
+			<value>10000</value>
+		</property>
+		<property name="frequencyC">
+			<value>886.545654</value>
+		</property>
+		<property name="frequencyD">
+			<value>500</value>
+		</property>
+		<property name="frequencyE">
+			<value>7000</value>
+		</property>
+		<property name="qualityA">
+			<value>0.599999964</value>
+		</property>
+		<property name="qualityB">
+			<value>0.644206941</value>
+		</property>
+		<property name="qualityC">
+			<value>1.4203794</value>
+		</property>
+		<property name="qualityD">
+			<value>3.60000014</value>
+		</property>
+		<property name="qualityE">
+			<value>3.60000014</value>
+		</property>
+		<property name="gainA">
+			<value>-15</value>
+		</property>
+		<property name="gainB">
+			<value>-30</value>
+		</property>
+		<property name="gainC">
+			<value>-4</value>
+		</property>
+		<property name="gainD">
+			<value>-3.5</value>
+		</property>
+		<property name="gainE">
+			<value>-3.5</value>
+		</property>
+	</object>
+	<object class="MultibandEqEffect" id="{6a60d134-c8a4-4a12-be34-47aae00c012d}">
+		<property name="filterTypeA">
+			<value>9</value>
+		</property>
+		<property name="filterTypeB">
+			<value>9</value>
+		</property>
+		<property name="frequencyA">
+			<value>2800</value>
+		</property>
+		<property name="frequencyB">
+			<value>270</value>
+		</property>
+		<property name="qualityA">
+			<value>2.5</value>
+		</property>
+		<property name="gainA">
+			<value>-2.5</value>
+		</property>
+		<property name="gainB">
+			<value>-1.5</value>
+		</property>
+	</object>
+	<object class="CompressorEffect" id="{68971323-cd85-4fde-871f-ff1f783e967f}">
+		<property name="threshold">
+			<value>-14</value>
+		</property>
+		<property name="attackTime">
+			<value>0.100000001</value>
+		</property>
+		<property name="releaseTime">
+			<value>10</value>
+		</property>
+		<property name="gain">
+			<value>15</value>
+		</property>
+	</object>
+	<object class="LimiterEffect" id="{c5fd684a-f044-4e51-92df-031ddb6e8bf7}">
+		<property name="ceiling">
+			<value>-2</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{c43f0425-09c5-44e5-9022-49cea45e33d3}">
+		<property name="gain">
+			<value>2</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{5349cd1d-2c0a-4908-944d-912315fb570f}" />
+</objects>

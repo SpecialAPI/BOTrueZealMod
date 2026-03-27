@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{8014d82b-10bd-4467-b941-0034027137a1}">
+		<property name="color">
+			<value>Cyan</value>
+		</property>
+		<property name="volume">
+			<value>-5.5</value>
+		</property>
+		<property name="name">
+			<value>Manna</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{2b1a1d0d-d96e-4ca3-b5e5-21a3ea6b3c79}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{11c8fda1-aa1e-41db-9f30-eb0b40b0b225}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{eceb697f-b6a4-4dc2-87bd-17c38a6313df}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{2b1a1d0d-d96e-4ca3-b5e5-21a3ea6b3c79}">
+		<relationship name="effects">
+			<destination>{eacb28bb-0124-427d-a8fe-e17674f4cf0a}</destination>
+			<destination>{23a69766-f7f0-4640-ad79-4fc0bca87238}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{11c8fda1-aa1e-41db-9f30-eb0b40b0b225}" />
+	<object class="MixerBusFader" id="{eacb28bb-0124-427d-a8fe-e17674f4cf0a}" />
+	<object class="PannerEffect" id="{23a69766-f7f0-4640-ad79-4fc0bca87238}">
+		<property name="overridingOutputFormat">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

@@ -8,11 +8,16 @@
 
   <ItemGroup>
     <Compile Remove="AssetBundle\**" />
+    <Compile Remove="Audio\Project\**" />
     <EmbeddedResource Remove="AssetBundle\**" />
+    <EmbeddedResource Remove="Audio\Project\**" />
     <None Remove="AssetBundle\**" />
+    <None Remove="Audio\Project\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Audio\FMODAssets\Desktop\TrueZealBank.bank" />
+    <None Remove="Audio\FMODAssets\Desktop\TrueZealBank.strings.bank" />
     <None Remove="Resources\Abilities\AttackIcon_Confession.png" />
     <None Remove="Resources\Abilities\AttackIcon_Flirtation.png" />
     <None Remove="Resources\Abilities\AttackIcon_Mass.png" />
@@ -91,6 +96,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Audio\FMODAssets\Desktop\TrueZealBank.bank" />
+    <EmbeddedResource Include="Audio\FMODAssets\Desktop\TrueZealBank.strings.bank" />
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Brawl.png" />
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Confession.png" />
     <EmbeddedResource Include="Resources\Abilities\AttackIcon_Flirtation.png" />

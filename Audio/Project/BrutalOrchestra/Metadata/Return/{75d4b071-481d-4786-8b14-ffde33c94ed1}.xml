@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerReturn" id="{75d4b071-481d-4786-8b14-ffde33c94ed1}">
+		<property name="name">
+			<value>NPC_Memory</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{f7ed9bd1-8528-4893-be84-b17a27c237e3}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{b4bc293a-fa08-4b40-8084-7ca7c86e4bd1}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{3eb7020d-dfd0-4319-9d82-c5157fc85319}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{f7ed9bd1-8528-4893-be84-b17a27c237e3}">
+		<relationship name="effects">
+			<destination>{f503e652-4fc8-4634-8a2e-acd61b36a6cd}</destination>
+			<destination>{3270ea72-c517-41b2-9f14-52ab918e904c}</destination>
+			<destination>{9ecc783e-1bbf-44f1-8e1b-db0c05f80506}</destination>
+			<destination>{7c3fd0e4-cdd4-428c-b27a-39d80076941e}</destination>
+			<destination>{80e744b7-6c3c-4385-b9a7-c88f2bdcddc8}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{b4bc293a-fa08-4b40-8084-7ca7c86e4bd1}" />
+	<object class="DistortionEffect" id="{f503e652-4fc8-4634-8a2e-acd61b36a6cd}">
+		<property name="level">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{3270ea72-c517-41b2-9f14-52ab918e904c}" />
+	<object class="DelayEffect" id="{9ecc783e-1bbf-44f1-8e1b-db0c05f80506}">
+		<property name="level">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{7c3fd0e4-cdd4-428c-b27a-39d80076941e}">
+		<property name="wetLevel">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{80e744b7-6c3c-4385-b9a7-c88f2bdcddc8}" />
+</objects>

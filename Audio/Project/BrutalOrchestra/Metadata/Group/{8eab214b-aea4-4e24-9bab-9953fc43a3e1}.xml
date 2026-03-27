@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{8eab214b-aea4-4e24-9bab-9953fc43a3e1}">
+		<property name="name">
+			<value>Zanguango</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{e0ac1ccb-846c-4c17-bf13-2995b18eb29b}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{50f797ee-7171-43b7-b221-e2670d39f0ba}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{94b669be-7207-4caa-9c40-50fcca7cf4ed}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{e0ac1ccb-846c-4c17-bf13-2995b18eb29b}">
+		<relationship name="effects">
+			<destination>{e9868014-ff24-400b-a928-4e9868d1f145}</destination>
+			<destination>{8fc7ed1e-4685-4685-90bc-a7d23368ad6f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{50f797ee-7171-43b7-b221-e2670d39f0ba}" />
+	<object class="Sidechain" id="{e9868014-ff24-400b-a928-4e9868d1f145}" />
+	<object class="MixerBusFader" id="{8fc7ed1e-4685-4685-90bc-a7d23368ad6f}" />
+</objects>

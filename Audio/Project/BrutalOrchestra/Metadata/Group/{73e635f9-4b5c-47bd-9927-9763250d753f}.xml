@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{73e635f9-4b5c-47bd-9927-9763250d753f}">
+		<property name="color">
+			<value>Cyan Light 1</value>
+		</property>
+		<property name="volume">
+			<value>-13</value>
+		</property>
+		<property name="name">
+			<value>UI</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{33286f6f-08f5-4099-8e04-63a976172b8d}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{6eeedbb8-fc50-429b-a81b-85731edb57b0}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8ed98c97-c994-4e27-a8b4-0688c0466c36}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{33286f6f-08f5-4099-8e04-63a976172b8d}">
+		<relationship name="effects">
+			<destination>{7e5d289d-204e-4244-8be7-2583da1ded58}</destination>
+			<destination>{a12f73bd-2443-4441-ac22-e73a2d9ce45b}</destination>
+			<destination>{c7d75566-c613-4311-9e65-07cc3a32b696}</destination>
+			<destination>{6b13ba9a-b860-4de8-8070-12350bfe4bc4}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{6eeedbb8-fc50-429b-a81b-85731edb57b0}" />
+	<object class="ThreeEQEffect" id="{7e5d289d-204e-4244-8be7-2583da1ded58}">
+		<property name="highGain">
+			<value>-4</value>
+		</property>
+		<property name="lowCrossover">
+			<value>80</value>
+		</property>
+		<property name="highCrossover">
+			<value>5500</value>
+		</property>
+		<property name="crossoverSlope">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{a12f73bd-2443-4441-ac22-e73a2d9ce45b}">
+		<property name="gain">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{c7d75566-c613-4311-9e65-07cc3a32b696}" />
+	<object class="MixerSend" id="{6b13ba9a-b860-4de8-8070-12350bfe4bc4}">
+		<property name="level">
+			<value>-14.5</value>
+		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{95974690-18b6-4808-8f08-c470f90f3e12}</destination>
+		</relationship>
+	</object>
+</objects>

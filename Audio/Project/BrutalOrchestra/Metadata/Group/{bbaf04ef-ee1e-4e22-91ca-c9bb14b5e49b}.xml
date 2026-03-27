@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{bbaf04ef-ee1e-4e22-91ca-c9bb14b5e49b}">
+		<property name="name">
+			<value>Overworld</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{3b6c23e8-9685-4441-8f4d-dbf71f64cea1}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{d4f4dbb3-8309-4b8a-b7d0-f5f6e136afb5}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{94b669be-7207-4caa-9c40-50fcca7cf4ed}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{3b6c23e8-9685-4441-8f4d-dbf71f64cea1}">
+		<relationship name="effects">
+			<destination>{c98f168f-e1d5-40be-b599-5a641e766324}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{d4f4dbb3-8309-4b8a-b7d0-f5f6e136afb5}" />
+	<object class="MixerBusFader" id="{c98f168f-e1d5-40be-b599-5a641e766324}" />
+</objects>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{d28bdd6c-0895-4e30-9797-ba440b28a3a3}">
+		<property name="color">
+			<value>Cyan Light 1</value>
+		</property>
+		<property name="name">
+			<value>MNU_PLR</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ead1c0b1-9d7e-4f8d-9157-dc6dad28a326}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{17d42f27-7759-4b9a-b821-183b02397650}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{6b9911e5-5122-44e9-8e79-859cb5a2937b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ead1c0b1-9d7e-4f8d-9157-dc6dad28a326}">
+		<relationship name="effects">
+			<destination>{24bf4dce-2c41-4672-89fb-16a258b031ed}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{17d42f27-7759-4b9a-b821-183b02397650}" />
+	<object class="MixerBusFader" id="{24bf4dce-2c41-4672-89fb-16a258b031ed}" />
+</objects>

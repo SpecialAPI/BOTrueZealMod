@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{cb86a12f-c248-4a26-89b5-7a2936d5ebec}">
+		<property name="color">
+			<value>Cyan</value>
+		</property>
+		<property name="name">
+			<value>Player</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{7816c350-cceb-4251-a6ba-fee4cdb4989f}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{2accb5ba-8f49-4a2e-9cf5-a54d7bd3421b}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{eceb697f-b6a4-4dc2-87bd-17c38a6313df}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{7816c350-cceb-4251-a6ba-fee4cdb4989f}">
+		<relationship name="effects">
+			<destination>{b572f7ea-f10b-4a74-99f6-f84196bc5a8a}</destination>
+			<destination>{aa7f868f-48ba-4c68-b1bc-74609c0b60a8}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{2accb5ba-8f49-4a2e-9cf5-a54d7bd3421b}" />
+	<object class="GainEffect" id="{b572f7ea-f10b-4a74-99f6-f84196bc5a8a}">
+		<property name="gain">
+			<value>5</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{aa7f868f-48ba-4c68-b1bc-74609c0b60a8}" />
+</objects>

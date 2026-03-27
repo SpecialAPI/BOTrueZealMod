@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{ff142109-03e6-47a4-8cad-2a28d671f5b8}">
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="name">
+			<value>Damage</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{186bcf56-6535-4da4-b7f6-52a858e5f97e}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{67972e39-32b7-4d2a-a078-7009969dfb38}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{f1bafc91-eaad-4750-a5dd-76aa8e9caf54}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{186bcf56-6535-4da4-b7f6-52a858e5f97e}">
+		<relationship name="effects">
+			<destination>{af27a4a8-97d6-49de-91f0-576df571b783}</destination>
+			<destination>{09c3bb8a-1fb2-4d24-ae0b-41a307b654c3}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{67972e39-32b7-4d2a-a078-7009969dfb38}" />
+	<object class="MixerBusFader" id="{af27a4a8-97d6-49de-91f0-576df571b783}" />
+	<object class="MixerSend" id="{09c3bb8a-1fb2-4d24-ae0b-41a307b654c3}">
+		<property name="level">
+			<value>-10</value>
+		</property>
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{c0265987-e751-46e2-bb65-b624f9c498d6}</destination>
+		</relationship>
+	</object>
+</objects>

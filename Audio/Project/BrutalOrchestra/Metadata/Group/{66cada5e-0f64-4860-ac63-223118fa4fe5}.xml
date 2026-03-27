@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{66cada5e-0f64-4860-ac63-223118fa4fe5}">
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="name">
+			<value>ATK_Super</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ed6da81a-5952-4343-be59-33a0047edaf3}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{52bae5aa-a830-4a73-9559-9f63bad0b7e3}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{952dcc6c-8d6d-4036-8571-cc3de0fc3986}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ed6da81a-5952-4343-be59-33a0047edaf3}">
+		<relationship name="effects">
+			<destination>{6139a2c0-3b8d-457f-9068-fef14eeab3de}</destination>
+			<destination>{7b2f3512-f347-464d-96f1-1a6106d91964}</destination>
+			<destination>{4306fb03-d2ae-47fa-97e7-468ed50be737}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{52bae5aa-a830-4a73-9559-9f63bad0b7e3}" />
+	<object class="Sidechain" id="{6139a2c0-3b8d-457f-9068-fef14eeab3de}" />
+	<object class="GainEffect" id="{7b2f3512-f347-464d-96f1-1a6106d91964}">
+		<property name="gain">
+			<value>2</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{4306fb03-d2ae-47fa-97e7-468ed50be737}" />
+</objects>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{756d50df-bb35-42b2-b02c-ca83309b0219}">
+		<property name="name">
+			<value>UnfinishedHeir_Dth</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ff085e55-b914-4e2a-9cec-3d45abc8597d}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{49afcd83-d50d-4319-9d6c-98b50a468fe3}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{7cda056d-49df-40f9-97d9-7ab9f5ca60db}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ff085e55-b914-4e2a-9cec-3d45abc8597d}">
+		<relationship name="effects">
+			<destination>{4f7e7fed-9469-4451-94eb-0188f3a7047f}</destination>
+			<destination>{869da4ba-e2b8-4526-a728-64830b8b04c7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{49afcd83-d50d-4319-9d6c-98b50a468fe3}" />
+	<object class="MixerBusFader" id="{4f7e7fed-9469-4451-94eb-0188f3a7047f}" />
+	<object class="Sidechain" id="{869da4ba-e2b8-4526-a728-64830b8b04c7}" />
+</objects>

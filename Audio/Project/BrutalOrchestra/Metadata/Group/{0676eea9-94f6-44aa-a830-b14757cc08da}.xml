@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{0676eea9-94f6-44aa-a830-b14757cc08da}">
+		<property name="name">
+			<value>MNU_MoneyExp</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{008f98af-1cf9-4204-bf01-0e606775561f}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{af2c7375-83a7-465f-b75c-9c1ff573d29b}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{6b9911e5-5122-44e9-8e79-859cb5a2937b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{008f98af-1cf9-4204-bf01-0e606775561f}">
+		<relationship name="effects">
+			<destination>{77316a5f-7b00-4f8d-a9b5-dfa36b2af5f1}</destination>
+			<destination>{d6eca004-b135-42de-b14b-537af86990ab}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{af2c7375-83a7-465f-b75c-9c1ff573d29b}" />
+	<object class="Sidechain" id="{77316a5f-7b00-4f8d-a9b5-dfa36b2af5f1}" />
+	<object class="MixerBusFader" id="{d6eca004-b135-42de-b14b-537af86990ab}" />
+</objects>

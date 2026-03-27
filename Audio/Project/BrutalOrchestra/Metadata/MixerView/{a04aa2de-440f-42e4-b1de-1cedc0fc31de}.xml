@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="UiMixerView" id="{a04aa2de-440f-42e4-b1de-1cedc0fc31de}">
+		<property name="name">
+			<value>Characters</value>
+		</property>
+		<relationship name="assignedStrips">
+			<destination>{3eb7020d-dfd0-4319-9d82-c5157fc85319}</destination>
+			<destination>{39c884f8-a325-4a09-bb1e-042a0fbe2378}</destination>
+			<destination>{d63eb28b-a8df-44cc-b0df-85e4c3012c5e}</destination>
+			<destination>{dafc6221-16a7-4ed1-8ccb-67ca1955a632}</destination>
+			<destination>{b40c325e-85b8-416b-a6dc-baf427c0f20c}</destination>
+			<destination>{a6736f05-71e1-4346-8356-0a07bbfd6a22}</destination>
+			<destination>{76bbf15c-a465-4251-ad37-1a8e2c6761c0}</destination>
+			<destination>{7d0f1957-d000-4328-934a-5fe0f078902f}</destination>
+			<destination>{75d4b071-481d-4786-8b14-ffde33c94ed1}</destination>
+			<destination>{7cda056d-49df-40f9-97d9-7ab9f5ca60db}</destination>
+			<destination>{6b686c1a-cf18-4a50-8101-81c9da21fa0b}</destination>
+			<destination>{d314df9a-50d9-4ad7-bcd2-a424a65128c4}</destination>
+			<destination>{7f29c455-dac8-42ec-9238-babfe380dec5}</destination>
+			<destination>{25dbc855-95a4-4d1b-8078-0ac83d493ffe}</destination>
+			<destination>{8777f2e4-9c55-41e2-b0ee-adfd838c4ddb}</destination>
+			<destination>{57dfe05e-8a69-4016-a7a4-ae69277551ae}</destination>
+			<destination>{6e3c9ef4-81c5-4f22-b83c-6069407300fb}</destination>
+			<destination>{160e9c89-e6a4-43e3-9410-94bb8ae9e5be}</destination>
+			<destination>{94b669be-7207-4caa-9c40-50fcca7cf4ed}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{980ab54e-1a4b-4c03-81ed-c3b96a98f9c1}</destination>
+		</relationship>
+	</object>
+</objects>

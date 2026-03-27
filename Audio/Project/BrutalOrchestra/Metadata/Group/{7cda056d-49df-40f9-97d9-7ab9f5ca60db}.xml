@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{7cda056d-49df-40f9-97d9-7ab9f5ca60db}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
+		<property name="name">
+			<value>ENM_Dmg</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{0f900653-9107-461b-b9a1-afdc5b10cd5b}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{f6e048b5-144b-41b5-8270-0fb009a68317}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{a6736f05-71e1-4346-8356-0a07bbfd6a22}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{0f900653-9107-461b-b9a1-afdc5b10cd5b}">
+		<relationship name="effects">
+			<destination>{e2a8426b-b25e-4d0c-ac30-1480d5f6993a}</destination>
+			<destination>{1f068b02-1329-4f96-bf36-ca2d26497d05}</destination>
+			<destination>{a5402045-3160-483e-b038-21df5c26a72f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{f6e048b5-144b-41b5-8270-0fb009a68317}" />
+	<object class="GainEffect" id="{e2a8426b-b25e-4d0c-ac30-1480d5f6993a}">
+		<property name="gain">
+			<value>7</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{1f068b02-1329-4f96-bf36-ca2d26497d05}" />
+	<object class="MixerSend" id="{a5402045-3160-483e-b038-21df5c26a72f}">
+		<property name="level">
+			<value>-20.5</value>
+		</property>
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{29ea0de3-0297-4ca1-9112-b6190d9fa695}</destination>
+		</relationship>
+	</object>
+</objects>

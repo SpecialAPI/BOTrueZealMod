@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerReturn" id="{160e9c89-e6a4-43e3-9410-94bb8ae9e5be}">
+		<property name="color">
+			<value>Green</value>
+		</property>
+		<property name="name">
+			<value>VRB_World</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{5a74ce10-52ed-456b-84e9-7fdfa2e21f22}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{4b350fb8-51ad-4792-8c55-a4abcf00a697}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8ed98c97-c994-4e27-a8b4-0688c0466c36}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{5a74ce10-52ed-456b-84e9-7fdfa2e21f22}">
+		<relationship name="effects">
+			<destination>{083d980d-32d1-41cc-80f4-1eb839a710b9}</destination>
+			<destination>{02fd343d-63ac-4de2-8808-06b614b5b1ee}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{4b350fb8-51ad-4792-8c55-a4abcf00a697}" />
+	<object class="SFXReverbEffect" id="{083d980d-32d1-41cc-80f4-1eb839a710b9}">
+		<property name="decayTime">
+			<value>1900</value>
+		</property>
+		<property name="highCut">
+			<value>2600</value>
+		</property>
+		<property name="wetLevel">
+			<value>0</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{02fd343d-63ac-4de2-8808-06b614b5b1ee}" />
+</objects>

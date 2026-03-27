@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{cc09a44d-fb9f-409e-b117-3198ab0e3c9c}">
+		<property name="color">
+			<value>Cyan Light 1</value>
+		</property>
+		<property name="name">
+			<value>Overworld</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{636014ee-a858-4b68-bbe9-361b5dca1932}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{64228017-39c3-46e0-8c7b-a94db5d6d5a9}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{73e635f9-4b5c-47bd-9927-9763250d753f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{636014ee-a858-4b68-bbe9-361b5dca1932}">
+		<relationship name="effects">
+			<destination>{f11a8449-10d1-4305-a584-7326f69aa693}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{64228017-39c3-46e0-8c7b-a94db5d6d5a9}" />
+	<object class="MixerBusFader" id="{f11a8449-10d1-4305-a584-7326f69aa693}" />
+</objects>

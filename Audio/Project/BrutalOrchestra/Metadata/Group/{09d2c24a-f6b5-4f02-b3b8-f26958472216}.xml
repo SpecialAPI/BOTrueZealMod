@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{09d2c24a-f6b5-4f02-b3b8-f26958472216}">
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="name">
+			<value>ATK_Gen</value>
+		</property>
+		<property name="maxInstances">
+			<value>1</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{3b65e494-ee45-4239-b92a-84530012f6b6}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{ac49279b-02b2-4930-8672-e30481abe094}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{952dcc6c-8d6d-4036-8571-cc3de0fc3986}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{3b65e494-ee45-4239-b92a-84530012f6b6}">
+		<relationship name="effects">
+			<destination>{137537fc-c28f-40fd-af92-0283577d3b87}</destination>
+			<destination>{f4ce13df-44db-40d6-9694-bd51022ebbec}</destination>
+			<destination>{6aca744b-97fb-487b-a0b9-252560a4a12d}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{ac49279b-02b2-4930-8672-e30481abe094}" />
+	<object class="MultibandEqEffect" id="{137537fc-c28f-40fd-af92-0283577d3b87}">
+		<property name="filterTypeA">
+			<value>4</value>
+		</property>
+		<property name="frequencyA">
+			<value>46</value>
+		</property>
+	</object>
+	<object class="CompressorEffect" id="{f4ce13df-44db-40d6-9694-bd51022ebbec}">
+		<property name="threshold">
+			<value>-18.5</value>
+		</property>
+		<property name="ratio">
+			<value>6</value>
+		</property>
+		<property name="attackTime">
+			<value>3</value>
+		</property>
+		<property name="releaseTime">
+			<value>56</value>
+		</property>
+		<property name="gain">
+			<value>9</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{6aca744b-97fb-487b-a0b9-252560a4a12d}" />
+</objects>

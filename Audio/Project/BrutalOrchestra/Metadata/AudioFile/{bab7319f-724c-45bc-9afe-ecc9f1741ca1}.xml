@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{bab7319f-724c-45bc-9afe-ecc9f1741ca1}">
+		<property name="assetPath">
+			<value>CHR_PLR_ShellyK_Dth_Bottle_02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.89862500000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{bc1446f3-101e-4bcc-b901-47ffe4284688}</destination>
+		</relationship>
+	</object>
+</objects>

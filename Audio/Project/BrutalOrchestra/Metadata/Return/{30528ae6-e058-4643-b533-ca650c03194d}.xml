@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerReturn" id="{30528ae6-e058-4643-b533-ca650c03194d}">
+		<property name="name">
+			<value>VRB_DthScreen</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{861ad562-049c-475e-9e65-544b2fc22589}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{032660e6-0a1f-4cc4-a34e-468a4c1f2857}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8ed98c97-c994-4e27-a8b4-0688c0466c36}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{861ad562-049c-475e-9e65-544b2fc22589}">
+		<relationship name="effects">
+			<destination>{d8cb9595-9c38-4e55-a553-d31e47ee9afb}</destination>
+			<destination>{0f5d55de-7cb8-4ed9-afd4-c3e434f42ee1}</destination>
+			<destination>{62c1f986-a48d-4dae-8b63-59226c931e51}</destination>
+			<destination>{2c21ca7a-7ae5-4e5d-a0fe-8745023b2381}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{032660e6-0a1f-4cc4-a34e-468a4c1f2857}" />
+	<object class="DelayEffect" id="{d8cb9595-9c38-4e55-a553-d31e47ee9afb}">
+		<property name="delay">
+			<value>560</value>
+		</property>
+		<property name="feedback">
+			<value>16</value>
+		</property>
+		<property name="level">
+			<value>-4</value>
+		</property>
+		<property name="dryLevel">
+			<value>-15</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{0f5d55de-7cb8-4ed9-afd4-c3e434f42ee1}">
+		<property name="decayTime">
+			<value>4600</value>
+		</property>
+		<property name="earlyDelay">
+			<value>62</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>320</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-11.5</value>
+		</property>
+		<property name="highCut">
+			<value>1000</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>60</value>
+		</property>
+		<property name="wetLevel">
+			<value>-1</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ChorusEffect" id="{62c1f986-a48d-4dae-8b63-59226c931e51}">
+		<property name="rate">
+			<value>0.0649999976</value>
+		</property>
+		<property name="depth">
+			<value>2.5</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{2c21ca7a-7ae5-4e5d-a0fe-8745023b2381}" />
+</objects>

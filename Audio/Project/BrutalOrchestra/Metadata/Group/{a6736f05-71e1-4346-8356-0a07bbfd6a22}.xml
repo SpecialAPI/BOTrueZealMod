@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{a6736f05-71e1-4346-8356-0a07bbfd6a22}">
+		<property name="color">
+			<value>Magenta</value>
+		</property>
+		<property name="name">
+			<value>Enemies</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{796503a0-149f-40b2-b2fe-c5dc9076a4e9}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{9ca210aa-25f3-40a1-b0a4-b4ac95cd8f07}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{3eb7020d-dfd0-4319-9d82-c5157fc85319}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{796503a0-149f-40b2-b2fe-c5dc9076a4e9}">
+		<relationship name="effects">
+			<destination>{04c5dd13-9e57-4632-af4d-5703958c0f50}</destination>
+			<destination>{b218a920-306b-4105-9449-ee8a5218ac91}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{9ca210aa-25f3-40a1-b0a4-b4ac95cd8f07}" />
+	<object class="CompressorEffect" id="{04c5dd13-9e57-4632-af4d-5703958c0f50}">
+		<property name="threshold">
+			<value>-19</value>
+		</property>
+		<property name="attackTime">
+			<value>1</value>
+		</property>
+		<property name="releaseTime">
+			<value>48</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{b218a920-306b-4105-9449-ee8a5218ac91}" />
+</objects>

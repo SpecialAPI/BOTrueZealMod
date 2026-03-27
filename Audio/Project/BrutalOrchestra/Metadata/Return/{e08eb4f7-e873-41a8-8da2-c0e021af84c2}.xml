@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerReturn" id="{e08eb4f7-e873-41a8-8da2-c0e021af84c2}">
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="name">
+			<value>VRB_Roar</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{b2bd0558-62d2-4346-9a9b-cfc6d780d85b}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{e22f7c3e-7e7d-4767-894b-5824b6472c92}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8ed98c97-c994-4e27-a8b4-0688c0466c36}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{b2bd0558-62d2-4346-9a9b-cfc6d780d85b}">
+		<relationship name="effects">
+			<destination>{baa87ad7-868d-43ec-a83a-060f7f1a1af4}</destination>
+			<destination>{5628bbf9-b53a-4bcf-b52d-4f971098c3ab}</destination>
+			<destination>{ec767589-45b7-4e5e-aea5-bf417bb0ab88}</destination>
+			<destination>{abb7c2de-642b-4e40-be28-cd1b42759f39}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{e22f7c3e-7e7d-4767-894b-5824b6472c92}" />
+	<object class="CompressorEffect" id="{baa87ad7-868d-43ec-a83a-060f7f1a1af4}">
+		<property name="threshold">
+			<value>-39</value>
+		</property>
+	</object>
+	<object class="DelayEffect" id="{5628bbf9-b53a-4bcf-b52d-4f971098c3ab}">
+		<property name="delay">
+			<value>260</value>
+		</property>
+		<property name="feedback">
+			<value>20.5</value>
+		</property>
+		<property name="level">
+			<value>-8.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{ec767589-45b7-4e5e-aea5-bf417bb0ab88}">
+		<property name="decayTime">
+			<value>3400</value>
+		</property>
+		<property name="highCut">
+			<value>4800</value>
+		</property>
+		<property name="wetLevel">
+			<value>3</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{abb7c2de-642b-4e40-be28-cd1b42759f39}" />
+</objects>

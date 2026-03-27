@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{94b669be-7207-4caa-9c40-50fcca7cf4ed}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
+		<property name="volume">
+			<value>-8</value>
+		</property>
+		<property name="name">
+			<value>Mx</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{cd66ca22-0854-4654-b4d8-4478bdee1583}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{45b3a136-98e2-4e4e-a0d3-57570b09229f}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{7e1d45f7-344d-4ec8-893a-c5a9189e78e0}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{cd66ca22-0854-4654-b4d8-4478bdee1583}">
+		<relationship name="effects">
+			<destination>{664d4329-d5b0-40bd-a5c8-4de32546ca80}</destination>
+			<destination>{f2b90c81-b6b6-4727-8f9d-5419975da876}</destination>
+			<destination>{83c9a3c1-b418-4823-a1ab-a19192ce99b0}</destination>
+			<destination>{aa1e30ff-1cc2-42e4-96d0-04e38ddc4319}</destination>
+			<destination>{a66abc09-f4d1-4af0-a2f8-c733dbe8f82f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{45b3a136-98e2-4e4e-a0d3-57570b09229f}" />
+	<object class="CompressorEffect" id="{664d4329-d5b0-40bd-a5c8-4de32546ca80}">
+		<property name="threshold">
+			<value>-10</value>
+		</property>
+		<property name="ratio">
+			<value>3</value>
+		</property>
+		<property name="attackTime">
+			<value>0.100000001</value>
+		</property>
+		<property name="releaseTime">
+			<value>100</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{4077b8ec-2b41-439c-b2b2-2685d30a3d23}</destination>
+			<destination>{4ced0d6a-8955-42a1-9acb-4a7bf2af7323}</destination>
+			<destination>{77316a5f-7b00-4f8d-a9b5-dfa36b2af5f1}</destination>
+			<destination>{6b929a57-1157-42cd-80af-45a3f4b1404d}</destination>
+			<destination>{79574d51-c47e-4de6-a8b4-e697b58dc9e0}</destination>
+		</relationship>
+	</object>
+	<object class="CompressorEffect" id="{f2b90c81-b6b6-4727-8f9d-5419975da876}">
+		<property name="threshold">
+			<value>-18.5</value>
+		</property>
+		<property name="ratio">
+			<value>9.19999981</value>
+		</property>
+		<property name="attackTime">
+			<value>0.100000001</value>
+		</property>
+		<property name="releaseTime">
+			<value>180</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{49c99086-4f2f-4b5c-a5c8-03a139447e5d}</destination>
+			<destination>{c0c86523-86bd-47b5-972c-ab5aa18c38fb}</destination>
+			<destination>{011c4a3b-0dac-4c61-b5f6-e042e41afc2e}</destination>
+			<destination>{97c8ef32-bc5b-4a63-b964-50c88845df32}</destination>
+			<destination>{79574d51-c47e-4de6-a8b4-e697b58dc9e0}</destination>
+			<destination>{32f11ce2-acf0-46b0-8447-8158cde7d003}</destination>
+			<destination>{869da4ba-e2b8-4526-a728-64830b8b04c7}</destination>
+			<destination>{d69db057-ae32-4194-ae6a-d521a345d037}</destination>
+		</relationship>
+	</object>
+	<object class="CompressorEffect" id="{83c9a3c1-b418-4823-a1ab-a19192ce99b0}">
+		<property name="threshold">
+			<value>-33</value>
+		</property>
+		<property name="ratio">
+			<value>20</value>
+		</property>
+		<property name="attackTime">
+			<value>0.100000001</value>
+		</property>
+		<property name="releaseTime">
+			<value>240</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{6139a2c0-3b8d-457f-9068-fef14eeab3de}</destination>
+			<destination>{9747f2b3-f2fd-4bd9-bf4d-43b2048b6a3e}</destination>
+			<destination>{869da4ba-e2b8-4526-a728-64830b8b04c7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{aa1e30ff-1cc2-42e4-96d0-04e38ddc4319}" />
+	<object class="LowpassEffect" id="{a66abc09-f4d1-4af0-a2f8-c733dbe8f82f}">
+		<property name="cutoff">
+			<value>22000</value>
+		</property>
+	</object>
+</objects>

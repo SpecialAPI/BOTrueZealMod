@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{09773ade-5baf-4857-a7df-90a555e65c4e}">
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="volume">
+			<value>-7</value>
+		</property>
+		<property name="name">
+			<value>StatusEffects</value>
+		</property>
+		<property name="maxInstances">
+			<value>2</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{962d0ffd-efdb-4b13-bb6f-43f3d464d495}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{127496ac-cc35-49a7-861e-31cae23cfcb3}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{f1bafc91-eaad-4750-a5dd-76aa8e9caf54}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{962d0ffd-efdb-4b13-bb6f-43f3d464d495}">
+		<relationship name="effects">
+			<destination>{86d3ef79-6052-4931-a920-d8291a42cea6}</destination>
+			<destination>{fe94400a-45f7-4072-962a-434c715247b5}</destination>
+			<destination>{65ce8460-98c8-41b3-a746-5c8732c7150b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{127496ac-cc35-49a7-861e-31cae23cfcb3}" />
+	<object class="GainEffect" id="{86d3ef79-6052-4931-a920-d8291a42cea6}">
+		<property name="gain">
+			<value>8</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{fe94400a-45f7-4072-962a-434c715247b5}" />
+	<object class="MixerSend" id="{65ce8460-98c8-41b3-a746-5c8732c7150b}">
+		<property name="level">
+			<value>-13.5</value>
+		</property>
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{c0265987-e751-46e2-bb65-b624f9c498d6}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{496b81a6-3550-4b99-9582-80148005e411}">
+		<property name="name">
+			<value>OWWhoosh</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{4c04884e-bca5-48be-8392-05d45a68b260}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{44c3544a-4770-46ea-898f-7b705fee4857}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{cc09a44d-fb9f-409e-b117-3198ab0e3c9c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{4c04884e-bca5-48be-8392-05d45a68b260}">
+		<relationship name="effects">
+			<destination>{6b929a57-1157-42cd-80af-45a3f4b1404d}</destination>
+			<destination>{a8e6c904-58cb-489b-9f13-b95f962cf84b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{44c3544a-4770-46ea-898f-7b705fee4857}" />
+	<object class="Sidechain" id="{6b929a57-1157-42cd-80af-45a3f4b1404d}" />
+	<object class="MixerBusFader" id="{a8e6c904-58cb-489b-9f13-b95f962cf84b}" />
+</objects>

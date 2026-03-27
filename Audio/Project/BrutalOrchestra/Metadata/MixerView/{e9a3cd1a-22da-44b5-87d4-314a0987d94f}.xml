@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="UiMixerView" id="{e9a3cd1a-22da-44b5-87d4-314a0987d94f}">
+		<property name="name">
+			<value>Combat</value>
+		</property>
+		<relationship name="assignedStrips">
+			<destination>{952dcc6c-8d6d-4036-8571-cc3de0fc3986}</destination>
+			<destination>{f3f0a742-87b7-4ee6-8942-0b59d222e259}</destination>
+			<destination>{cb372db1-23c8-41a5-bfd8-beb8ab812bcd}</destination>
+			<destination>{09773ade-5baf-4857-a7df-90a555e65c4e}</destination>
+			<destination>{ff142109-03e6-47a4-8cad-2a28d671f5b8}</destination>
+			<destination>{f1bafc91-eaad-4750-a5dd-76aa8e9caf54}</destination>
+			<destination>{c0265987-e751-46e2-bb65-b624f9c498d6}</destination>
+			<destination>{29ea0de3-0297-4ca1-9112-b6190d9fa695}</destination>
+			<destination>{09d2c24a-f6b5-4f02-b3b8-f26958472216}</destination>
+			<destination>{3aee838b-4136-40bb-a4ea-b8772206e345}</destination>
+			<destination>{66cada5e-0f64-4860-ac63-223118fa4fe5}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{980ab54e-1a4b-4c03-81ed-c3b96a98f9c1}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerReturn" id="{c0265987-e751-46e2-bb65-b624f9c498d6}">
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="name">
+			<value>VRB_Combat</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{0d39b632-ca6f-4a81-8617-e873729085a0}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{096e286e-87c1-4528-926a-bf54542fdbf5}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8ed98c97-c994-4e27-a8b4-0688c0466c36}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{0d39b632-ca6f-4a81-8617-e873729085a0}">
+		<relationship name="effects">
+			<destination>{4a7523d4-eb0d-4b4d-85c8-12c72a6bb33d}</destination>
+			<destination>{e688791a-9ae1-4a8a-a3d8-12e0d5021351}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{096e286e-87c1-4528-926a-bf54542fdbf5}" />
+	<object class="SFXReverbEffect" id="{4a7523d4-eb0d-4b4d-85c8-12c72a6bb33d}">
+		<property name="decayTime">
+			<value>2500</value>
+		</property>
+		<property name="HFReference">
+			<value>1800</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>120</value>
+		</property>
+		<property name="highCut">
+			<value>280</value>
+		</property>
+		<property name="wetLevel">
+			<value>0</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{e688791a-9ae1-4a8a-a3d8-12e0d5021351}" />
+</objects>

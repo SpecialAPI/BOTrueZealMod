@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{727412a1-cd68-4401-83b1-fdd553f0e5c4}">
+		<property name="name">
+			<value>UnfinishedHeir_Dmg</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{d7567752-91ac-464c-9bb8-974fea3177fc}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{bad2237a-d4f7-44be-b22c-db8fe61c926f}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{7cda056d-49df-40f9-97d9-7ab9f5ca60db}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{d7567752-91ac-464c-9bb8-974fea3177fc}">
+		<relationship name="effects">
+			<destination>{310386b8-e7de-451f-86d2-d9c66108b60c}</destination>
+			<destination>{d69db057-ae32-4194-ae6a-d521a345d037}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{bad2237a-d4f7-44be-b22c-db8fe61c926f}" />
+	<object class="MixerBusFader" id="{310386b8-e7de-451f-86d2-d9c66108b60c}" />
+	<object class="Sidechain" id="{d69db057-ae32-4194-ae6a-d521a345d037}" />
+</objects>
