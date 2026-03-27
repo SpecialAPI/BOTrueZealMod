@@ -25,6 +25,8 @@
     <None Remove="Resources\Achievements\Shelly_Osman.png" />
     <None Remove="Resources\Achievements\Shelly_Quest.png" />
     <None Remove="Resources\BarIcon.png" />
+    <None Remove="Resources\Dialogue\AntonSad.png" />
+    <None Remove="Resources\Dialogue\HansSurprised.png" />
     <None Remove="Resources\Dialogue\ShellyBlush.png" />
     <None Remove="Resources\Dialogue\ShellyDrink.png" />
     <None Remove="Resources\Dialogue\ShellySmirk.png" />
@@ -102,6 +104,8 @@
     <EmbeddedResource Include="Resources\Achievements\Shelly_Osman.png" />
     <EmbeddedResource Include="Resources\Achievements\Shelly_Quest.png" />
     <EmbeddedResource Include="Resources\BarIcon.png" />
+    <EmbeddedResource Include="Resources\Dialogue\AntonSad.png" />
+    <EmbeddedResource Include="Resources\Dialogue\HansSurprised.png" />
     <EmbeddedResource Include="Resources\Dialogue\ShellyBlush.png" />
     <EmbeddedResource Include="Resources\Dialogue\ShellyDrink.png" />
     <EmbeddedResource Include="Resources\Dialogue\ShellySmirk.png" />

@@ -56,6 +56,7 @@ namespace BOTrueZealMod
             Bluey.Init();
             BlueyEncounters.Init();
 
+            BasegameSpeakerChanges.Init();
             Bar.Init();
         }
     }
