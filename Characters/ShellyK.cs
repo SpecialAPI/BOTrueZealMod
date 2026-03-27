@@ -81,7 +81,7 @@ namespace BOTrueZealMod.Characters
                     rankAbilities = [relapse, flirt, brawl]
                 };
             });
-            ch.AddToDatabase(true, false);
+            ch.AddToDatabase(true, true);
 
             var osmanAch = AchievementBuilder.NewAchievement(AchievementIDs.ShellyOsmanUnlock, "Burn-Bottle Batch", "Unlocked a new item.")
                 .SetSprite("Shelly_Osman")
