@@ -11,6 +11,7 @@ namespace BOTrueZealMod.Characters
         {
             var ch = NewCharacter("ShellyK_CH", EntityIDsE.ShellyK);
             ch.SetBasicInformation("Shelly K.", Pigments.Purple, "ShellyFront", "ShellyBack", "ShellyOW");
+            ch.SetSounds("event:/TrueZeal/ShellyHurt", "event:/TrueZeal/ShellyDeath", "event:/TrueZeal/ShellyDX");
 
             ch.RankedDataSetup(4, (rank, abRank) =>
             {
