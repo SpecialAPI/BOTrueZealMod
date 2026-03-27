@@ -378,5 +378,13 @@ namespace BOTrueZealMod.Tools
 
             return new StringTrioData(defaultName, defaultDescription, defaultDescription2);
         }
+
+        public static string GetCustomUIData(this InGameLanguage lang, string id, string defaultText)
+        {
+            if (lang._uiData.TryGetValue(id.ToString(), out var value))
+                return value;
+
+            return defaultText;
+        }
     }
 }
