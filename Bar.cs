@@ -35,7 +35,7 @@ namespace BOTrueZealMod
                 _minimumAmount = 1,
                 _maximumAmount = 1,
                 _usePercentage = true,
-                _percentage = 30
+                _percentage = 100
             };
 
             var deck = zone1BG._deckInfo;
