@@ -17,6 +17,7 @@ namespace BOTrueZealMod
 
             BarRoom = room;
 
+            PortalSignAdder.AddSign(SignTypeE.Bar, LoadSprite("BarIcon", new(0.5f, 0f)));
             CustomCardHandler.AddCardGenerator(CardTypeE.EventBar, GenerateBarCard);
             AddCard();
         }

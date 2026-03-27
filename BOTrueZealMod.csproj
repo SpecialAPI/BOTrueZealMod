@@ -24,6 +24,7 @@
     <None Remove="Resources\Achievements\Shelly_Heaven.png" />
     <None Remove="Resources\Achievements\Shelly_Osman.png" />
     <None Remove="Resources\Achievements\Shelly_Quest.png" />
+    <None Remove="Resources\BarIcon.png" />
     <None Remove="Resources\Enemies\BlueyOW.png" />
     <None Remove="Resources\Formosus\FormosusBack.png" />
     <None Remove="Resources\Formosus\FormosusFront.png" />
@@ -97,6 +98,7 @@
     <EmbeddedResource Include="Resources\Achievements\Shelly_Heaven.png" />
     <EmbeddedResource Include="Resources\Achievements\Shelly_Osman.png" />
     <EmbeddedResource Include="Resources\Achievements\Shelly_Quest.png" />
+    <EmbeddedResource Include="Resources\BarIcon.png" />
     <EmbeddedResource Include="Resources\Enemies\BlueyOW.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusBack.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusFront.png" />
