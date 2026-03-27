@@ -7,12 +7,15 @@ namespace BOTrueZealMod
     public static class Bar
     {
         public const string BarRoomPrefabName = "TrueZeal_Bar_Zone01_Room";
+        private static GameObject BarRoom;
 
         public static void Init()
         {
             var room = Bundle.LoadAsset<GameObject>(BarRoomPrefabName);
             var barHandler = room.AddComponent<BarRoomHandler>();
             LoadedAssetsHandler.LoadedRoomPrefabs[barHandler.name] = barHandler;
+
+            BarRoom = room;
 
             AddCard();
         }
