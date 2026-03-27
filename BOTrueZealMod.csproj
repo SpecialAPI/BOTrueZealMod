@@ -25,6 +25,9 @@
     <None Remove="Resources\Achievements\Shelly_Osman.png" />
     <None Remove="Resources\Achievements\Shelly_Quest.png" />
     <None Remove="Resources\BarIcon.png" />
+    <None Remove="Resources\Dialogue\ShellyBlush.png" />
+    <None Remove="Resources\Dialogue\ShellyDrink.png" />
+    <None Remove="Resources\Dialogue\ShellySmirk.png" />
     <None Remove="Resources\Enemies\BlueyOW.png" />
     <None Remove="Resources\Formosus\FormosusBack.png" />
     <None Remove="Resources\Formosus\FormosusFront.png" />
@@ -99,6 +102,9 @@
     <EmbeddedResource Include="Resources\Achievements\Shelly_Osman.png" />
     <EmbeddedResource Include="Resources\Achievements\Shelly_Quest.png" />
     <EmbeddedResource Include="Resources\BarIcon.png" />
+    <EmbeddedResource Include="Resources\Dialogue\ShellyBlush.png" />
+    <EmbeddedResource Include="Resources\Dialogue\ShellyDrink.png" />
+    <EmbeddedResource Include="Resources\Dialogue\ShellySmirk.png" />
     <EmbeddedResource Include="Resources\Enemies\BlueyOW.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusBack.png" />
     <EmbeddedResource Include="Resources\Formosus\FormosusFront.png" />

@@ -104,6 +104,52 @@ namespace BOTrueZealMod.Characters
             menuCh.AddToDatabase();
             menuCh.SetOsmanAchievement(AchievementIDs.ShellyOsmanUnlock);
             menuCh.SetHeavenAchievement(AchievementIDs.ShellyHeavenUnlock);
+
+            var speaker = CreateScriptable<SpeakerData>();
+            speaker.name = GetID("ShellyK_SpeakerData");
+            speaker.speakerName = "Shelly K.";
+            speaker.portraitLooksCenter = false;
+            speaker.portraitLooksLeft = true;
+            speaker._emotionBundles =
+            [
+                new()
+                {
+                    emotion = "Drink",
+                    bundle = new()
+                    {
+                        portrait = LoadSprite("ShellyDrink"),
+                        dialogueSound = ch.dxSound,
+                        bundleTextColor = new(0.6078f, 0.6784f, 0.7176f)
+                    }
+                },
+                new()
+                {
+                    emotion = "Smirk",
+                    bundle = new()
+                    {
+                        portrait = LoadSprite("ShellySmirk"),
+                        dialogueSound = ch.dxSound,
+                        bundleTextColor = new(0.6078f, 0.6784f, 0.7176f)
+                    }
+                },
+                new()
+                {
+                    emotion = "Blush",
+                    bundle = new()
+                    {
+                        portrait = LoadSprite("ShellyBlush"),
+                        dialogueSound = ch.dxSound,
+                        bundleTextColor = new(0.7176f, 0.5088f, 0.5088f)
+                    }
+                },
+            ];
+            speaker._defaultBundle = new()
+            {
+                portrait = ch.characterSprite,
+                dialogueSound = ch.dxSound,
+                bundleTextColor = new(0.6078f, 0.6784f, 0.7176f)
+            };
+            LoadedAssetsHandler.LoadedSpeakers[speaker.name] = speaker;
         }
     }
 }
