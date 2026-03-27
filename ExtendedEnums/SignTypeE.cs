@@ -8,5 +8,7 @@ namespace BOTrueZealMod.ExtendedEnums
     public class SignTypeE
     {
         public static SignType CadaverSynod;
+
+        public static SignType Bar;
     }
 }
