@@ -14,7 +14,25 @@ namespace BOTrueZealMod
         {
             var room = Bundle.LoadAsset<GameObject>(BarRoomPrefabName);
             var barHandler = room.AddComponent<BarRoomHandler>();
+
+            var shelly = room.transform.Find("Seat (0)").gameObject;
+            var shellyItem = shelly.AddComponent<BasicRoomItem>();
+            shellyItem._renderers = shelly.GetComponentsInChildren<SpriteRenderer>();
+            shellyItem._detector = shelly.GetComponent<BoxCollider2D>();
+            barHandler.Shelly = shellyItem;
+
+            var npcOutlineMat = (LoadedAssetsHandler.GetRoomPrefab(CardType.Flavour, "Flavour_PervertMessiah_ER") as NPCRoomHandler)._npcSelectable._renderers[0].material;
+            foreach(var s in shellyItem._renderers)
+            {
+                if (s == null)
+                    continue;
+
+                s.material = new Material(npcOutlineMat);
+                s.material.SetFloat("_OutlineAlpha", 0f);
+            }
+
             LoadedAssetsHandler.LoadedRoomPrefabs[barHandler.name] = barHandler;
+            BarRoom = room;
 
             var shellyDialogue = CreateScriptable<DialogueSO>();
             shellyDialogue.name = GetID("Bar_ShellyK_Dialogue");
@@ -24,8 +42,6 @@ namespace BOTrueZealMod
             LoadedAssetsHandler.LoadedDialogues[shellyDialogue.name] = shellyDialogue;
             LoadedDBsHandler.GetDialogueDB().AddOrChangeDialog(shellyDialogue.m_DialogID, shellyDialogue.dialog);
             ShellyDialogueName = shellyDialogue.name;
-
-            BarRoom = room;
 
             PortalSignAdder.AddSign(SignTypeE.Bar, LoadSprite("BarIcon", new(0.5f, 0f)));
             CustomCardHandler.AddCardGenerator(CardTypeE.EventBar, GenerateBarCard);
