@@ -108,11 +108,17 @@ namespace BOTrueZealMod.Characters
                 .SetItems([GetID("RoyalPine_TW")]);
             ch.AddFinalBossUnlock(BossType.Heaven, heavenUnlock);
 
+            var unlockTracker = CreateScriptable<CustomGameBoolTrackData>();
+            unlockTracker.boolDataKey = "TrueZeal_ShellyKFirstBarTalkDone";
+            unlockTracker.locID = "TrueZeal_TrackerCharShellyK";
+            unlockTracker.defaultText = "This party member needs to be seduced by a real man.";
+
             var menuCh = ch.GenerateMenuCharacter("ShellyUnlocked", "ShellyLocked");
             menuCh.SetAsFullDPS();
             menuCh.AddToDatabase();
             menuCh.SetOsmanAchievement(AchievementIDs.ShellyOsmanUnlock);
             menuCh.SetHeavenAchievement(AchievementIDs.ShellyHeavenUnlock);
+            menuCh._trackData = unlockTracker;
 
             var speaker = CreateScriptable<SpeakerData>();
             speaker.name = GetID("ShellyK_SpeakerData");
