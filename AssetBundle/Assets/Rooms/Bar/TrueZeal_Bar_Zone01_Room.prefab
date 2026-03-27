@@ -1082,7 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002669891404536}
   m_Layer: 0
-  m_Name: Bar_Zone01_Room
+  m_Name: TrueZeal_Bar_Zone01_Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
