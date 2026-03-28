@@ -29,8 +29,18 @@ namespace BOTrueZealMod.Enemies
             var ow = LoadSprite("BlueyOW", new(0.5f, 0f));
             en.SetSprites(ow, ow, sepulchre.enemyOWCorpseSprite);
             en.SetSounds(sepulchre.damageSound, sepulchre.deathSound);
-            en.enemyTemplate = sepulchre.enemyTemplate;
-            en.priority = Priority.ExtremelySlow;
+            en.SetEnemyPrefab("CadaverSynod_EFL Variant", "Giblets_CadaverSynod");
+            var template = en.enemyTemplate;
+            template._rootTransform = template.transform;
+            template._locator = template.transform.Find("Locator").gameObject;
+            template._renderer = template.transform.Find("Locator").Find("Sprite").GetComponent<SpriteRenderer>();
+            template._animator = template.GetComponent<Animator>();
+            template._UI3DLocation = template.transform.Find("3DUILocation");
+            template._basicColor = sepulchre.enemyTemplate._basicColor;
+            template._hoverColor = sepulchre.enemyTemplate._hoverColor;
+            template._targetColor = sepulchre.enemyTemplate._targetColor;
+            template._turnColor = sepulchre.enemyTemplate._turnColor;
+            template._gibsEvent = "event:/Combat/Gibs/CBT_Gibs";
 
             SpawnEffect = CreateScriptable<SpawnRandomEnemyAnywhereEffect>();
             SpawnEffect._enemies = CreateBasegameSpawnPool();
