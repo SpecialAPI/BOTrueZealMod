@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: 9b166628af5d8e547a5c46f409645f46
+timeCreated: 
+licenseType: 
+NativeFormatImporter: 
+TextureImporter:
+  serializedVersion: 11
+  internalIDToNameTable:
+  - first:
+      213: 7433719024319688250
+    second: Attack_WormFetus_1
+  - first:
+      213: 9127654703198024278
+    second: Attack_WormFetus_2
+  - first:
+      213: -5164274380623124502
+    second: Attack_WormFetus_3
+  - first:
+      213: 4954466073439977681
+    second: Attack_WormFetus_4
+  - first:
+      213: 8396216108896053539
+    second: Attack_WormFetus_5
+  - first:
+      213: 5781718159764694213
+    second: Attack_WormFetus_6
+  externalObjects: {}
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot:
+    x: 0.5
+    y: 0.5
+  spritePixelsToUnits: 32
+  spriteBorder:
+    x: 0
+    y: 0
+    z: 0
+    w: 0
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_WormFetus_1
+      rect:
+        serializedVersion: 2
+        x: 271.02673
+        y: 79.07612
+        width: 34.897133
+        height: 24.847763
+      alignment: 9
+      pivot:
+        x: 0.48637998
+        y: 0.39938733
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5579c20d283d96f4791112814fb7cf7d
+      internalID: 7433719024319688250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_WormFetus_2
+      rect:
+        serializedVersion: 2
+        x: 459.0761
+        y: 77.051315
+        width: 40.847763
+        height: 33.921936
+      alignment: 9
+      pivot:
+        x: 0.51224077
+        y: 0.35224065
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d608d793e75b21e4593aeb01454d8fed
+      internalID: 9127654703198024278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_WormFetus_3
+      rect:
+        serializedVersion: 2
+        x: 648.0761
+        y: 76.07612
+        width: 47.847763
+        height: 39.872566
+      alignment: 9
+      pivot:
+        x: 0.5000002
+        y: 0.32412967
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcb7f068b8535845ab7e536a268ff18
+      internalID: -5164274380623124502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_WormFetus_4
+      rect:
+        serializedVersion: 2
+        x: 833.0761
+        y: 69.07612
+        width: 60.847763
+        height: 52.880974
+      alignment: 9
+      pivot:
+        x: 0.50821733
+        y: 0.37676844
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49868fa310bdbd14480e2b3571d22eb0
+      internalID: 4954466073439977681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_WormFetus_5
+      rect:
+        serializedVersion: 2
+        x: 1020.0761
+        y: 61.076122
+        width: 84.84775
+        height: 72.88097
+      alignment: 9
+      pivot:
+        x: 0.4233924
+        y: 0.38314363
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a793574a7932546a9734a0765ec660
+      internalID: 8396216108896053539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_WormFetus_6
+      rect:
+        serializedVersion: 2
+        x: 1205.0762
+        y: 53.026752
+        width: 106.84775
+        height: 91.9465
+      alignment: 9
+      pivot:
+        x: 0.4017289
+        y: 0.39124107
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822d362f4cc37344499d2bf1f7665553
+      internalID: 5781718159764694213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ''
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  output: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,300 @@
+fileFormatVersion: 2
+guid: 27f0b8548bf6fdd4a97562bb4f98d003
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3855223018808300346
+    second: Attack_Crush_0
+  - first:
+      213: -2854097681476068902
+    second: Attack_Crush_1
+  - first:
+      213: -6899569789358563922
+    second: Attack_Crush_2
+  - first:
+      213: 467447114503771079
+    second: Attack_Crush_3
+  - first:
+      213: -4411550412013706121
+    second: Attack_Crush_4
+  - first:
+      213: 5992462880065737446
+    second: Attack_Crush_5
+  - first:
+      213: 1072230899655670451
+    second: Attack_Crush_6
+  - first:
+      213: -4437913180772565048
+    second: Attack_Crush_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_Crush_0
+      rect:
+        serializedVersion: 2
+        x: 55.076122
+        y: 38.026752
+        width: 81.84775
+        height: 85.9465
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.5930811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956cb90552e6a464aacf94c7cb8ac7f5
+      internalID: 3855223018808300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Crush_1
+      rect:
+        serializedVersion: 2
+        x: 247.03629
+        y: 34.026752
+        width: 79.92081
+        height: 94.9465
+      alignment: 9
+      pivot: {x: 0.5125538, y: 0.57899183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e192cf20b079184ea705094ed5035fe
+      internalID: -2854097681476068902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Crush_2
+      rect:
+        serializedVersion: 2
+        x: 437.0363
+        y: 32.026752
+        width: 85.92081
+        height: 99.9465
+      alignment: 9
+      pivot: {x: 0.50003856, y: 0.5700374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b58873301bfa60458acc9b2ff17d0fa
+      internalID: -6899569789358563922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Crush_3
+      rect:
+        serializedVersion: 2
+        x: 641.0564
+        y: 50.076122
+        width: 67.91688
+        height: 69.84776
+      alignment: 9
+      pivot: {x: 0.45560992, y: 0.55726737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf46244c16b4c84a91f3be6e2665217
+      internalID: 467447114503771079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Crush_4
+      rect:
+        serializedVersion: 2
+        x: 837.0761
+        y: 55.026752
+        width: 56.897133
+        height: 51.89713
+      alignment: 9
+      pivot: {x: 0.4732029, y: 0.6546267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9911d9a6e7787848b0755be46e558f0
+      internalID: -4411550412013706121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Crush_5
+      rect:
+        serializedVersion: 2
+        x: 1036.0762
+        y: 59.076122
+        width: 43.897133
+        height: 38.904697
+      alignment: 9
+      pivot: {x: 0.4538754, y: 0.7691585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb7f69e02594c242b37b74184d5012a
+      internalID: 5992462880065737446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Crush_6
+      rect:
+        serializedVersion: 2
+        x: 1231.0762
+        y: 64.06101
+        width: 33.872566
+        height: 30.86287
+      alignment: 9
+      pivot: {x: 0.4996323, y: 0.80805796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89044082ccb11fa4d96ca8246de6bd3e
+      internalID: 1072230899655670451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Crush_7
+      rect:
+        serializedVersion: 2
+        x: 1431.0762
+        y: 69.07612
+        width: 20.897133
+        height: 20.897133
+      alignment: 9
+      pivot: {x: 0.42703602, y: 0.95342654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e14af70db1dea4d9748c0e147dab81
+      internalID: -4437913180772565048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: c84293947779a724b9d85cff0f2687f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4950301838319972224
+    second: Attack_Bosch_0
+  - first:
+      213: -7093844675278412208
+    second: Attack_Bosch_1
+  - first:
+      213: 8984825796641869299
+    second: Attack_Bosch_2
+  - first:
+      213: 435161478837676841
+    second: Attack_Bosch_3
+  - first:
+      213: 8784523791682472477
+    second: Attack_Bosch_4
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_Bosch_0
+      rect:
+        serializedVersion: 2
+        x: 55.076122
+        y: 38.026752
+        width: 81.84775
+        height: 85.9465
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.5930811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f722fbbf465d754eb74c3301f02b49f
+      internalID: -4950301838319972224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bosch_1
+      rect:
+        serializedVersion: 2
+        x: 247.07613
+        y: 38.026752
+        width: 63.89713
+        height: 85.9465
+      alignment: 9
+      pivot: {x: 0.64046496, y: 0.5930811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35b36e5779e20b418940b77d870d6a0
+      internalID: -7093844675278412208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bosch_2
+      rect:
+        serializedVersion: 2
+        x: 467.0761
+        y: 66.07612
+        width: 31.847763
+        height: 40.847763
+      alignment: 9
+      pivot: {x: 0.4058021, y: 0.5612029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46f5242d153f9647a9f2ebaccbb78cf
+      internalID: 8984825796641869299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bosch_3
+      rect:
+        serializedVersion: 2
+        x: 650.0761
+        y: 74.051315
+        width: 41.847763
+        height: 34.872566
+      alignment: 9
+      pivot: {x: 0.52389634, y: 0.42866603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e49270c2454604c88dfe0cc0afe967
+      internalID: 435161478837676841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bosch_4
+      rect:
+        serializedVersion: 2
+        x: 846.0761
+        y: 70.07612
+        width: 39.872566
+        height: 29.847763
+      alignment: 9
+      pivot: {x: 0.44952935, y: 0.6340134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812804a193163994fb4a178f735080f8
+      internalID: 8784523791682472477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: ad9ab1e2d2f8cba478eb6777eb3b9f3e
+timeCreated: 
+licenseType: 
+NativeFormatImporter: 
+TextureImporter:
+  serializedVersion: 11
+  internalIDToNameTable:
+  - first:
+      213: 5418341679119682469
+    second: Attack_Bottle_0
+  - first:
+      213: 3133742231525343255
+    second: Attack_Bottle_1
+  - first:
+      213: -2673262009451112235
+    second: Attack_Bottle_10
+  - first:
+      213: 1469254410883412458
+    second: Attack_Bottle_11
+  - first:
+      213: -6072604782323749832
+    second: Attack_Bottle_12
+  - first:
+      213: 8659722691293702691
+    second: Attack_Bottle_13
+  - first:
+      213: -8233485039248826285
+    second: Attack_Bottle_2
+  - first:
+      213: -7404454598679097201
+    second: Attack_Bottle_3
+  - first:
+      213: 7141581719412240147
+    second: Attack_Bottle_4
+  - first:
+      213: 3297903347677778240
+    second: Attack_Bottle_5
+  - first:
+      213: 4356538985214401157
+    second: Attack_Bottle_6
+  - first:
+      213: 1643670390452221623
+    second: Attack_Bottle_7
+  - first:
+      213: -3978070565880436227
+    second: Attack_Bottle_8
+  - first:
+      213: -7460915017268578926
+    second: Attack_Bottle_9
+  externalObjects: {}
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 4096
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot:
+    x: 0.5
+    y: 0.5
+  spritePixelsToUnits: 32
+  spriteBorder:
+    x: 0
+    y: 0
+    z: 0
+    w: 0
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_Bottle_0
+      rect:
+        serializedVersion: 2
+        x: 11.026751
+        y: 16.02675
+        width: 162.89713
+        height: 154.9465
+      alignment: 9
+      pivot:
+        x: 0.67486304
+        y: 0.29864016
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e4c6bba18cf0b47b40d51e75e5e30b
+      internalID: 5418341679119682469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_1
+      rect:
+        serializedVersion: 2
+        x: 220.04291
+        y: 16.02675
+        width: 145.88097
+        height: 129.9465
+      alignment: 9
+      pivot:
+        x: 0.63693774
+        y: 0.32869872
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbd1e67fe7654440898177258e57910
+      internalID: 3133742231525343255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_10
+      rect:
+        serializedVersion: 2
+        x: 1931.0267
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.74756354
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a62a7727dcb17540b0934b03e0445dc
+      internalID: -2673262009451112235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_11
+      rect:
+        serializedVersion: 2
+        x: 2123.0269
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.7475628
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5243ed16fdd45499babe646fedcc28
+      internalID: 1469254410883412458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_12
+      rect:
+        serializedVersion: 2
+        x: 2315.0269
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.7475628
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4e0c9055985fb43895f6189d7c241d
+      internalID: -6072604782323749832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_13
+      rect:
+        serializedVersion: 2
+        x: 2507.0269
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.7475628
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a67da0356ac424681f47b598b896b4
+      internalID: 8659722691293702691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_2
+      rect:
+        serializedVersion: 2
+        x: 395.02676
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.74756336
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5ccaf1ac0d1e444ba69ab00ad4795f
+      internalID: -8233485039248826285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_3
+      rect:
+        serializedVersion: 2
+        x: 587.02673
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.7600716
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24909a17daa31e45aa1a2c85832a083
+      internalID: -7404454598679097201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_4
+      rect:
+        serializedVersion: 2
+        x: 779.02673
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.74756354
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc7e3366247aa346983e3f67706dff7
+      internalID: 7141581719412240147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_5
+      rect:
+        serializedVersion: 2
+        x: 971.02673
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.74756354
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6593eac006d6d041ab07969f0ad9534
+      internalID: 3297903347677778240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_6
+      rect:
+        serializedVersion: 2
+        x: 1163.0267
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.74756354
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec02a7ab88118d499b5c828c04f8d9a
+      internalID: 4356538985214401157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_7
+      rect:
+        serializedVersion: 2
+        x: 1355.0267
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.74756354
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da00df80c2bdb734fb770453f439150c
+      internalID: 1643670390452221623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_8
+      rect:
+        serializedVersion: 2
+        x: 1547.0267
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.74756354
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f9966fef12b154ab06c4d02a0185cb
+      internalID: -3978070565880436227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bottle_9
+      rect:
+        serializedVersion: 2
+        x: 1739.0267
+        y: 7.026751
+        width: 159.89713
+        height: 146.9465
+      alignment: 9
+      pivot:
+        x: 0.79759574
+        y: 0.82433575
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768b970a1a687134ba352ebb4e0c40c8
+      internalID: -7460915017268578926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ''
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  output: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
