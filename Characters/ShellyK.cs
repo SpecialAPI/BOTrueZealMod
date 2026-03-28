@@ -30,7 +30,7 @@ namespace BOTrueZealMod.Characters
                     TargetIntent(Targets.Relative(false, -1, 0, 1), IntentForDamage(relapseDmgHeal), IntentForHealing(relapseDmgHeal)),
                     TargetIntent(Targets.Relative(true, -1, 1), IntentForDamage(relapseDmgHeal), IntentForHealing(relapseDmgHeal))
                 })
-                .SetVisuals(Animations.OiledBurn, Targets.Self)
+                .SetVisuals(CustomAnimations.Relapse, Targets.Self)
                 .CharacterAbility(Pigments.Red, Pigments.Blue, Pigments.Red);
 
                 var flirtDmg = RankedValue(6, 8, 10, 12);
@@ -49,7 +49,7 @@ namespace BOTrueZealMod.Characters
                 {
                     TargetIntent(Targets.FurthestOpponents, IntentForDamage(flirtDmg), IntentForHealing(flirtHeal), IntentType.Swap_Sides)
                 })
-                .SetVisuals(Animations.Kiss, Targets.FurthestOpponents)
+                .SetVisuals(CustomAnimations.Flirt, Targets.FurthestOpponents)
                 .CharacterAbility(Pigments.Red, Pigments.Purple, Pigments.Red);
 
                 var brawlRupture = RankedValue(2, 3, 3, 4);
@@ -73,7 +73,7 @@ namespace BOTrueZealMod.Characters
                     TargetIntent(brawlOilTargets, IntentType.Status_OilSlicked),
                     TargetIntent(Targets.UnitsWithStatus(false, StatusEffectType.OilSlicked), IntentForDamage(brawlDamage))
                 })
-                .SetVisuals(Animations.EatMyFlesh, Targets.FurthestOpponents)
+                .SetVisuals(CustomAnimations.BarFight, Targets.FurthestOpponents)
                 .CharacterAbility(Pigments.Red, Pigments.Yellow, Pigments.Red);
 
                 return new()

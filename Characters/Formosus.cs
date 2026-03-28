@@ -38,7 +38,7 @@ namespace BOTrueZealMod.Characters
                     TargetIntent(Targets.OpponentsWithStatuses, IntentForDamage(massMaxDamage)),
                     TargetIntent(Targets.AlliesWithStatuses, IntentForHealing(massMaxDamage * 5))
                 })
-                .SetVisuals(Animations.RingABell, Targets.OpponentsWithStatuses)
+                .SetVisuals(CustomAnimations.Bell, Targets.OpponentsWithStatuses)
                 .CharacterAbility(Pigments.Purple, RankedValue(Pigments.Yellow, Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple), Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple), Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)));
 
                 var confessionStatusIncrease = RankedValue(1, 2, 2, 3);
@@ -58,7 +58,7 @@ namespace BOTrueZealMod.Characters
                     TargetIntent(Targets.OpponentsWithStatuses, IntentType.Misc),
                     TargetIntent(Targets.Front, IntentType.Status_DivineProtection),
                 })
-                .SetVisuals(Animations.Malpractice, Targets.OpponentsWithStatuses)
+                .SetVisuals(CustomAnimations.Scales, Targets.OpponentsWithStatuses)
                 .CharacterAbility(Pigments.Purple, RankedValue(Pigments.Blue, Pigments.Blue, Pigments.SplitPigment(Pigments.Blue, Pigments.Purple), Pigments.SplitPigment(Pigments.Blue, Pigments.Purple)));
 
                 var seeDamage = RankedValue(8, 10, 12, 15);
@@ -75,7 +75,7 @@ namespace BOTrueZealMod.Characters
                 {
                     TargetIntent(seeTargets, IntentForDamage(seeDamage))
                 })
-                .SetVisuals(Animations.Excommunicate, seeTargets)
+                .SetVisuals(CustomAnimations.Providence, seeTargets)
                 .CharacterAbility(Pigments.Purple, Pigments.Red);
 
                 return new()

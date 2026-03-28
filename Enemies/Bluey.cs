@@ -73,7 +73,7 @@ namespace BOTrueZealMod.Enemies
             {
                 TargetIntent(Targets.Self, IntentType.Other_Spawn)
             })
-            .SetVisuals(Animations.Birth, Targets.Self)
+            .SetVisuals(CustomAnimations.BodySnatcher, Targets.Self)
             .EnemyAbility(Rarity.Common, Priority.ExtremelySlow);
 
             en.SetAbilities([exhume]);
