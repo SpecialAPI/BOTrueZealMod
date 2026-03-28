@@ -1,0 +1,407 @@
+fileFormatVersion: 2
+guid: ecded9a20fcbbf1479b5e2143b4ceb06
+timeCreated: 
+licenseType: 
+NativeFormatImporter: 
+TextureImporter:
+  serializedVersion: 11
+  internalIDToNameTable:
+  - first:
+      213: -3085466230847045616
+    second: CadaverSynod_Gibs_0
+  - first:
+      213: 2853055503130530673
+    second: CadaverSynod_Gibs_1
+  - first:
+      213: -2264955895043842671
+    second: CadaverSynod_Gibs_2
+  - first:
+      213: 8413286491794663854
+    second: CadaverSynod_Gibs_3
+  - first:
+      213: -4445647457952155551
+    second: CadaverSynod_Gibs_4
+  - first:
+      213: -2754138000800501857
+    second: CadaverSynod_Gibs_5
+  - first:
+      213: 8965176695003805385
+    second: CadaverSynod_Gibs_6
+  - first:
+      213: 8905762045764147426
+    second: CadaverSynod_Gibs_7
+  - first:
+      213: 5329639872856005732
+    second: CadaverSynod_Gibs_8
+  - first:
+      213: 7488263914171892835
+    second: CadaverSynod_Gibs_9
+  externalObjects: {}
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot:
+    x: 0.5
+    y: 0.5
+  spritePixelsToUnits: 32
+  spriteBorder:
+    x: 0
+    y: 0
+    z: 0
+    w: 0
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_0
+      rect:
+        serializedVersion: 2
+        x: 12.07612
+        y: 58.05973
+        width: 24.897127
+        height: 26.913519
+      alignment: 9
+      pivot:
+        x: 0.4789259
+        y: 0.5179653
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39888e81fb4ecd44aef5db28f9b4352
+      internalID: -3085466230847045616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_1
+      rect:
+        serializedVersion: 2
+        x: 56.07612
+        y: 57.07612
+        width: 26.847757
+        height: 27.847757
+      alignment: 9
+      pivot:
+        x: 0.5931178
+        y: 0.53590965
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a08786bd368a3e4d90c6a6b696b64c4
+      internalID: 2853055503130530673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_2
+      rect:
+        serializedVersion: 2
+        x: 101.07612
+        y: 50.07612
+        width: 32.897125
+        height: 42.880974
+      alignment: 9
+      pivot:
+        x: 0.57524425
+        y: 0.51127297
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069a890f4a186ec41b2acd674b3534d8
+      internalID: -2264955895043842671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_3
+      rect:
+        serializedVersion: 2
+        x: 153.02675
+        y: 50.07612
+        width: 28.911135
+        height: 34.897125
+      alignment: 9
+      pivot:
+        x: 0.51790607
+        y: 0.6282432
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940b11430c7df474dbe410c09181d8e9
+      internalID: 8413286491794663854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_4
+      rect:
+        serializedVersion: 2
+        x: 204.02675
+        y: 58.02675
+        width: 23.946497
+        height: 23.946497
+      alignment: 9
+      pivot:
+        x: 0.5000001
+        y: 0.58351964
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7104ca314f6b8d04f82b76e5c5a0a107
+      internalID: -4445647457952155551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_5
+      rect:
+        serializedVersion: 2
+        x: 11.026751
+        y: 6.026751
+        width: 24.946497
+        height: 37.946495
+      alignment: 9
+      pivot:
+        x: 0.52004296
+        y: 0.47364715
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841726a4fd1c36f4b896f5ac50e5aaa7
+      internalID: -2754138000800501857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_6
+      rect:
+        serializedVersion: 2
+        x: 60.042908
+        y: 10.042908
+        width: 24.88097
+        height: 26.914185
+      alignment: 9
+      pivot:
+        x: 0.48057178
+        y: 0.5185776
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f647477ce5854e14c852306b6c730542
+      internalID: 8965176695003805385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_7
+      rect:
+        serializedVersion: 2
+        x: 108.02675
+        y: 8.07612
+        width: 23.897127
+        height: 29.864153
+      alignment: 9
+      pivot:
+        x: 0.50103307
+        y: 0.5332105
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75d2c0c7a39c23428945a2a13d98cff
+      internalID: 8905762045764147426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_8
+      rect:
+        serializedVersion: 2
+        x: 152.07613
+        y: 9.07612
+        width: 23.880972
+        height: 22.84776
+      alignment: 9
+      pivot:
+        x: 0.66680175
+        y: 0.6531879
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3f3e511f9970f4e83be606779ed595
+      internalID: 5329639872856005732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CadaverSynod_Gibs_9
+      rect:
+        serializedVersion: 2
+        x: 212.07613
+        y: 20.07612
+        width: 7.8477592
+        height: 7.8477592
+      alignment: 9
+      pivot:
+        x: 0.49999928
+        y: 0.5
+      border:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc01cef250c79745a712eaf63cc8131
+      internalID: 7488263914171892835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ''
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  output: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
