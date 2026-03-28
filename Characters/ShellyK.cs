@@ -41,7 +41,7 @@ namespace BOTrueZealMod.Characters
                 .SetBasicInformationCharacter(flirtName, flirtDesc, "AttackIcon_Flirtation")
                 .SetEffects(new()
                 {
-                    Effects.Effect(Targets.FurthestOpponents, CreateScriptable<DamageEffect>(), flirtDmg),
+                    Effects.Effect(Targets.FurthestOpponents, CreateScriptable<DamageEffect>(x => x._indirect = true), flirtDmg),
                     Effects.Effect(Targets.FurthestOpponents, CreateScriptable<HealEffect>(x => x._onlyIfHasHealthOver0 = true), flirtHeal),
                     Effects.Effect(Targets.FurthestOpponents, CreateScriptable<SwapTowardsCasterEffect>()),
                 })
