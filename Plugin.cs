@@ -46,6 +46,7 @@ namespace BOTrueZealMod
             HarmonyInstance.PatchAll();
             Magic.ExtendAllEnums();
             CustomPassives.Init();
+            CustomAnimations.Init();
             #endregion
 
             BurnBottleBatch.Init();
