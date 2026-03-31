@@ -169,6 +169,24 @@ namespace BOTrueZealMod.Tools
                 __instance.HasTheDivine = IsCustomAchievementUnlocked(customSelCh.customHeavenAchievementID);
         }
 
+        [HarmonyPatch(typeof(SelectableCharactersSO), nameof(SelectableCharactersSO.PrepareCharacters))]
+        [HarmonyPostfix]
+        private static void ProcessCustomHeavenAndOsmanAchievements2(SelectableCharactersSO __instance)
+        {
+            foreach(var ch in __instance._characters)
+                ProcessCustomHeavenAndOsmanAchievements(ch);
+        }
+
+        [HarmonyPatch(typeof(MainMenuController), nameof(MainMenuController.Start))]
+        [HarmonyPostfix]
+        private static void ProcessCustomHeavenAndOsmanAchievements3(MainMenuController __instance)
+        {
+            if (__instance._charSelectionDB == null)
+                return;
+
+            ProcessCustomHeavenAndOsmanAchievements2(__instance._charSelectionDB);
+        }
+
         public static CustomAchievement NewAchievement(string ACH_achievementId, string name, string description)
         {
             var ach = new CustomAchievement(ACH_achievementId, name, description);
