@@ -10,5 +10,8 @@ namespace BOTrueZealMod.ExtendedEnums
         public static SignType CadaverSynod;
 
         public static SignType Bar;
+
+        public static SignType ShellyK;
+        public static SignType Formosus;
     }
 }
