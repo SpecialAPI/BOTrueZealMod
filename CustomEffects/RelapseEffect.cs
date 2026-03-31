@@ -22,7 +22,7 @@ namespace BOTrueZealMod.CustomEffects
                     dmgAmt += u.Damage(caster.WillApplyDamage(entryVariable, u), caster, DeathType.Basic, t.SlotID - u.SlotID, true, true, false, DamageType.None).damageAmount;
 
                 else if (u.CurrentHealth < caster.CurrentHealth)
-                    healAmt += u.Heal(entryVariable, HealType.None, true);
+                    healAmt += u.Heal(entryVariable, HealType.Heal, true);
             }
 
             if (dmgAmt > 0)
