@@ -7,6 +7,8 @@ namespace BOTrueZealMod.Characters
 {
     public static class ShellyK
     {
+        private static GameObject FreeFoolRoom;
+        
         public static void Init()
         {
             var ch = NewCharacter("ShellyK_CH", EntityIDsE.ShellyK);
@@ -171,7 +173,8 @@ namespace BOTrueZealMod.Characters
             var roomHandler = room.AddComponent<NPCRoomHandler>();
             roomHandler._requiresToTalk = false;
             roomHandler._dialogueMusic = string.Empty;
-            LoadedAssetsHandler.LoadedRoomPrefabs[roomHandler.name] = roomHandler;
+            LoadedAssetsHandler.LoadedRoomPrefabs[$"Encounters/{roomHandler.name}"] = roomHandler;
+            FreeFoolRoom = room;
 
             var npc = room.transform.Find("NPCRoomItemSelectable_Template").gameObject;
             var npcItem = npc.AddComponent<BasicRoomItem>();
