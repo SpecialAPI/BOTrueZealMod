@@ -42,6 +42,7 @@ namespace BOTrueZealMod
 
             Pigments.Init();
             Passives.Init();
+            Zones.Init();
 
             HarmonyInstance.PatchAll();
             Magic.ExtendAllEnums();
