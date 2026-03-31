@@ -53,6 +53,7 @@ namespace BOTrueZealMod
             RoyalPine.Init();
             Coelacanth.Init();
             SacredShrub.Init();
+            WailingWhistle.Init();
 
             ShellyK.Init();
             Formosus.Init();

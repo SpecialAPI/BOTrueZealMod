@@ -386,5 +386,27 @@ namespace BOTrueZealMod.Tools
 
             return defaultText;
         }
+
+        public static void RemoveAllPassives(this IUnit u, bool disconnect = true, bool removeFromExtras = true)
+        {
+            if (u is not IPassiveEffector effector)
+                return;
+
+            for (var i = effector.PassiveAbilities.Count - 1; i >= 0; i--)
+            {
+                var passive = effector.PassiveAbilities[i];
+                effector.PassiveAbilities.RemoveAt(i);
+
+                if (removeFromExtras && u is CharacterCombat cc)
+                {
+                    cc.ExtraPassives.Remove(passive);
+                    cc.ItemExtraPassives.Remove(passive);
+                }
+
+                passive.OnTriggerDettached(effector);
+                if (disconnect)
+                    passive.OnPassiveDisconnected(u);
+            }
+        }
     }
 }
