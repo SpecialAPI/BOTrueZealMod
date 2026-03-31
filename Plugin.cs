@@ -64,6 +64,8 @@ namespace BOTrueZealMod
 
             BasegameSpeakerChanges.Init();
             Bar.Init();
+
+            WhistleUnlock.Init();
         }
     }
 }

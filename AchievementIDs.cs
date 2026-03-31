@@ -13,5 +13,7 @@ namespace BOTrueZealMod
         public static readonly string FormosusQuest = "ACH_PartyMember_Formosus";
         public static readonly string FormosusHeavenUnlock = "ACH_Unlocked_Formosus_Heaven";
         public static readonly string FormosusOsmanUnlock = "ACH_Unlocked_Formosus_Osman";
+
+        public static readonly string ShellyTragedy = "ACH_Misc_Anton_Sad";
     }
 }

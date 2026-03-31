@@ -15,5 +15,7 @@ namespace BOTrueZealMod.ExtendedEnums
 
         public static UnlockableID Formosus_Osman;
         public static UnlockableID Formosus_Heaven;
+
+        public static UnlockableID AntonSad;
     }
 }

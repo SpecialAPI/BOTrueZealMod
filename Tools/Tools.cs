@@ -413,5 +413,13 @@ namespace BOTrueZealMod.Tools
             else if(u is CharacterCombat cc)
                 CombatManager.Instance.AddUIAction(new CharacterPassiveAbilityChangeUIAction(cc.ID, [..cc.PassiveAbilities], cc.CanSwapNoTrigger, cc.CanUseAbilitiesNoTrigger));
         }
+
+        public static EntityIDs GetEntityID(this IUnit u)
+        {
+            if (u is CharacterCombat cc && cc.Character is CharacterSO cSO && cSO != null)
+                return cSO.characterEntityID;
+
+            return EntityIDs.None;
+        }
     }
 }
