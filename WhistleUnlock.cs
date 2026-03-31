@@ -66,6 +66,7 @@ namespace BOTrueZealMod
 
             var shellyDialogue = Dialogues.ShellyCombat;
             CombatManager.Instance.AddUIAction(new PlayDialogueUIAction(shellyDialogue.m_DialogID, shellyDialogue.startNode, shellyDialogue.dialog));
+            CombatManager.Instance.RemoveObserver(CheckUnlock, TriggerCalls.OnDeath.ToString());
         }
     }
 }
