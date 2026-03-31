@@ -168,6 +168,7 @@ namespace BOTrueZealMod.Characters
                 bundleTextColor = new(0.6078f, 0.6784f, 0.7176f)
             };
             LoadedAssetsHandler.LoadedSpeakers[speaker.name] = speaker;
+            ch.speakerDataName = speaker.name;
 
             var room = Bundle.LoadAsset<GameObject>("TrueZeal_FreeFool_ShellyK_ER");
             var roomHandler = room.AddComponent<NPCRoomHandler>();

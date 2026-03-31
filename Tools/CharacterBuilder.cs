@@ -90,6 +90,8 @@ namespace BOTrueZealMod.Tools
             ch.deathSound = string.Empty;
             ch.dxSound = string.Empty;
 
+            ch.speakerDataName = string.Empty;
+
             //ch.m_StartsLocked = false;
 
             return ch;
