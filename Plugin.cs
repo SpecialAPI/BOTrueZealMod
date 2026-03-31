@@ -47,6 +47,7 @@ namespace BOTrueZealMod
             Magic.ExtendAllEnums();
             CustomPassives.Init();
             CustomAnimations.Init();
+            Dialogues.Init();
             #endregion
 
             BurnBottleBatch.Init();
