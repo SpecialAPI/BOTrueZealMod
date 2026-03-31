@@ -16,13 +16,13 @@ namespace BOTrueZealMod
 
         public static void Init()
         {
-            BarFight        = Create("Barfight",        "");
-            Bell            = Create("Bell",            "");
-            BodySnatcher    = Create("BodySnatcher",    "");
-            Flirt           = Create("Flirt",           "");
-            Providence      = Create("Providence",      "");
-            Relapse         = Create("Relapse",         "");
-            Scales          = Create("Scales",          "");
+            BarFight        = Create("Barfight",        "event:/TrueZeal/AttackBarFight");
+            Bell            = Create("Bell",            "event:/TrueZeal/AttackBell");
+            BodySnatcher    = Create("BodySnatcher",    "event:/TrueZeal/AttackBodySnatcher");
+            Flirt           = Create("Flirt",           "event:/TrueZeal/AttackFlirt");
+            Providence      = Create("Providence",      "event:/TrueZeal/AttackProvidence");
+            Relapse         = Create("Relapse",         "event:/TrueZeal/AttackRelapse");
+            Scales          = Create("Scales",          "event:/TrueZeal/AttackScales");
         }
 
         private static AttackVisualsSO Create(string clipName, string sound, bool fullscreen = false)
