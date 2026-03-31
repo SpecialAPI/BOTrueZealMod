@@ -8,8 +8,10 @@ namespace BOTrueZealMod
     {
         public static DialogueSO ShellyBar;
         public static DialogueSO ShellyCombat;
+        public static DialogueSO ShellyFreeFool;
 
         public static DialogueSO FormosusCombat;
+        public static DialogueSO FormosusFreeFool;
 
         public static void Init()
         {
@@ -32,6 +34,13 @@ namespace BOTrueZealMod
             ShellyCombat.dialog = shellyProgram;
             LoadedAssetsHandler.LoadedDialogues[ShellyCombat.name] = ShellyCombat;
 
+            ShellyFreeFool = CreateScriptable<DialogueSO>();
+            ShellyFreeFool.name = GetID("FreeFool_ShellyK_Dialogue");
+            ShellyFreeFool.m_DialogID = shellyDxID;
+            ShellyFreeFool.startNode = "TrueZeal_ShellyK_FreeFool_Start";
+            ShellyFreeFool.dialog = shellyProgram;
+            LoadedAssetsHandler.LoadedDialogues[ShellyFreeFool.name] = ShellyFreeFool;
+
             // formosus
             var formosusProgram = Bundle.LoadAsset<YarnProgram>("FormosusDialogue");
             var formosusDxID = GetID("Formosus");
@@ -43,6 +52,13 @@ namespace BOTrueZealMod
             FormosusCombat.startNode = "TrueZeal_Formosus_Quest_Complete";
             FormosusCombat.dialog = formosusProgram;
             LoadedAssetsHandler.LoadedDialogues[FormosusCombat.name] = FormosusCombat;
+
+            FormosusFreeFool = CreateScriptable<DialogueSO>();
+            FormosusFreeFool.name = GetID("FreeFool_Formosus_Dialogue");
+            FormosusFreeFool.m_DialogID = formosusDxID;
+            FormosusFreeFool.startNode = "TrueZeal_Formosus_FreeFool_Start";
+            FormosusFreeFool.dialog = formosusProgram;
+            LoadedAssetsHandler.LoadedDialogues[FormosusFreeFool.name] = FormosusFreeFool;
         }
     }
 }
