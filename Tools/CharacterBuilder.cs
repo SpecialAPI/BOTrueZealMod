@@ -262,18 +262,23 @@ namespace BOTrueZealMod.Tools
 
             if (!appearsInShops)
             {
-                // todo
-                var areas = new List<string>()
+                var areas = new List<ZoneBGDataBaseSO>()
                 {
+                    Zones.Easy1,
+                    Zones.Easy2,
+                    Zones.Easy3,
 
+                    Zones.Hard1,
+                    Zones.Hard2,
+                    Zones.Hard3,
                 };
 
                 foreach(var a in areas)
                 {
-                    if (LoadedAssetsHandler.GetZoneDB(a) is not ZoneBGDataBaseSO bg)
+                    if(a == null)
                         continue;
 
-                    bg._omittedCharacters.Add(ch.name);
+                    a._omittedCharacters?.Add(ch.name);
                 }
             }
 
