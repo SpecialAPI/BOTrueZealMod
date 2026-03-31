@@ -606,6 +606,6 @@ Okay?
 Y-yeah, I'll stop.
 <<RightFocus>>
 Okay.
-<<Unlock 157.TrueZeal.AntonSad>>
-<<SaveProgress>>
+<<TrueZeal_UnlockCombat 157.TrueZeal.AntonSad>>
+<<TrueZeal_SaveProgressCombat>>
 ===
