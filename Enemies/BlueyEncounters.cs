@@ -17,7 +17,7 @@ namespace BOTrueZealMod.Enemies
             BlueyBundle = CreateScriptable<RandomEnemyBundleSO>();
             BlueyBundle.name = GetID("H_Zone03_CadaverSynod_Hard_EnemyBundle");
             BlueyBundle._musicEventReference = "event:/Music/Mx_Sepulchre";
-            BlueyBundle._roarReference = new("event:/Characters/Enemies/Sepulcre/CHR_ENM_Sepulcre_Roar");
+            BlueyBundle._roarReference = new("event:/TrueZeal/BlueyRoar");
             BlueyBundle._bundleSignType = SignTypeE.CadaverSynod;
 
             BlueyBundle._enemyBundles =
