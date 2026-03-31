@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4618682377417806}
   m_Layer: 0
-  m_Name: FreeFool_Formosus_ER
+  m_Name: TrueZeal_FreeFool_ShellyK_ER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6081901006401576808, guid: ddbe4d0340714cc459b7c2289599c538, type: 3}
+  m_Sprite: {fileID: -4142922069873442038, guid: ddbe4d0340714cc459b7c2289599c538, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

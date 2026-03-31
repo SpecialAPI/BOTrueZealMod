@@ -169,7 +169,7 @@ namespace BOTrueZealMod.Characters
             };
             LoadedAssetsHandler.LoadedSpeakers[speaker.name] = speaker;
 
-            var room = Bundle.LoadAsset<GameObject>("FreeFool_ShellyK_ER");
+            var room = Bundle.LoadAsset<GameObject>("TrueZeal_FreeFool_ShellyK_ER");
             var roomHandler = room.AddComponent<NPCRoomHandler>();
             roomHandler._requiresToTalk = false;
             roomHandler._dialogueMusic = string.Empty;
