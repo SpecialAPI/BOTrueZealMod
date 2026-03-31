@@ -188,7 +188,7 @@ namespace BOTrueZealMod.Characters
                 s.material.SetFloat("_OutlineAlpha", 0f);
             }
 
-            PortalSignAdder.AddSign(SignTypeE.ShellyK, LoadSprite("ShellyOverworld", new(0.5f, 0f)));
+            PortalSignAdder.AddSign(SignTypeE.ShellyK, LoadSprite("ShellyOW", new(0.5f, 0f)));
             var freefool = CreateScriptable<FreeFoolEncounterSO>();
             freefool._freeFool = ch.name;
             freefool._dialogue = Dialogues.ShellyFreeFool.name;
