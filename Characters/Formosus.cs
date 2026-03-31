@@ -6,6 +6,8 @@ namespace BOTrueZealMod.Characters
 {
     public static class Formosus
     {
+        private static GameObject FreeFoolRoom;
+
         public static void Init()
         {
             var ch = NewCharacter("Formosus_CH", EntityIDsE.Formosus);
@@ -132,6 +134,39 @@ namespace BOTrueZealMod.Characters
                 bundleTextColor = new(0.3725f, 0.0902f, 0.0902f)
             };
             LoadedAssetsHandler.LoadedSpeakers[speaker.name] = speaker;
+
+            var room = Bundle.LoadAsset<GameObject>("TrueZeal_FreeFool_Formosus_ER");
+            var roomHandler = room.AddComponent<NPCRoomHandler>();
+            roomHandler._requiresToTalk = false;
+            roomHandler._dialogueMusic = string.Empty;
+            LoadedAssetsHandler.LoadedRoomPrefabs[$"Encounters/{roomHandler.name}"] = roomHandler;
+            FreeFoolRoom = room;
+
+            var npc = room.transform.Find("NPCRoomItemSelectable_Template").gameObject;
+            var npcItem = npc.AddComponent<BasicRoomItem>();
+            npcItem._renderers = npc.GetComponentsInChildren<SpriteRenderer>();
+            npcItem._detector = npc.GetComponent<BoxCollider2D>();
+            roomHandler._npcSelectable = npcItem;
+            var npcOutlineMat = (LoadedAssetsHandler.GetRoomPrefab(CardType.Flavour, "Flavour_PervertMessiah_ER") as NPCRoomHandler)._npcSelectable._renderers[0].material;
+            foreach (var s in npcItem._renderers)
+            {
+                if (s == null)
+                    continue;
+
+                s.material = new Material(npcOutlineMat);
+                s.material.SetFloat("_OutlineAlpha", 0f);
+            }
+
+            PortalSignAdder.AddSign(SignTypeE.Formosus, LoadSprite("FormosusOW", new(0.5f, 0f)));
+            var freefool = CreateScriptable<FreeFoolEncounterSO>();
+            freefool._freeFool = ch.name;
+            freefool._dialogue = Dialogues.FormosusFreeFool.name;
+            freefool.encounterRoom = roomHandler.name;
+            freefool.npcEntityIDs = [ch.characterEntityID];
+            freefool.signType = SignTypeE.Formosus;
+            freefool.name = GetID("Formosus_FreeFoolEncounter");
+            LoadedAssetsHandler.LoadedFreeFoolEncounters[freefool.name] = freefool;
+            Zones.Hard3._FreeFoolsPool = Zones.Hard3._FreeFoolsPool.AddToArray(freefool.name);
         }
     }
 }
