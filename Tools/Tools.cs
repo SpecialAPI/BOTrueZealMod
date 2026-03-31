@@ -397,16 +397,21 @@ namespace BOTrueZealMod.Tools
                 var passive = effector.PassiveAbilities[i];
                 effector.PassiveAbilities.RemoveAt(i);
 
-                if (removeFromExtras && u is CharacterCombat cc)
+                if (removeFromExtras && u is CharacterCombat cc1)
                 {
-                    cc.ExtraPassives.Remove(passive);
-                    cc.ItemExtraPassives.Remove(passive);
+                    cc1.ExtraPassives.Remove(passive);
+                    cc1.ItemExtraPassives.Remove(passive);
                 }
 
                 passive.OnTriggerDettached(effector);
                 if (disconnect)
                     passive.OnPassiveDisconnected(u);
             }
+
+            if(u is EnemyCombat ec)
+                CombatManager.Instance.AddUIAction(new EnemyPassiveAbilityChangeUIAction(ec.ID, [..ec.PassiveAbilities]));
+            else if(u is CharacterCombat cc)
+                CombatManager.Instance.AddUIAction(new CharacterPassiveAbilityChangeUIAction(cc.ID, [..cc.PassiveAbilities], cc.CanSwapNoTrigger, cc.CanUseAbilitiesNoTrigger));
         }
     }
 }
