@@ -46,16 +46,8 @@ namespace BOTrueZealMod.Enemies
             SpawnEffect._enemies = CreateBasegameSpawnPool();
             SpawnEffect._givesExperience = true;
 
-            var formosusUnlockDialogue = CreateScriptable<DialogueSO>();
-            formosusUnlockDialogue.name = GetID("Combat_Formosus_Dialogue");
-            formosusUnlockDialogue.m_DialogID = GetID("Formosus");
-            formosusUnlockDialogue.startNode = "TrueZeal_Formosus_Quest_Complete";
-            formosusUnlockDialogue.dialog = Bundle.LoadAsset<YarnProgram>("FormosusDialogue");
-            LoadedAssetsHandler.LoadedDialogues[formosusUnlockDialogue.name] = formosusUnlockDialogue;
-            LoadedDBsHandler.GetDialogueDB().AddOrChangeDialog(formosusUnlockDialogue.m_DialogID, formosusUnlockDialogue.dialog);
-
             en.enterEffects = [Effects.Effect(null, SpawnEffect, 4)];
-            en.exitEffects = [Effects.Effect(null, CreateScriptable<StartDialogueConversationEffect>(x => x._dialogue = formosusUnlockDialogue)).WithCondition(CreateScriptable<HasCustomAchievementEffectCondition>(x =>
+            en.exitEffects = [Effects.Effect(null, CreateScriptable<StartDialogueConversationEffect>(x => x._dialogue = Dialogues.FormosusCombat)).WithCondition(CreateScriptable<HasCustomAchievementEffectCondition>(x =>
             {
                 x.achID = AchievementIDs.FormosusQuest;
                 x.needsToBeUnlocked = false;
