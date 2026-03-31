@@ -529,9 +529,9 @@ tags:
 title: TrueZeal_ShellyK_Combat_Anton_Start
 tags:
 ---
-<<if Visited("TrueZeal_ShellyK_Combat_Anton01") is false>>
+<<if TrueZeal_VisitedCombat("TrueZeal_ShellyK_Combat_Anton01") is false>>
     [[TrueZeal_ShellyK_Combat_Anton01]]
-<<elseif Visited("TrueZeal_ShellyK_Combat_Anton02") is false>>
+<<elseif TrueZeal_VisitedCombat("TrueZeal_ShellyK_Combat_Anton02") is false>>
     [[TrueZeal_ShellyK_Combat_Anton02]]
 <<else>>
     [[TrueZeal_ShellyK_Combat_Anton03]]

@@ -12,6 +12,7 @@ namespace BOTrueZealMod
         public const string SaveProgressCombat = "TrueZeal_SaveProgressCombat";
 
         public const string HasPartySpaceCombat = "TrueZeal_HasPartySpaceCombat";
+        public const string VisitedCombat = "TrueZeal_VisitedCombat";
 
         [HarmonyPatch(typeof(CombatDialogueHandler), nameof(CombatDialogueHandler.Awake))]
         [HarmonyPostfix]
@@ -55,6 +56,21 @@ namespace BOTrueZealMod
                     return false;
 
                 return playerData.HasCharacterSpace;
+            });
+            runner.AddFunction(VisitedCombat, 1, parameters =>
+            {
+                if (infoHolder == null)
+                    return false;
+
+                if (!infoHolder.HasRunData)
+                    return false;
+
+                var runData = infoHolder.Run;
+                if(runData.inGameData is not RunInGameData gameRun)
+                    return false;
+
+                var value = parameters[0];
+                return gameRun.ContainsVisitedNode(value.AsString);
             });
         }
     }
