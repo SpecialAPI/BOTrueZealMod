@@ -166,6 +166,38 @@ namespace BOTrueZealMod.Characters
                 bundleTextColor = new(0.6078f, 0.6784f, 0.7176f)
             };
             LoadedAssetsHandler.LoadedSpeakers[speaker.name] = speaker;
+
+            var room = Bundle.LoadAsset<GameObject>("FreeFool_ShellyK_ER");
+            var roomHandler = room.AddComponent<NPCRoomHandler>();
+            roomHandler._requiresToTalk = false;
+            roomHandler._dialogueMusic = string.Empty;
+            LoadedAssetsHandler.LoadedRoomPrefabs[roomHandler.name] = roomHandler;
+
+            var npc = room.transform.Find("NPCRoomItemSelectable_Template").gameObject;
+            var npcItem = npc.AddComponent<BasicRoomItem>();
+            npcItem._renderers = npc.GetComponentsInChildren<SpriteRenderer>();
+            npcItem._detector = npc.GetComponent<BoxCollider2D>();
+            roomHandler._npcSelectable = npcItem;
+            var npcOutlineMat = (LoadedAssetsHandler.GetRoomPrefab(CardType.Flavour, "Flavour_PervertMessiah_ER") as NPCRoomHandler)._npcSelectable._renderers[0].material;
+            foreach (var s in npcItem._renderers)
+            {
+                if (s == null)
+                    continue;
+
+                s.material = new Material(npcOutlineMat);
+                s.material.SetFloat("_OutlineAlpha", 0f);
+            }
+
+            PortalSignAdder.AddSign(SignTypeE.ShellyK, LoadSprite("ShellyOverworld", new(0.5f, 0f)));
+            var freefool = CreateScriptable<FreeFoolEncounterSO>();
+            freefool._freeFool = ch.name;
+            freefool._dialogue = Dialogues.ShellyFreeFool.name;
+            freefool.encounterRoom = roomHandler.name;
+            freefool.npcEntityIDs = [ch.characterEntityID];
+            freefool.signType = SignTypeE.ShellyK;
+            freefool.name = GetID("ShellyK_FreeFoolEncounter");
+            LoadedAssetsHandler.LoadedFreeFoolEncounters[freefool.name] = freefool;
+            Zones.Hard1._FreeFoolsPool = Zones.Hard1._FreeFoolsPool.AddToArray(freefool.name);
         }
     }
 }
