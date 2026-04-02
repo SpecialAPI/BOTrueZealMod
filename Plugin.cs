@@ -67,6 +67,8 @@ namespace BOTrueZealMod
             Bar.Init();
 
             WhistleUnlock.Init();
+
+            MiscChanges.Init();
         }
     }
 }
